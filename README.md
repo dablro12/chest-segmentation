@@ -1,4 +1,4 @@
-# Catheter&Electrode Semantic Segmentation on Infatogram with [SNUH-MEDISC()](https://snuh.medisc.org/)
+# Catheter&Electrode Semantic Segmentation on Infatogram with [SNUH-MEDISC](https://snuh.medisc.org/)
 
 ## Project Overview
 This repository contains the code for the catheter electrode segmentation project on infantograms. The project aims to develop and train deep learning models that can automatically segment catheter electrodes from chest X-ray images. This is particularly useful in medical image processing where precise detection of medical devices in radiographic images is required.

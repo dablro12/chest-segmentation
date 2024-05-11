@@ -366,3 +366,9 @@ Visualize save : 121/1000
 
  12%|█▏        | 122/1000 [34:48<3:47:28, 15.54s/it]
 Visualize save : 122/1000
+
+ 12%|█▏        | 123/1000 [35:04<3:47:28, 15.56s/it]
+Visualize save : 123/1000
+Saved model at /mnt/HDD/chest-seg_models/unet_plus_plus_v1_240512/model_123.pt
+
+ 12%|█▏        | 124/1000 [35:20<3:47:08, 15.56s/it]

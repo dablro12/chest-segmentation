@@ -405,3 +405,9 @@ Visualize save : 134/1000
 
  14%|█▎        | 135/1000 [35:06<3:27:52, 14.42s/it]
 Visualize save : 135/1000
+Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_135.pt
+Visualize save : 136/1000
+
+ 14%|█▎        | 136/1000 [35:21<3:27:27, 14.41s/it]
+Visualize save : 137/1000
+
