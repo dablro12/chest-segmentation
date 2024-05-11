@@ -1,0 +1,8 @@
+
+Model: MAnet loaded successfully!! | pretrained : imagenet
+
+  0%|          | 1/1000 [00:14<4:08:28, 14.92s/it]
+Visualize save : 1/1000
+Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_1.pt
+Visualize save : 2/1000
+

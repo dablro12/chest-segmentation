@@ -38,3 +38,378 @@ Visualize save : 12/3000
 
   0%|          | 13/3000 [02:49<10:50:58, 13.08s/it]
 Visualize save : 13/3000
+Saved model at /mnt/HDD/chest-seg_models/swin-unet/Swin-UNET_v1_240511/model_13.pt
+Visualize save : 14/3000
+
+
+  0%|          | 15/3000 [03:15<10:49:04, 13.05s/it]
+Visualize save : 15/3000
+Saved model at /mnt/HDD/chest-seg_models/swin-unet/Swin-UNET_v1_240511/model_15.pt
+Visualize save : 16/3000
+
+  1%|          | 16/3000 [03:28<10:46:12, 12.99s/it]
+Visualize save : 17/3000
+
+
+  1%|          | 18/3000 [03:53<10:42:08, 12.92s/it]
+Visualize save : 18/3000
+Saved model at /mnt/HDD/chest-seg_models/swin-unet/Swin-UNET_v1_240511/model_18.pt
+Visualize save : 19/3000
+
+
+  1%|          | 20/3000 [04:19<10:40:26, 12.89s/it]
+Visualize save : 20/3000
+Saved model at /mnt/HDD/chest-seg_models/swin-unet/Swin-UNET_v1_240511/model_20.pt
+Visualize save : 21/3000
+
+
+  1%|          | 22/3000 [04:45<10:38:47, 12.87s/it]
+Visualize save : 22/3000
+
+  1%|          | 23/3000 [04:58<10:38:00, 12.86s/it]
+Visualize save : 23/3000
+Saved model at /mnt/HDD/chest-seg_models/swin-unet/Swin-UNET_v1_240511/model_23.pt
+Visualize save : 24/3000
+
+
+  1%|          | 25/3000 [05:23<10:37:45, 12.86s/it]
+Visualize save : 25/3000
+Saved model at /mnt/HDD/chest-seg_models/swin-unet/Swin-UNET_v1_240511/model_25.pt
+Visualize save : 26/3000
+
+
+  1%|          | 27/3000 [05:49<10:37:44, 12.87s/it]
+Visualize save : 27/3000
+Saved model at /mnt/HDD/chest-seg_models/swin-unet/Swin-UNET_v1_240511/model_27.pt
+Visualize save : 28/3000
+
+
+  1%|          | 29/3000 [06:15<10:37:10, 12.87s/it]
+Visualize save : 29/3000
+Saved model at /mnt/HDD/chest-seg_models/swin-unet/Swin-UNET_v1_240511/model_29.pt
+Visualize save : 30/3000
+
+  1%|          | 30/3000 [06:28<10:38:10, 12.89s/it]
+
+  1%|          | 31/3000 [06:41<10:36:57, 12.87s/it]
+
+  1%|          | 32/3000 [06:53<10:36:08, 12.86s/it]
+Visualize save : 32/3000
+Saved model at /mnt/HDD/chest-seg_models/swin-unet/Swin-UNET_v1_240511/model_32.pt
+Visualize save : 33/3000
+
+
+  1%|          | 34/3000 [07:19<10:37:07, 12.89s/it]
+Visualize save : 34/3000
+Saved model at /mnt/HDD/chest-seg_models/swin-unet/Swin-UNET_v1_240511/model_34.pt
+Visualize save : 35/3000
+
+
+  1%|          | 36/3000 [07:45<10:37:16, 12.90s/it]
+Visualize save : 36/3000
+
+  1%|          | 37/3000 [07:58<10:34:36, 12.85s/it]
+Visualize save : 37/3000
+Saved model at /mnt/HDD/chest-seg_models/swin-unet/Swin-UNET_v1_240511/model_37.pt
+Visualize save : 38/3000
+
+
+  1%|▏         | 39/3000 [08:23<10:31:24, 12.79s/it]
+Visualize save : 39/3000
+Saved model at /mnt/HDD/chest-seg_models/swin-unet/Swin-UNET_v1_240511/model_39.pt
+Visualize save : 40/3000
+
+  1%|▏         | 40/3000 [08:36<10:30:26, 12.78s/it]
+
+  1%|▏         | 41/3000 [08:49<10:29:42, 12.77s/it]
+
+  1%|▏         | 42/3000 [09:02<10:29:42, 12.77s/it]
+Visualize save : 42/3000
+Saved model at /mnt/HDD/chest-seg_models/swin-unet/Swin-UNET_v1_240511/model_42.pt
+Visualize save : 43/3000
+
+
+  1%|▏         | 44/3000 [09:27<10:28:29, 12.76s/it]
+Visualize save : 44/3000
+
+  2%|▏         | 45/3000 [09:40<10:28:00, 12.75s/it]
+Visualize save : 45/3000
+Saved model at /mnt/HDD/chest-seg_models/swin-unet/Swin-UNET_v1_240511/model_45.pt
+Visualize save : 46/3000
+
+
+  2%|▏         | 47/3000 [10:05<10:27:56, 12.76s/it]
+Visualize save : 47/3000
+Saved model at /mnt/HDD/chest-seg_models/swin-unet/Swin-UNET_v1_240511/model_47.pt
+Visualize save : 48/3000
+
+  2%|▏         | 48/3000 [10:18<10:27:31, 12.75s/it]
+Visualize save : 49/3000
+
+
+  2%|▏         | 50/3000 [10:43<10:26:38, 12.75s/it]
+Visualize save : 50/3000
+Saved model at /mnt/HDD/chest-seg_models/swin-unet/Swin-UNET_v1_240511/model_50.pt
+Visualize save : 51/3000
+
+  2%|▏         | 51/3000 [10:56<10:26:21, 12.74s/it]
+Visualize save : 52/3000
+
+
+  2%|▏         | 53/3000 [11:22<10:26:28, 12.75s/it]
+Visualize save : 53/3000
+Saved model at /mnt/HDD/chest-seg_models/swin-unet/Swin-UNET_v1_240511/model_53.pt
+Visualize save : 54/3000
+
+  2%|▏         | 54/3000 [11:34<10:25:46, 12.75s/it]
+Visualize save : 55/3000
+
+
+  2%|▏         | 56/3000 [12:00<10:24:59, 12.74s/it]
+Visualize save : 56/3000
+Saved model at /mnt/HDD/chest-seg_models/swin-unet/Swin-UNET_v1_240511/model_56.pt
+Visualize save : 57/3000
+
+  2%|▏         | 57/3000 [12:13<10:24:47, 12.74s/it]
+
+  2%|▏         | 58/3000 [12:25<10:25:31, 12.76s/it]
+Saved model at /mnt/HDD/chest-seg_models/swin-unet/Swin-UNET_v1_240511/model_58.pt
+Visualize save : 59/3000
+
+  2%|▏         | 59/3000 [12:38<10:25:23, 12.76s/it]
+
+  2%|▏         | 60/3000 [12:51<10:25:02, 12.76s/it]
+
+  2%|▏         | 61/3000 [13:04<10:24:45, 12.75s/it]
+Visualize save : 61/3000
+Saved model at /mnt/HDD/chest-seg_models/swin-unet/Swin-UNET_v1_240511/model_61.pt
+Visualize save : 62/3000
+
+
+  2%|▏         | 63/3000 [13:29<10:25:03, 12.77s/it]
+Visualize save : 63/3000
+
+  2%|▏         | 64/3000 [13:42<10:24:36, 12.76s/it]
+Visualize save : 64/3000
+Saved model at /mnt/HDD/chest-seg_models/swin-unet/Swin-UNET_v1_240511/model_64.pt
+Visualize save : 65/3000
+
+  2%|▏         | 65/3000 [13:55<10:24:02, 12.76s/it]
+Visualize save : 66/3000
+
+  2%|▏         | 66/3000 [14:08<10:23:23, 12.75s/it]
+Visualize save : 67/3000
+
+  2%|▏         | 67/3000 [14:20<10:22:56, 12.74s/it]
+Visualize save : 68/3000
+
+
+  2%|▏         | 69/3000 [14:46<10:22:59, 12.75s/it]
+Visualize save : 69/3000
+Saved model at /mnt/HDD/chest-seg_models/swin-unet/Swin-UNET_v1_240511/model_69.pt
+Visualize save : 70/3000
+
+  2%|▏         | 70/3000 [14:58<10:22:25, 12.75s/it]
+Visualize save : 71/3000
+
+
+  2%|▏         | 72/3000 [15:24<10:21:33, 12.74s/it]
+Visualize save : 72/3000
+Saved model at /mnt/HDD/chest-seg_models/swin-unet/Swin-UNET_v1_240511/model_72.pt
+Visualize save : 73/3000
+
+  2%|▏         | 73/3000 [15:37<10:21:21, 12.74s/it]
+Visualize save : 74/3000
+
+
+  2%|▎         | 75/3000 [16:02<10:21:28, 12.75s/it]
+Visualize save : 75/3000
+Saved model at /mnt/HDD/chest-seg_models/swin-unet/Swin-UNET_v1_240511/model_75.pt
+Visualize save : 76/3000
+
+  3%|▎         | 76/3000 [16:15<10:21:10, 12.75s/it]
+Visualize save : 77/3000
+
+  3%|▎         | 77/3000 [16:28<10:20:49, 12.74s/it]
+Visualize save : 78/3000
+
+  3%|▎         | 78/3000 [16:40<10:20:25, 12.74s/it]
+Visualize save : 79/3000
+
+
+  3%|▎         | 80/3000 [17:06<10:20:37, 12.75s/it]
+Visualize save : 80/3000
+Saved model at /mnt/HDD/chest-seg_models/swin-unet/Swin-UNET_v1_240511/model_80.pt
+Visualize save : 81/3000
+
+  3%|▎         | 81/3000 [17:19<10:20:17, 12.75s/it]
+Visualize save : 82/3000
+
+
+  3%|▎         | 83/3000 [17:44<10:19:33, 12.74s/it]
+Visualize save : 83/3000
+Saved model at /mnt/HDD/chest-seg_models/swin-unet/Swin-UNET_v1_240511/model_83.pt
+Visualize save : 84/3000
+
+  3%|▎         | 84/3000 [17:57<10:19:19, 12.74s/it]
+Visualize save : 85/3000
+
+  3%|▎         | 85/3000 [18:10<10:20:00, 12.76s/it]
+Visualize save : 86/3000
+
+  3%|▎         | 86/3000 [18:22<10:19:58, 12.77s/it]
+Visualize save : 87/3000
+
+
+  3%|▎         | 88/3000 [18:48<10:19:11, 12.76s/it]
+Visualize save : 88/3000
+Saved model at /mnt/HDD/chest-seg_models/swin-unet/Swin-UNET_v1_240511/model_88.pt
+Visualize save : 89/3000
+
+  3%|▎         | 89/3000 [19:01<10:18:38, 12.75s/it]
+Visualize save : 90/3000
+
+
+  3%|▎         | 91/3000 [19:26<10:19:42, 12.78s/it]
+Visualize save : 91/3000
+Saved model at /mnt/HDD/chest-seg_models/swin-unet/Swin-UNET_v1_240511/model_91.pt
+Visualize save : 92/3000
+
+  3%|▎         | 92/3000 [19:39<10:19:04, 12.77s/it]
+Visualize save : 93/3000
+
+  3%|▎         | 93/3000 [19:52<10:18:30, 12.77s/it]
+Visualize save : 94/3000
+
+  3%|▎         | 94/3000 [20:05<10:18:06, 12.76s/it]
+Visualize save : 95/3000
+
+
+  3%|▎         | 96/3000 [20:30<10:17:39, 12.76s/it]
+Visualize save : 96/3000
+Saved model at /mnt/HDD/chest-seg_models/swin-unet/Swin-UNET_v1_240511/model_96.pt
+Visualize save : 97/3000
+
+
+  3%|▎         | 98/3000 [20:56<10:17:28, 12.77s/it]
+Visualize save : 98/3000
+
+  3%|▎         | 99/3000 [21:08<10:16:49, 12.76s/it]
+Visualize save : 99/3000
+Saved model at /mnt/HDD/chest-seg_models/swin-unet/Swin-UNET_v1_240511/model_99.pt
+Visualize save : 100/3000
+
+
+  3%|▎         | 101/3000 [21:34<10:17:01, 12.77s/it]
+Visualize save : 101/3000
+Saved model at /mnt/HDD/chest-seg_models/swin-unet/Swin-UNET_v1_240511/model_101.pt
+Visualize save : 102/3000
+
+  3%|▎         | 102/3000 [21:47<10:17:12, 12.78s/it]
+Visualize save : 103/3000
+
+
+  3%|▎         | 104/3000 [22:12<10:16:20, 12.77s/it]
+Visualize save : 104/3000
+Saved model at /mnt/HDD/chest-seg_models/swin-unet/Swin-UNET_v1_240511/model_104.pt
+Visualize save : 105/3000
+
+  4%|▎         | 105/3000 [22:25<10:16:03, 12.77s/it]
+Visualize save : 106/3000
+
+
+  4%|▎         | 107/3000 [22:51<10:14:55, 12.75s/it]
+Visualize save : 107/3000
+Saved model at /mnt/HDD/chest-seg_models/swin-unet/Swin-UNET_v1_240511/model_107.pt
+Visualize save : 108/3000
+
+  4%|▎         | 108/3000 [23:03<10:15:29, 12.77s/it]
+Visualize save : 109/3000
+
+
+  4%|▎         | 110/3000 [23:29<10:14:17, 12.75s/it]
+Visualize save : 110/3000
+Saved model at /mnt/HDD/chest-seg_models/swin-unet/Swin-UNET_v1_240511/model_110.pt
+Visualize save : 111/3000
+
+
+  4%|▎         | 112/3000 [23:54<10:13:49, 12.75s/it]
+Visualize save : 112/3000
+
+  4%|▍         | 113/3000 [24:07<10:14:43, 12.78s/it]
+Visualize save : 113/3000
+Saved model at /mnt/HDD/chest-seg_models/swin-unet/Swin-UNET_v1_240511/model_113.pt
+Visualize save : 114/3000
+
+
+  4%|▍         | 115/3000 [24:33<10:14:12, 12.77s/it]
+Visualize save : 115/3000
+Saved model at /mnt/HDD/chest-seg_models/swin-unet/Swin-UNET_v1_240511/model_115.pt
+Visualize save : 116/3000
+
+  4%|▍         | 116/3000 [24:45<10:13:39, 12.77s/it]
+Visualize save : 117/3000
+
+  4%|▍         | 117/3000 [24:58<10:12:57, 12.76s/it]
+Visualize save : 118/3000
+
+  4%|▍         | 118/3000 [25:11<10:12:41, 12.76s/it]
+Visualize save : 119/3000
+
+
+  4%|▍         | 120/3000 [25:36<10:12:49, 12.77s/it]
+Visualize save : 120/3000
+Saved model at /mnt/HDD/chest-seg_models/swin-unet/Swin-UNET_v1_240511/model_120.pt
+Visualize save : 121/3000
+
+  4%|▍         | 121/3000 [25:49<10:12:14, 12.76s/it]
+Visualize save : 122/3000
+
+
+  4%|▍         | 123/3000 [26:15<10:11:45, 12.76s/it]
+Visualize save : 123/3000
+Saved model at /mnt/HDD/chest-seg_models/swin-unet/Swin-UNET_v1_240511/model_123.pt
+Visualize save : 124/3000
+
+  4%|▍         | 124/3000 [26:27<10:11:24, 12.76s/it]
+Visualize save : 125/3000
+
+
+  4%|▍         | 126/3000 [26:53<10:11:35, 12.77s/it]
+Visualize save : 126/3000
+Saved model at /mnt/HDD/chest-seg_models/swin-unet/Swin-UNET_v1_240511/model_126.pt
+Visualize save : 127/3000
+
+
+  4%|▍         | 128/3000 [27:19<10:11:10, 12.77s/it]
+Visualize save : 128/3000
+
+  4%|▍         | 129/3000 [27:31<10:10:37, 12.76s/it]
+Visualize save : 129/3000
+Saved model at /mnt/HDD/chest-seg_models/swin-unet/Swin-UNET_v1_240511/model_129.pt
+Visualize save : 130/3000
+
+
+  4%|▍         | 131/3000 [27:57<10:10:20, 12.76s/it]
+Visualize save : 131/3000
+Saved model at /mnt/HDD/chest-seg_models/swin-unet/Swin-UNET_v1_240511/model_131.pt
+Visualize save : 132/3000
+
+  4%|▍         | 132/3000 [28:10<10:09:40, 12.75s/it]
+Visualize save : 133/3000
+
+
+  4%|▍         | 134/3000 [28:35<10:08:51, 12.75s/it]
+Visualize save : 134/3000
+Saved model at /mnt/HDD/chest-seg_models/swin-unet/Swin-UNET_v1_240511/model_134.pt
+Visualize save : 135/3000
+
+
+  5%|▍         | 136/3000 [29:01<10:08:58, 12.76s/it]
+Visualize save : 136/3000
+Saved model at /mnt/HDD/chest-seg_models/swin-unet/Swin-UNET_v1_240511/model_136.pt
+Visualize save : 137/3000
+Saved model at /mnt/HDD/chest-seg_models/swin-unet/Swin-UNET_v1_240511/model_137.pt
+Saved model at /mnt/HDD/chest-seg_models/swin-unet/Swin-UNET_v1_240511/model_137.pt
+
+  5%|▍         | 136/3000 [29:14<10:15:43, 12.90s/it]

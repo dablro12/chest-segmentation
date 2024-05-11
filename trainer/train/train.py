@@ -11,9 +11,11 @@ from torchvision import transforms
 from torch.utils.data import DataLoader
 from tqdm import tqdm
 from utils.dataset import Segmentation_CustomDataset as CustomDataset
+from utils.metrics import calculate_metrics
 from utils.__init__ import *
 from utils.arg import save_args
 from utils import * 
+
 import wandb
 # Set environment variable for compatibility issues
 os.environ['KMP_DUPLICATE_LIB_OK'] = 'True'
@@ -22,6 +24,21 @@ os.environ['KMP_DUPLICATE_LIB_OK'] = 'True'
 torch.backends.cuda.matmul.allow_tf32 = False
 torch.backends.cudnn.allow_tf32 = False
 torch.autograd.set_detect_anomaly(False) 
+
+#################
+import torch 
+from torchvision import transforms
+from torch.utils.data import DataLoader
+import torch.nn as nn
+from utils.dataset import Segmentation_CustomDataset as CustomDataset
+import os
+import torch.optim as optim
+from utils.__init__ import *
+from utils import * 
+os.environ['KMP_DUPLICATE_LIB_OK']='True'
+import sys 
+sys.path.append('../')
+from model import load_model
 
 class Train(nn.Module):
     def __init__(self, args):
@@ -48,12 +65,11 @@ class Train(nn.Module):
                 transforms.RandomRotation(25),
                 transforms.RandomHorizontalFlip(p=0.5),
                 transforms.RandomVerticalFlip(p=0.5),
-                transforms.Resize((224, 224)),
-                # transforms.RandomResizedCrop(224, scale=(0.75, 1.0), ratio=(0.75, 1.33)),
+                transforms.RandomResizedCrop(224, scale=(0.75, 1.0), ratio=(0.75, 1.33)),
                 # transforms.RandomCrop(size = (224,224), pad_if_needed=True, padding_mode='reflect'),
                 transforms.ColorJitter(brightness=0.2, contrast=0.2),  # 밝기와 대비 조정
                 transforms.ToTensor(),
-                transforms.Normalize(mean=[0.5], std=[0.5]),
+                transforms.Normalize(mean=[0.5], std=[0.5]),# [0, 1] -> [-1, 1] : 이게 실험적으로 더 좋은 신경망 학습
             ]),
             'valid': transforms.Compose([
                 transforms.Resize((224, 224)),
@@ -69,7 +85,7 @@ class Train(nn.Module):
             batch_size=args.ts_batch_size, shuffle=True
         )
         self.valid_loader = DataLoader(
-            CustomDataset(image_dir = img_dirs['valid'], mask_dir = mask_dir['valid'], transform=transform['valid'], testing=True,), 
+            CustomDataset(image_dir = img_dirs['valid'], mask_dir = mask_dir['valid'], transform=transform['valid'], testing=True, seed = 627), 
             batch_size=args.vs_batch_size, shuffle=False
         )
 
@@ -83,11 +99,8 @@ class Train(nn.Module):
             self.run_name = args.model + '_debug'
 
     def initialize_models(self, args):
-        from model import swinunet
-        self.model = swinunet.SwinUNet(H = 224, W = 224, ch = 1, C = 48, num_class = 1, num_blocks = 3, patch_size = 4).to(self.device)
-        for p in self.model.parameters():
-            if p.dim() > 1:
-                nn.init.kaiming_uniform_(p)
+        model_loader = load_model.segmentation_models_loader(model_name = args.model)
+        self.model = model_loader().to(self.device)
                 
         self.setup_optimizers(args)
     
@@ -95,7 +108,6 @@ class Train(nn.Module):
         self.epochs = args.epochs
         self.loss_fn = nn.BCEWithLogitsLoss().to(self.device)
         
-
     def setup_optimizers(self, args):
         self.optimizer = optim.AdamW(self.model.parameters(), lr=args.learning_rate, betas=(0, 0.9))
 
@@ -117,14 +129,13 @@ class Train(nn.Module):
 
     def fit(self):
         for epoch in tqdm(range(1, self.epochs+1)):
-            train_losses, valid_losses = 0., 0.
-
+            train_losses, train_accs, train_ious, valid_losses, valid_accs, valid_ious = 0, 0, 0, 0, 0, 0
             # Training phase
             self.model.train()
             for images, masks in self.train_loader:
                 self.optimizer.zero_grad()
                 images, masks = images.to(self.device), masks.to(self.device)
-                outputs = self.model.forward(images).to(self.device)
+                outputs = self.model(images)
 
                 # BCE Logistic Loss
                 loss = self.loss_fn(outputs, masks)
@@ -132,18 +143,25 @@ class Train(nn.Module):
                 self.optimizer.step()
                 train_losses += loss.item()
 
+                acc, iou = calculate_metrics(outputs, masks, threshold=0.5)
+                train_accs += acc
+                train_ious += iou
             # Validation phase
             with torch.no_grad():
                 self.model.eval()
                 for (images, masks, paths) in self.valid_loader:
                     images, masks = images.to(self.device), masks.to(self.device)
-                    outputs = self.model.forward(images).to(self.device)
+                    outputs = self.model(images)
                     # BCE Logistic Loss
                     loss = self.loss_fn(outputs, masks)
                     valid_losses += loss.item()
+
+                    acc, iou = calculate_metrics(outputs, masks, threshold=0.5)
+                    valid_accs += acc
+                    valid_ious += iou
     
-            self.log_metrics(epoch, train_losses/len(self.train_loader), valid_losses/len(self.valid_loader))
-            self.visualize(epoch = epoch, image = images[0,0], mask = masks[0,0], output_image = outputs[0,0])
+            self.log_metrics(epoch, train_losses, train_accs, train_ious, valid_losses, valid_accs, valid_ious)
+            self.visualize(epoch = epoch, image = images[0,0], mask = masks[0,0], output_image = (outputs[0,0] > 0.5).int())
             
             # Early Stopping Check
             if valid_losses < self.best_valid_loss:
@@ -157,18 +175,25 @@ class Train(nn.Module):
 
             if self.epochs_no_improve >= self.n_epochs_stop:
                 self.save_model(epoch, valid_losses/len(self.valid_loader))  # Save the best model
-                print(f"\033[41m Early stopping at epoch {epoch}. Best valid loss: {self.best_valid_loss}. \033[0m")
+                print(f"\033[41m Early stopping at epoch {epoch}\033[0m")
+                print(f"\033[41m Best valid loss: {self.best_valid_loss}\033[0m")
+                print(f"\033[41m ACC : {valid_accs / len(self.valid_loader)}\033[0m")
+                print(f"\033[41m mIoU: {valid_ious / len(self.valid_loader)}\033[0m")
                 break
 
         if self.w == "yes":
             wandb.finish()
         print("Training Complete.")
 
-    def log_metrics(self, epoch, train_loss, valid_loss):
+    def log_metrics(self, epoch, train_losses, train_accs, train_ious, valid_losses, valid_accs, valid_ious):
         if self.w == 'yes':
             wandb.log({
-                "t_bce_loss": train_loss,
-                "v_bce_loss": valid_loss,
+                "train_loss": train_losses / len(self.train_loader),
+                "train_acc": train_accs / len(self.train_loader),
+                "train_loss": train_ious / len(self.train_loader),
+                "valid_loss": valid_losses / len(self.valid_loader),
+                "valid_acc": valid_accs / len(self.valid_loader),
+                "valid_loss": valid_ious / len(self.valid_loader),
             }, step = epoch)
 
     def save_model(self, epoch, valid_loss):
