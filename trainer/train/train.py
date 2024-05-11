@@ -172,7 +172,7 @@ class Train(nn.Module):
             else:
                 self.epochs_no_improve += 1
             
-            if self.epochs % 100 == 0:
+            if epoch % 50 == 0:
                 self.save_model(epoch, valid_losses/len(self.valid_loader))
 
             if self.epochs_no_improve >= self.n_epochs_stop:

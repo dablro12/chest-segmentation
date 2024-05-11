@@ -60,19 +60,19 @@ chest-segmentation
 ## Setup and Installation
 1. Clone this repository:
    ```bash
-   git clone https://github.com/<your-username>/chest-segmentation.git
+   git clone https://github.com/dablro12/chest-segmentation.git
    cd chest-segmentation
    ```
 
 2. Install required packages:
    ```bash
-   pip install -r requirements.txt
+   pip install -r src/settings/requirements.txt
    ```
 
 ## Usage
 To train a model, navigate to the `trainer/train/` directory and run the following command:
 ```bash
-python train.py
+sh src/trainer/train/run.sh
 ```
 
 To perform inference using a trained model, navigate to the `trainer/test/` directory and execute:

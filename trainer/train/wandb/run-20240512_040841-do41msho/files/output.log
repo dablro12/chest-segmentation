@@ -411,3 +411,90 @@ Visualize save : 136/1000
  14%|█▎        | 136/1000 [35:21<3:27:27, 14.41s/it]
 Visualize save : 137/1000
 
+ 14%|█▎        | 137/1000 [35:35<3:27:07, 14.40s/it]
+Visualize save : 138/1000
+
+ 14%|█▍        | 138/1000 [35:50<3:27:08, 14.42s/it]
+Visualize save : 139/1000
+
+ 14%|█▍        | 139/1000 [36:04<3:27:44, 14.48s/it]
+Visualize save : 140/1000
+
+
+ 14%|█▍        | 141/1000 [36:33<3:26:29, 14.42s/it]
+Visualize save : 141/1000
+
+ 14%|█▍        | 142/1000 [36:47<3:26:20, 14.43s/it]
+Visualize save : 142/1000
+Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_142.pt
+Visualize save : 143/1000
+
+
+ 14%|█▍        | 144/1000 [37:16<3:25:35, 14.41s/it]
+Visualize save : 144/1000
+
+ 14%|█▍        | 145/1000 [37:31<3:26:27, 14.49s/it]
+Visualize save : 145/1000
+
+ 15%|█▍        | 146/1000 [37:45<3:25:48, 14.46s/it]
+Visualize save : 146/1000
+
+ 15%|█▍        | 147/1000 [38:00<3:24:33, 14.39s/it]
+Visualize save : 147/1000
+
+ 15%|█▍        | 148/1000 [38:14<3:24:26, 14.40s/it]
+Visualize save : 148/1000
+
+ 15%|█▍        | 149/1000 [38:28<3:24:23, 14.41s/it]
+Visualize save : 149/1000
+
+ 15%|█▌        | 150/1000 [38:43<3:23:44, 14.38s/it]
+Visualize save : 150/1000
+
+ 15%|█▌        | 151/1000 [38:57<3:22:45, 14.33s/it]
+Visualize save : 151/1000
+Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_151.pt
+Visualize save : 152/1000
+
+ 15%|█▌        | 152/1000 [39:11<3:22:24, 14.32s/it]
+Visualize save : 153/1000
+
+ 15%|█▌        | 153/1000 [39:26<3:23:01, 14.38s/it]
+Visualize save : 154/1000
+
+ 15%|█▌        | 154/1000 [39:41<3:25:47, 14.60s/it]
+Visualize save : 155/1000
+
+ 16%|█▌        | 155/1000 [39:56<3:26:11, 14.64s/it]
+Visualize save : 156/1000
+
+ 16%|█▌        | 156/1000 [40:11<3:28:28, 14.82s/it]
+Visualize save : 157/1000
+
+
+ 16%|█▌        | 158/1000 [40:42<3:32:26, 15.14s/it]
+Visualize save : 158/1000
+Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_158.pt
+Visualize save : 159/1000
+
+ 16%|█▌        | 159/1000 [40:56<3:28:20, 14.86s/it]
+Visualize save : 160/1000
+
+
+ 16%|█▌        | 161/1000 [41:25<3:23:25, 14.55s/it]
+Visualize save : 161/1000
+Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_161.pt
+Visualize save : 162/1000
+
+ 16%|█▌        | 162/1000 [41:41<3:29:36, 15.01s/it]
+Visualize save : 163/1000
+
+ 16%|█▋        | 163/1000 [41:57<3:35:44, 15.47s/it]
+Visualize save : 164/1000
+
+ 16%|█▋        | 164/1000 [42:12<3:31:40, 15.19s/it]
+Visualize save : 165/1000
+
+ 16%|█▋        | 165/1000 [42:27<3:28:56, 15.01s/it]
+Visualize save : 166/1000
+
