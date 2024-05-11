@@ -1,0 +1,47 @@
+
+Model: MAnet loaded successfully!! | pretrained : imagenet
+  0%|          | 0/1000 [00:00<?, ?it/s]
+Visualize save : 1/1000
+
+  0%|          | 1/1000 [00:14<4:03:04, 14.60s/it]
+Visualize save : 2/1000
+
+  0%|          | 2/1000 [00:29<4:08:56, 14.97s/it]
+Visualize save : 3/1000
+
+  0%|          | 3/1000 [00:46<4:19:59, 15.65s/it]
+Visualize save : 4/1000
+
+  0%|          | 4/1000 [01:02<4:26:43, 16.07s/it]
+
+  0%|          | 5/1000 [01:19<4:29:50, 16.27s/it]
+Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_5.pt
+
+  1%|          | 6/1000 [01:36<4:31:45, 16.40s/it]
+Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_6.pt
+Visualize save : 7/1000
+
+  1%|          | 7/1000 [01:53<4:34:25, 16.58s/it]
+Visualize save : 8/1000
+
+  1%|          | 8/1000 [02:09<4:33:49, 16.56s/it]
+Visualize save : 9/1000
+
+  1%|          | 9/1000 [02:26<4:36:07, 16.72s/it]
+Visualize save : 10/1000
+
+  1%|          | 10/1000 [02:43<4:33:12, 16.56s/it]
+Visualize save : 11/1000
+
+  1%|          | 11/1000 [02:59<4:33:22, 16.58s/it]
+Visualize save : 12/1000
+
+  1%|          | 12/1000 [03:15<4:30:32, 16.43s/it]
+Visualize save : 13/1000
+
+  1%|▏         | 13/1000 [03:32<4:30:47, 16.46s/it]
+
+  1%|▏         | 14/1000 [03:48<4:31:41, 16.53s/it]
+Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_14.pt
+
+  2%|▏         | 15/1000 [04:06<4:35:55, 16.81s/it]

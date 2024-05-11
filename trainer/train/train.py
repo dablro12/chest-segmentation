@@ -144,7 +144,7 @@ class Train(nn.Module):
 
                 acc, iou = calculate_metrics(outputs, masks, threshold=0.5)
 
-                train_losses += loss.item()
+                train_losses += loss.cpu().detach().item()
                 train_accs += acc
                 train_ious += iou
             # Validation phase
@@ -158,7 +158,7 @@ class Train(nn.Module):
 
                     acc, iou = calculate_metrics(outputs, masks, threshold=0.5)
 
-                    valid_losses += loss.item()
+                    valid_losses += loss.cpu().detach().item()
                     valid_accs += acc
                     valid_ious += iou
     
@@ -192,10 +192,10 @@ class Train(nn.Module):
             wandb.log({
                 "train_loss": train_losses / len(self.train_loader),
                 "train_acc": train_accs / len(self.train_loader),
-                "train_loss": train_ious / len(self.train_loader),
+                "train_ious": train_ious / len(self.train_loader),
                 "valid_loss": valid_losses / len(self.valid_loader),
                 "valid_acc": valid_accs / len(self.valid_loader),
-                "valid_loss": valid_ious / len(self.valid_loader),
+                "valid_ious": valid_ious / len(self.valid_loader),
             }, step = epoch)
 
     def save_model(self, epoch, valid_loss):
