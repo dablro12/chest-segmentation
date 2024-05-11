@@ -1,24 +1,21 @@
 import matplotlib.pyplot as plt 
 import matplotlib
-# matplotlib의 Backend를 TkAgg로 설정
+import torch 
+import os 
+import numpy as np 
 
-def plotting(images, masks, input_images):
+# matplotlib의 Backend를 TkAgg로 설정
+def train_plotting(images, masks):
     plt.figure(dpi =256)
-    plt.subplot(131)
-    plt.imshow(images[1,0].cpu().detach().numpy(), cmap= 'gray')
-    plt.axis('off')
+    plt.subplot(121)
+    plt.imshow(images[1,0], cmap= 'gray')
     plt.title('image')
-    plt.subplot(132)
-    plt.imshow(masks[1,0].cpu().detach().numpy(), cmap= 'gray')
-    plt.axis('off')
+    plt.subplot(122)
+    plt.imshow(masks[1,0], cmap= 'gray')
     plt.title('mask')
-    plt.subplot(133)
-    plt.imshow(input_images[1,0].cpu().detach().numpy(), cmap= 'gray')
-    plt.axis('off')
-    plt.title('Result')
     plt.tight_layout()
     plt.show()
-
+    
 def test_plotting(input_image, mask, pred_image, save_path):
     plt.figure(dpi =256)
     plt.subplot(131)
@@ -38,6 +35,38 @@ def test_plotting(input_image, mask, pred_image, save_path):
     plt.close()
 
 
+def save_validation(input_images, masks, output_images, epoch, save_dir):
+    plt.figure(dpi=128)
+    plt.subplot(231)
+    plt.imshow(input_images[0, 0].cpu().detach().numpy(), cmap='gray')
+    plt.title("Input")
+    plt.subplot(232)
+    plt.imshow(masks[0, 0].cpu().detach().numpy(), cmap='gray')
+    plt.title("mask")
+    plt.subplot(233)
+    plt.imshow(output_images[0, 0].cpu().detach().numpy(), cmap='gray')
+    plt.title('Output')
+    plt.tight_layout()
+    # plt.savefig(os.path.join(save_dir, f'epoch_{epoch}.png'))
+    plt.show()
+    plt.close()
+
+def save_model(model, optimizer, epoch, save_dir):
+    torch.save({
+        'model': model.state_dict(),
+        'optimizer': optimizer.state_dict(),
+    }, os.path.join(save_dir, f'epoch_{epoch}.pt'))
+
+def save_loss(metrics, save_dir):
+    # loss plot
+    plt.figure(dpi=128)
+    for key, value in metrics.items():
+        plt.plot(value, label=key)
+    plt.legend()
+    plt.savefig(os.path.join(save_dir, 'loss.png'))
+    plt.close()
+    
+    np.save(os.path.join(save_dir, 'metrics.npy'),metrics)
 
 
 def visualize_gui(original_images, masks, results):
