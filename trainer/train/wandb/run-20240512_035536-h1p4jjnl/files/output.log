@@ -6,3 +6,57 @@ Visualize save : 1/1000
 Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_1.pt
 Visualize save : 2/1000
 
+  0%|          | 2/1000 [00:30<4:11:34, 15.13s/it]
+
+  0%|          | 3/1000 [00:44<4:05:45, 14.79s/it]
+
+  0%|          | 4/1000 [00:58<4:03:00, 14.64s/it]
+Visualize save : 4/1000
+Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_4.pt
+
+  0%|          | 5/1000 [01:14<4:07:48, 14.94s/it]
+
+  1%|          | 6/1000 [01:28<4:03:19, 14.69s/it]
+Visualize save : 6/1000
+
+  1%|          | 7/1000 [01:43<4:04:09, 14.75s/it]
+Visualize save : 7/1000
+
+  1%|          | 8/1000 [01:57<4:00:51, 14.57s/it]
+Visualize save : 8/1000
+Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_8.pt
+Visualize save : 9/1000
+
+  1%|          | 9/1000 [02:12<4:00:13, 14.54s/it]
+Visualize save : 10/1000
+
+  1%|          | 10/1000 [02:26<3:58:03, 14.43s/it]
+Visualize save : 11/1000
+
+  1%|          | 11/1000 [02:40<3:56:45, 14.36s/it]
+Visualize save : 12/1000
+
+  1%|          | 12/1000 [03:00<4:21:46, 15.90s/it]
+Visualize save : 13/1000
+
+  1%|▏         | 13/1000 [03:15<4:17:26, 15.65s/it]
+Visualize save : 14/1000
+
+  1%|▏         | 14/1000 [03:29<4:11:09, 15.28s/it]
+Visualize save : 15/1000
+
+  2%|▏         | 15/1000 [03:43<4:05:46, 14.97s/it]
+Visualize save : 16/1000
+
+  2%|▏         | 16/1000 [03:58<4:01:52, 14.75s/it]
+Visualize save : 17/1000
+
+  2%|▏         | 17/1000 [04:12<3:58:52, 14.58s/it]
+Visualize save : 18/1000
+
+  2%|▏         | 18/1000 [04:27<4:00:46, 14.71s/it]
+Visualize save : 19/1000
+
+  2%|▏         | 19/1000 [04:42<4:02:16, 14.82s/it]
+Visualize save : 20/1000
+

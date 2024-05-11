@@ -106,7 +106,7 @@ class Train(nn.Module):
     
     def setup_train(self, args):
         self.epochs = args.epochs
-        self.loss_fn = nn.BCEWithLogitsLoss().to(self.device)
+        self.loss_fn = nn.BCELoss().to(self.device)
         
     def setup_optimizers(self, args):
         self.optimizer = optim.AdamW(self.model.parameters(), lr=args.learning_rate, betas=(0, 0.9))
@@ -141,9 +141,10 @@ class Train(nn.Module):
                 loss = self.loss_fn(outputs, masks)
                 loss.backward()
                 self.optimizer.step()
-                train_losses += loss.item()
 
                 acc, iou = calculate_metrics(outputs, masks, threshold=0.5)
+
+                train_losses += loss.item()
                 train_accs += acc
                 train_ious += iou
             # Validation phase
@@ -154,9 +155,10 @@ class Train(nn.Module):
                     outputs = self.model(images)
                     # BCE Logistic Loss
                     loss = self.loss_fn(outputs, masks)
-                    valid_losses += loss.item()
 
                     acc, iou = calculate_metrics(outputs, masks, threshold=0.5)
+
+                    valid_losses += loss.item()
                     valid_accs += acc
                     valid_ious += iou
     
