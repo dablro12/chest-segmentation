@@ -1,0 +1,176 @@
+2024-05-12 04:08:53.066153: I tensorflow/core/util/port.cc:110] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2024-05-12 04:08:53.067334: I tensorflow/tsl/cuda/cudart_stub.cc:28] Could not find cuda drivers on your machine, GPU will not be used.
+2024-05-12 04:08:53.091410: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-05-12 04:08:53.501367: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+wandb: Currently logged in as: dablro1232. Use `wandb login --relogin` to force relogin
+wandb: wandb version 0.17.0 is available!  To upgrade, please run:
+wandb:  $ pip install wandb --upgrade
+wandb: Tracking run with wandb version 0.16.4
+wandb: Run data is saved locally in /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040854-fiqghl54
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run pious-fire-8
+wandb: ⭐️ View project at https://wandb.ai/dablro1232/Chest-segmentation
+wandb: 🚀 View run at https://wandb.ai/dablro1232/Chest-segmentation/runs/fiqghl54
+CUDA Status : cuda
+Model: Unet++ loaded successfully!! | pretrained : imagenet
+  0%|          | 0/1000 [00:00<?, ?it/s]  0%|          | 1/1000 [00:18<5:14:19, 18.88s/it]  0%|          | 2/1000 [00:36<5:04:50, 18.33s/it]  0%|          | 3/1000 [00:58<5:31:25, 19.95s/it]  0%|          | 4/1000 [01:19<5:36:21, 20.26s/it]  0%|          | 5/1000 [01:43<5:57:27, 21.56s/it]  1%|          | 6/1000 [02:02<5:42:40, 20.68s/it]  1%|          | 7/1000 [02:20<5:26:23, 19.72s/it]  1%|          | 8/1000 [02:38<5:17:15, 19.19s/it]  1%|          | 9/1000 [02:55<5:06:27, 18.55s/it]  1%|          | 10/1000 [03:12<4:58:42, 18.10s/it]  1%|          | 11/1000 [03:31<5:02:35, 18.36s/it]  1%|          | 12/1000 [03:48<4:56:54, 18.03s/it]  1%|▏         | 13/1000 [04:05<4:53:07, 17.82s/it]  1%|▏         | 14/1000 [04:22<4:47:39, 17.50s/it]  2%|▏         | 15/1000 [04:39<4:45:10, 17.37s/it]  2%|▏         | 16/1000 [04:58<4:53:50, 17.92s/it]  2%|▏         | 17/1000 [05:17<4:58:34, 18.22s/it]  2%|▏         | 18/1000 [05:35<4:57:22, 18.17s/it]  2%|▏         | 19/1000 [05:53<4:55:26, 18.07s/it]  2%|▏         | 20/1000 [06:11<4:53:05, 17.94s/it]  2%|▏         | 21/1000 [06:31<5:05:53, 18.75s/it]  2%|▏         | 22/1000 [06:51<5:08:20, 18.92s/it]  2%|▏         | 23/1000 [07:10<5:10:33, 19.07s/it]  2%|▏         | 24/1000 [07:29<5:09:18, 19.02s/it]  2%|▎         | 25/1000 [07:47<5:05:24, 18.79s/it]  3%|▎         | 26/1000 [08:06<5:06:14, 18.86s/it]  3%|▎         | 27/1000 [08:25<5:03:55, 18.74s/it]  3%|▎         | 28/1000 [08:45<5:09:26, 19.10s/it]  3%|▎         | 29/1000 [09:04<5:11:19, 19.24s/it]  3%|▎         | 30/1000 [09:24<5:12:46, 19.35s/it]  3%|▎         | 31/1000 [09:42<5:06:38, 18.99s/it]  3%|▎         | 32/1000 [10:01<5:06:43, 19.01s/it]  3%|▎         | 33/1000 [10:18<4:57:28, 18.46s/it]  3%|▎         | 34/1000 [10:37<4:58:17, 18.53s/it]  4%|▎         | 35/1000 [10:57<5:03:44, 18.89s/it]  4%|▎         | 36/1000 [11:16<5:04:26, 18.95s/it]  4%|▎         | 37/1000 [11:35<5:07:00, 19.13s/it]  4%|▍         | 38/1000 [11:52<4:56:21, 18.48s/it]  4%|▍         | 39/1000 [12:10<4:52:31, 18.26s/it]  4%|▍         | 40/1000 [12:28<4:49:58, 18.12s/it]  4%|▍         | 41/1000 [12:46<4:49:14, 18.10s/it]  4%|▍         | 42/1000 [13:04<4:48:11, 18.05s/it]  4%|▍         | 43/1000 [13:20<4:36:24, 17.33s/it]  4%|▍         | 44/1000 [13:35<4:27:02, 16.76s/it]  4%|▍         | 45/1000 [13:51<4:20:59, 16.40s/it]  5%|▍         | 46/1000 [14:06<4:17:28, 16.19s/it]  5%|▍         | 47/1000 [14:22<4:15:41, 16.10s/it]  5%|▍         | 48/1000 [14:38<4:16:24, 16.16s/it]  5%|▍         | 49/1000 [14:54<4:14:38, 16.07s/it]  5%|▌         | 50/1000 [15:10<4:12:59, 15.98s/it]  5%|▌         | 51/1000 [15:27<4:18:59, 16.37s/it]  5%|▌         | 52/1000 [15:43<4:16:51, 16.26s/it]  5%|▌         | 53/1000 [16:00<4:18:50, 16.40s/it]  5%|▌         | 54/1000 [16:16<4:14:03, 16.11s/it]  6%|▌         | 55/1000 [16:31<4:10:47, 15.92s/it]  6%|▌         | 56/1000 [16:47<4:10:56, 15.95s/it]  6%|▌         | 57/1000 [17:03<4:11:49, 16.02s/it]  6%|▌         | 58/1000 [17:19<4:08:56, 15.86s/it]  6%|▌         | 59/1000 [17:35<4:11:00, 16.00s/it]  6%|▌         | 60/1000 [17:54<4:26:49, 17.03s/it]  6%|▌         | 61/1000 [18:12<4:27:23, 17.09s/it]  6%|▌         | 62/1000 [18:28<4:23:58, 16.89s/it]  6%|▋         | 63/1000 [18:45<4:25:43, 17.02s/it]  6%|▋         | 64/1000 [19:02<4:21:12, 16.74s/it]  6%|▋         | 65/1000 [19:18<4:20:43, 16.73s/it]  7%|▋         | 66/1000 [19:34<4:14:48, 16.37s/it]  7%|▋         | 67/1000 [19:49<4:10:09, 16.09s/it]  7%|▋         | 68/1000 [20:04<4:06:20, 15.86s/it]  7%|▋         | 69/1000 [20:20<4:03:19, 15.68s/it]  7%|▋         | 70/1000 [20:37<4:12:06, 16.27s/it]  7%|▋         | 71/1000 [20:54<4:14:43, 16.45s/it]  7%|▋         | 72/1000 [21:11<4:16:32, 16.59s/it]  7%|▋         | 73/1000 [21:26<4:09:52, 16.17s/it]  7%|▋         | 74/1000 [21:43<4:10:48, 16.25s/it]  8%|▊         | 75/1000 [22:05<4:37:11, 17.98s/it]  8%|▊         | 76/1000 [22:22<4:31:32, 17.63s/it]  8%|▊         | 77/1000 [22:39<4:29:48, 17.54s/it]  8%|▊         | 78/1000 [22:56<4:26:17, 17.33s/it]  8%|▊         | 79/1000 [23:14<4:28:18, 17.48s/it]Visualize save : 1/1000
+Saved model at /mnt/HDD/chest-seg_models/unet_plus_plus_v1_240512/model_1.pt
+Visualize save : 2/1000
+Saved model at /mnt/HDD/chest-seg_models/unet_plus_plus_v1_240512/model_2.pt
+Visualize save : 3/1000
+Saved model at /mnt/HDD/chest-seg_models/unet_plus_plus_v1_240512/model_3.pt
+Visualize save : 4/1000
+Saved model at /mnt/HDD/chest-seg_models/unet_plus_plus_v1_240512/model_4.pt
+Visualize save : 5/1000
+Saved model at /mnt/HDD/chest-seg_models/unet_plus_plus_v1_240512/model_5.pt
+Visualize save : 6/1000
+Saved model at /mnt/HDD/chest-seg_models/unet_plus_plus_v1_240512/model_6.pt
+Visualize save : 7/1000
+Saved model at /mnt/HDD/chest-seg_models/unet_plus_plus_v1_240512/model_7.pt
+Visualize save : 8/1000
+Saved model at /mnt/HDD/chest-seg_models/unet_plus_plus_v1_240512/model_8.pt
+Visualize save : 9/1000
+Saved model at /mnt/HDD/chest-seg_models/unet_plus_plus_v1_240512/model_9.pt
+Visualize save : 10/1000
+Saved model at /mnt/HDD/chest-seg_models/unet_plus_plus_v1_240512/model_10.pt
+Visualize save : 11/1000
+Saved model at /mnt/HDD/chest-seg_models/unet_plus_plus_v1_240512/model_11.pt
+Visualize save : 12/1000
+Saved model at /mnt/HDD/chest-seg_models/unet_plus_plus_v1_240512/model_12.pt
+Visualize save : 13/1000
+Saved model at /mnt/HDD/chest-seg_models/unet_plus_plus_v1_240512/model_13.pt
+Visualize save : 14/1000
+Saved model at /mnt/HDD/chest-seg_models/unet_plus_plus_v1_240512/model_14.pt
+Visualize save : 15/1000
+Saved model at /mnt/HDD/chest-seg_models/unet_plus_plus_v1_240512/model_15.pt
+Visualize save : 16/1000
+Saved model at /mnt/HDD/chest-seg_models/unet_plus_plus_v1_240512/model_16.pt
+Visualize save : 17/1000
+Saved model at /mnt/HDD/chest-seg_models/unet_plus_plus_v1_240512/model_17.pt
+Visualize save : 18/1000
+Saved model at /mnt/HDD/chest-seg_models/unet_plus_plus_v1_240512/model_18.pt
+Visualize save : 19/1000
+Saved model at /mnt/HDD/chest-seg_models/unet_plus_plus_v1_240512/model_19.pt
+Visualize save : 20/1000
+Saved model at /mnt/HDD/chest-seg_models/unet_plus_plus_v1_240512/model_20.pt
+Visualize save : 21/1000
+Saved model at /mnt/HDD/chest-seg_models/unet_plus_plus_v1_240512/model_21.pt
+Visualize save : 22/1000
+Saved model at /mnt/HDD/chest-seg_models/unet_plus_plus_v1_240512/model_22.pt
+Visualize save : 23/1000
+Saved model at /mnt/HDD/chest-seg_models/unet_plus_plus_v1_240512/model_23.pt
+Visualize save : 24/1000
+Saved model at /mnt/HDD/chest-seg_models/unet_plus_plus_v1_240512/model_24.pt
+Visualize save : 25/1000
+Saved model at /mnt/HDD/chest-seg_models/unet_plus_plus_v1_240512/model_25.pt
+Visualize save : 26/1000
+Saved model at /mnt/HDD/chest-seg_models/unet_plus_plus_v1_240512/model_26.pt
+Visualize save : 27/1000
+Saved model at /mnt/HDD/chest-seg_models/unet_plus_plus_v1_240512/model_27.pt
+Visualize save : 28/1000
+Saved model at /mnt/HDD/chest-seg_models/unet_plus_plus_v1_240512/model_28.pt
+Visualize save : 29/1000
+Saved model at /mnt/HDD/chest-seg_models/unet_plus_plus_v1_240512/model_29.pt
+Visualize save : 30/1000
+Saved model at /mnt/HDD/chest-seg_models/unet_plus_plus_v1_240512/model_30.pt
+Visualize save : 31/1000
+Saved model at /mnt/HDD/chest-seg_models/unet_plus_plus_v1_240512/model_31.pt
+Visualize save : 32/1000
+Saved model at /mnt/HDD/chest-seg_models/unet_plus_plus_v1_240512/model_32.pt
+Visualize save : 33/1000
+Saved model at /mnt/HDD/chest-seg_models/unet_plus_plus_v1_240512/model_33.pt
+Visualize save : 34/1000
+Saved model at /mnt/HDD/chest-seg_models/unet_plus_plus_v1_240512/model_34.pt
+Visualize save : 35/1000
+Saved model at /mnt/HDD/chest-seg_models/unet_plus_plus_v1_240512/model_35.pt
+Visualize save : 36/1000
+Saved model at /mnt/HDD/chest-seg_models/unet_plus_plus_v1_240512/model_36.pt
+Visualize save : 37/1000
+Saved model at /mnt/HDD/chest-seg_models/unet_plus_plus_v1_240512/model_37.pt
+Visualize save : 38/1000
+Saved model at /mnt/HDD/chest-seg_models/unet_plus_plus_v1_240512/model_38.pt
+Visualize save : 39/1000
+Saved model at /mnt/HDD/chest-seg_models/unet_plus_plus_v1_240512/model_39.pt
+Visualize save : 40/1000
+Saved model at /mnt/HDD/chest-seg_models/unet_plus_plus_v1_240512/model_40.pt
+Visualize save : 41/1000
+Saved model at /mnt/HDD/chest-seg_models/unet_plus_plus_v1_240512/model_41.pt
+Visualize save : 42/1000
+Saved model at /mnt/HDD/chest-seg_models/unet_plus_plus_v1_240512/model_42.pt
+Visualize save : 43/1000
+Saved model at /mnt/HDD/chest-seg_models/unet_plus_plus_v1_240512/model_43.pt
+Visualize save : 44/1000
+Saved model at /mnt/HDD/chest-seg_models/unet_plus_plus_v1_240512/model_44.pt
+Visualize save : 45/1000
+Saved model at /mnt/HDD/chest-seg_models/unet_plus_plus_v1_240512/model_45.pt
+Visualize save : 46/1000
+Saved model at /mnt/HDD/chest-seg_models/unet_plus_plus_v1_240512/model_46.pt
+Visualize save : 47/1000
+Saved model at /mnt/HDD/chest-seg_models/unet_plus_plus_v1_240512/model_47.pt
+Visualize save : 48/1000
+Saved model at /mnt/HDD/chest-seg_models/unet_plus_plus_v1_240512/model_48.pt
+Visualize save : 49/1000
+Saved model at /mnt/HDD/chest-seg_models/unet_plus_plus_v1_240512/model_49.pt
+Visualize save : 50/1000
+Saved model at /mnt/HDD/chest-seg_models/unet_plus_plus_v1_240512/model_50.pt
+Visualize save : 51/1000
+Saved model at /mnt/HDD/chest-seg_models/unet_plus_plus_v1_240512/model_51.pt
+Visualize save : 52/1000
+Saved model at /mnt/HDD/chest-seg_models/unet_plus_plus_v1_240512/model_52.pt
+Visualize save : 53/1000
+Saved model at /mnt/HDD/chest-seg_models/unet_plus_plus_v1_240512/model_53.pt
+Visualize save : 54/1000
+Saved model at /mnt/HDD/chest-seg_models/unet_plus_plus_v1_240512/model_54.pt
+Visualize save : 55/1000
+Saved model at /mnt/HDD/chest-seg_models/unet_plus_plus_v1_240512/model_55.pt
+Visualize save : 56/1000
+Saved model at /mnt/HDD/chest-seg_models/unet_plus_plus_v1_240512/model_56.pt
+Visualize save : 57/1000
+Saved model at /mnt/HDD/chest-seg_models/unet_plus_plus_v1_240512/model_57.pt
+Visualize save : 58/1000
+Saved model at /mnt/HDD/chest-seg_models/unet_plus_plus_v1_240512/model_58.pt
+Visualize save : 59/1000
+Saved model at /mnt/HDD/chest-seg_models/unet_plus_plus_v1_240512/model_59.pt
+Visualize save : 60/1000
+Saved model at /mnt/HDD/chest-seg_models/unet_plus_plus_v1_240512/model_60.pt
+Visualize save : 61/1000
+Saved model at /mnt/HDD/chest-seg_models/unet_plus_plus_v1_240512/model_61.pt
+Visualize save : 62/1000
+Saved model at /mnt/HDD/chest-seg_models/unet_plus_plus_v1_240512/model_62.pt
+Visualize save : 63/1000
+Saved model at /mnt/HDD/chest-seg_models/unet_plus_plus_v1_240512/model_63.pt
+Visualize save : 64/1000
+Saved model at /mnt/HDD/chest-seg_models/unet_plus_plus_v1_240512/model_64.pt
+Visualize save : 65/1000
+Saved model at /mnt/HDD/chest-seg_models/unet_plus_plus_v1_240512/model_65.pt
+Visualize save : 66/1000
+Saved model at /mnt/HDD/chest-seg_models/unet_plus_plus_v1_240512/model_66.pt
+Visualize save : 67/1000
+Saved model at /mnt/HDD/chest-seg_models/unet_plus_plus_v1_240512/model_67.pt
+Visualize save : 68/1000
+Saved model at /mnt/HDD/chest-seg_models/unet_plus_plus_v1_240512/model_68.pt
+Visualize save : 69/1000
+Saved model at /mnt/HDD/chest-seg_models/unet_plus_plus_v1_240512/model_69.pt
+Visualize save : 70/1000
+Saved model at /mnt/HDD/chest-seg_models/unet_plus_plus_v1_240512/model_70.pt
+Visualize save : 71/1000
+Saved model at /mnt/HDD/chest-seg_models/unet_plus_plus_v1_240512/model_71.pt
+Visualize save : 72/1000
+Saved model at /mnt/HDD/chest-seg_models/unet_plus_plus_v1_240512/model_72.pt
+Visualize save : 73/1000
+Saved model at /mnt/HDD/chest-seg_models/unet_plus_plus_v1_240512/model_73.pt
+Visualize save : 74/1000
+Saved model at /mnt/HDD/chest-seg_models/unet_plus_plus_v1_240512/model_74.pt
+Visualize save : 75/1000
+Saved model at /mnt/HDD/chest-seg_models/unet_plus_plus_v1_240512/model_75.pt
+Visualize save : 76/1000
+Saved model at /mnt/HDD/chest-seg_models/unet_plus_plus_v1_240512/model_76.pt
+Visualize save : 77/1000
+Saved model at /mnt/HDD/chest-seg_models/unet_plus_plus_v1_240512/model_77.pt
+Visualize save : 78/1000
+Saved model at /mnt/HDD/chest-seg_models/unet_plus_plus_v1_240512/model_78.pt
+Visualize save : 79/1000
+Saved model at /mnt/HDD/chest-seg_models/unet_plus_plus_v1_240512/model_79.pt
+Visualize save : 80/1000
+  8%|▊         | 80/1000 [23:31<4:27:14, 17.43s/it]  8%|▊         | 81/1000 [23:48<4:22:57, 17.17s/it]  8%|▊         | 82/1000 [24:15<5:07:51, 20.12s/it]  8%|▊         | 83/1000 [24:37<5:16:38, 20.72s/it]  8%|▊         | 84/1000 [24:52<4:51:55, 19.12s/it]  8%|▊         | 85/1000 [25:08<4:37:59, 18.23s/it]  9%|▊         | 86/1000 [25:24<4:25:09, 17.41s/it]  9%|▊         | 87/1000 [25:40<4:18:00, 16.96s/it]

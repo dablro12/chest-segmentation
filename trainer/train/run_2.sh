@@ -1,4 +1,4 @@
-python ./run.py --model "unet_plus_plus" \
+python ./run.py --model "r2unet" \
                 --version "v1" \
                 --save_path "/mnt/HDD/chest-seg_models" \
                 --cuda "0"\
@@ -10,6 +10,6 @@ python ./run.py --model "unet_plus_plus" \
                 --learning_rate 0.0001\
                 --scheduler "lambda"\
                 --pretrain "no" --pretrained_model "premodel" --error_signal no\
-                --wandb "yes"\ > output2.log 2>&1 &
+                --wandb "yes"\ > r2unet.log 2>&1 &
 
 

@@ -1,0 +1,1312 @@
+2024-05-12 04:08:41,247 INFO    StreamThr :316323 [internal.py:wandb_internal():86] W&B internal server running at pid: 316323, started at: 2024-05-12 04:08:41.246948
+2024-05-12 04:08:41,247 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status
+2024-05-12 04:08:41,252 INFO    WriterThread:316323 [datastore.py:open_for_write():87] open: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/run-do41msho.wandb
+2024-05-12 04:08:41,252 DEBUG   SenderThread:316323 [sender.py:send():378] send: header
+2024-05-12 04:08:41,274 DEBUG   SenderThread:316323 [sender.py:send():378] send: run
+2024-05-12 04:08:41,754 INFO    SenderThread:316323 [dir_watcher.py:__init__():211] watching files in: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files
+2024-05-12 04:08:41,754 INFO    SenderThread:316323 [sender.py:_start_run_threads():1099] run started: do41msho with start time 1715454521.246994
+2024-05-12 04:08:41,761 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: check_version
+2024-05-12 04:08:41,761 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: check_version
+2024-05-12 04:08:42,646 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: run_start
+2024-05-12 04:08:42,672 DEBUG   HandlerThread:316323 [system_info.py:__init__():26] System info init
+2024-05-12 04:08:42,672 DEBUG   HandlerThread:316323 [system_info.py:__init__():41] System info init done
+2024-05-12 04:08:42,672 INFO    HandlerThread:316323 [system_monitor.py:start():194] Starting system monitor
+2024-05-12 04:08:42,672 INFO    SystemMonitor:316323 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-05-12 04:08:42,672 INFO    HandlerThread:316323 [system_monitor.py:probe():214] Collecting system info
+2024-05-12 04:08:42,673 INFO    SystemMonitor:316323 [interfaces.py:start():190] Started cpu monitoring
+2024-05-12 04:08:42,673 INFO    SystemMonitor:316323 [interfaces.py:start():190] Started disk monitoring
+2024-05-12 04:08:42,673 INFO    SystemMonitor:316323 [interfaces.py:start():190] Started gpu monitoring
+2024-05-12 04:08:42,673 INFO    SystemMonitor:316323 [interfaces.py:start():190] Started memory monitoring
+2024-05-12 04:08:42,674 INFO    SystemMonitor:316323 [interfaces.py:start():190] Started network monitoring
+2024-05-12 04:08:42,702 DEBUG   HandlerThread:316323 [system_info.py:probe():150] Probing system
+2024-05-12 04:08:42,709 DEBUG   HandlerThread:316323 [system_info.py:_probe_git():135] Probing git
+2024-05-12 04:08:42,725 DEBUG   HandlerThread:316323 [system_info.py:_probe_git():143] Probing git done
+2024-05-12 04:08:42,725 DEBUG   HandlerThread:316323 [system_info.py:probe():198] Probing system done
+2024-05-12 04:08:42,725 DEBUG   HandlerThread:316323 [system_monitor.py:probe():223] {'os': 'Linux-5.15.0-105-generic-x86_64-with-glibc2.17', 'python': '3.8.18', 'heartbeatAt': '2024-05-11T19:08:42.702773', 'startedAt': '2024-05-11T19:08:41.242842', 'docker': None, 'cuda': None, 'args': ('--model', 'manet', '--version', 'v1', '--save_path', '/mnt/HDD/chest-seg_models', '--cuda', '0', '--ts_batch_size', '64', '--vs_batch_size', '8', '--epochs', '1000', '--loss', 'BCE', '--optimizer', 'AdamW', '--learning_rate', '0.0001', '--scheduler', 'lambda', '--pretrain', 'no', '--pretrained_model', 'premodel', '--error_signal', 'no', '--wandb', 'yes '), 'state': 'running', 'program': './run.py', 'codePathLocal': 'run.py', 'codePath': 'trainer/train/run.py', 'git': {'remote': 'https://github.com/dablro12/chest-segmentation.git', 'commit': '25b30ed2c2c373153ee67f971d463ec6b1903c1c'}, 'email': 'dablro1232@gmail.com', 'root': '/home/eiden/eiden/chest-segmentation/src', 'host': 'eiden', 'username': 'eiden', 'executable': '/home/eiden/anaconda3/envs/eiden/bin/python', 'cpu_count': 8, 'cpu_count_logical': 16, 'cpu_freq': {'current': 3.3345625, 'min': 800.0, 'max': 5150.0}, 'cpu_freq_per_core': [{'current': 3.5, 'min': 800.0, 'max': 5100.0}, {'current': 3.5, 'min': 800.0, 'max': 5100.0}, {'current': 3.5, 'min': 800.0, 'max': 5100.0}, {'current': 3.5, 'min': 800.0, 'max': 5100.0}, {'current': 3.5, 'min': 800.0, 'max': 5300.0}, {'current': 3.5, 'min': 800.0, 'max': 5300.0}, {'current': 3.5, 'min': 800.0, 'max': 5100.0}, {'current': 0.853, 'min': 800.0, 'max': 5100.0}, {'current': 3.5, 'min': 800.0, 'max': 5100.0}, {'current': 3.5, 'min': 800.0, 'max': 5100.0}, {'current': 3.5, 'min': 800.0, 'max': 5100.0}, {'current': 3.5, 'min': 800.0, 'max': 5100.0}, {'current': 3.5, 'min': 800.0, 'max': 5300.0}, {'current': 3.5, 'min': 800.0, 'max': 5300.0}, {'current': 3.5, 'min': 800.0, 'max': 5100.0}, {'current': 3.5, 'min': 800.0, 'max': 5100.0}], 'disk': {'/': {'total': 915.3232879638672, 'used': 554.5503196716309}}, 'gpu': 'NVIDIA GeForce RTX 4090', 'gpu_count': 1, 'gpu_devices': [{'name': 'NVIDIA GeForce RTX 4090', 'memory_total': 25757220864}], 'memory': {'total': 31.16965103149414}}
+2024-05-12 04:08:42,726 INFO    HandlerThread:316323 [system_monitor.py:probe():224] Finished collecting system info
+2024-05-12 04:08:42,726 INFO    HandlerThread:316323 [system_monitor.py:probe():227] Publishing system info
+2024-05-12 04:08:42,726 DEBUG   HandlerThread:316323 [system_info.py:_save_conda():207] Saving list of conda packages installed into the current environment
+2024-05-12 04:08:42,755 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_created():271] file/dir created: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/conda-environment.yaml
+2024-05-12 04:08:45,754 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/conda-environment.yaml
+2024-05-12 04:08:45,797 DEBUG   HandlerThread:316323 [system_info.py:_save_conda():219] Saving conda packages done
+2024-05-12 04:08:45,798 INFO    HandlerThread:316323 [system_monitor.py:probe():229] Finished publishing system info
+2024-05-12 04:08:45,801 DEBUG   SenderThread:316323 [sender.py:send():378] send: files
+2024-05-12 04:08:45,801 INFO    SenderThread:316323 [sender.py:_save_file():1365] saving file wandb-metadata.json with policy now
+2024-05-12 04:08:45,919 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: python_packages
+2024-05-12 04:08:45,919 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: python_packages
+2024-05-12 04:08:45,919 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-12 04:08:45,919 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: stop_status
+2024-05-12 04:08:45,920 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-12 04:08:46,239 DEBUG   SenderThread:316323 [sender.py:send():378] send: telemetry
+2024-05-12 04:08:46,239 DEBUG   SenderThread:316323 [sender.py:send():378] send: telemetry
+2024-05-12 04:08:46,239 DEBUG   SenderThread:316323 [sender.py:send():378] send: run
+2024-05-12 04:08:46,513 INFO    SenderThread:316323 [sender.py:send_run():973] updated run: do41msho
+2024-05-12 04:08:46,513 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:08:46,541 INFO    wandb-upload_0:316323 [upload_job.py:push():131] Uploaded file /tmp/tmpran4247uwandb/46eu938l-wandb-metadata.json
+2024-05-12 04:08:46,755 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/config.yaml
+2024-05-12 04:08:46,755 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_created():271] file/dir created: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/output.log
+2024-05-12 04:08:46,755 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_created():271] file/dir created: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/requirements.txt
+2024-05-12 04:08:46,755 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_created():271] file/dir created: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/wandb-metadata.json
+2024-05-12 04:08:48,755 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/output.log
+2024-05-12 04:08:51,514 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:08:56,514 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:08:58,791 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-12 04:09:00,757 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/output.log
+2024-05-12 04:09:01,499 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-12 04:09:01,499 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-12 04:09:01,499 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: stop_status
+2024-05-12 04:09:01,774 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:09:02,757 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/output.log
+2024-05-12 04:09:06,775 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:09:11,777 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:09:12,764 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/config.yaml
+2024-05-12 04:09:16,104 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-12 04:09:16,105 DEBUG   SenderThread:316323 [sender.py:send():378] send: history
+2024-05-12 04:09:16,105 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: summary_record
+2024-05-12 04:09:16,106 INFO    SenderThread:316323 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-05-12 04:09:16,558 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-12 04:09:16,558 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: stop_status
+2024-05-12 04:09:16,600 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-12 04:09:16,765 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_created():271] file/dir created: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/wandb-summary.json
+2024-05-12 04:09:17,821 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:09:18,766 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/output.log
+2024-05-12 04:09:22,767 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/output.log
+2024-05-12 04:09:23,429 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:09:28,429 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:09:31,507 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-12 04:09:31,507 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: stop_status
+2024-05-12 04:09:31,509 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-12 04:09:33,770 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:09:34,372 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-12 04:09:34,373 DEBUG   SenderThread:316323 [sender.py:send():378] send: history
+2024-05-12 04:09:34,373 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: summary_record
+2024-05-12 04:09:34,374 INFO    SenderThread:316323 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-05-12 04:09:34,769 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/wandb-summary.json
+2024-05-12 04:09:36,770 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/output.log
+2024-05-12 04:09:39,423 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:09:40,771 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/output.log
+2024-05-12 04:09:42,674 DEBUG   SystemMonitor:316323 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-05-12 04:09:42,675 DEBUG   SenderThread:316323 [sender.py:send():378] send: stats
+2024-05-12 04:09:44,675 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:09:46,507 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-12 04:09:46,507 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-12 04:09:46,508 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: stop_status
+2024-05-12 04:09:49,826 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:09:52,645 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-12 04:09:52,645 DEBUG   SenderThread:316323 [sender.py:send():378] send: history
+2024-05-12 04:09:52,646 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: summary_record
+2024-05-12 04:09:52,647 INFO    SenderThread:316323 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-05-12 04:09:52,773 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/wandb-summary.json
+2024-05-12 04:09:54,774 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/output.log
+2024-05-12 04:09:54,845 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:10:00,535 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:10:00,777 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/output.log
+2024-05-12 04:10:01,507 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-12 04:10:01,507 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-12 04:10:01,507 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: stop_status
+2024-05-12 04:10:05,707 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:10:10,707 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:10:12,675 DEBUG   SenderThread:316323 [sender.py:send():378] send: stats
+2024-05-12 04:10:14,634 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-12 04:10:14,635 DEBUG   SenderThread:316323 [sender.py:send():378] send: history
+2024-05-12 04:10:14,635 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: summary_record
+2024-05-12 04:10:14,635 INFO    SenderThread:316323 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-05-12 04:10:14,779 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/wandb-summary.json
+2024-05-12 04:10:15,827 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:10:16,780 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/output.log
+2024-05-12 04:10:20,827 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:10:21,847 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-12 04:10:21,848 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-12 04:10:21,849 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: stop_status
+2024-05-12 04:10:24,782 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/output.log
+2024-05-12 04:10:26,142 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:10:31,142 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:10:36,143 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:10:36,162 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-12 04:10:36,162 DEBUG   SenderThread:316323 [sender.py:send():378] send: history
+2024-05-12 04:10:36,163 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: summary_record
+2024-05-12 04:10:36,164 INFO    SenderThread:316323 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-05-12 04:10:36,785 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/wandb-summary.json
+2024-05-12 04:10:38,787 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/output.log
+2024-05-12 04:10:41,337 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:10:42,677 DEBUG   SenderThread:316323 [sender.py:send():378] send: stats
+2024-05-12 04:10:43,160 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-12 04:10:43,160 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-12 04:10:43,162 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: stop_status
+2024-05-12 04:10:44,789 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/output.log
+2024-05-12 04:10:46,473 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:10:51,473 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:10:56,474 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:10:57,151 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-12 04:10:57,151 DEBUG   SenderThread:316323 [sender.py:send():378] send: history
+2024-05-12 04:10:57,151 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: summary_record
+2024-05-12 04:10:57,152 INFO    SenderThread:316323 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-05-12 04:10:57,791 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/wandb-summary.json
+2024-05-12 04:10:58,791 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/output.log
+2024-05-12 04:11:02,134 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:11:02,134 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-12 04:11:02,135 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-12 04:11:02,136 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: stop_status
+2024-05-12 04:11:04,793 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/output.log
+2024-05-12 04:11:07,405 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:11:12,406 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:11:12,677 DEBUG   SenderThread:316323 [sender.py:send():378] send: stats
+2024-05-12 04:11:16,022 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-12 04:11:16,023 DEBUG   SenderThread:316323 [sender.py:send():378] send: history
+2024-05-12 04:11:16,023 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: summary_record
+2024-05-12 04:11:16,024 INFO    SenderThread:316323 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-05-12 04:11:16,796 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/wandb-summary.json
+2024-05-12 04:11:18,224 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:11:18,797 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/output.log
+2024-05-12 04:11:19,088 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-12 04:11:19,089 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-12 04:11:19,089 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: stop_status
+2024-05-12 04:11:20,797 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/output.log
+2024-05-12 04:11:23,393 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:11:28,394 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:11:33,377 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-12 04:11:33,378 DEBUG   SenderThread:316323 [sender.py:send():378] send: history
+2024-05-12 04:11:33,378 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: summary_record
+2024-05-12 04:11:33,378 INFO    SenderThread:316323 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-05-12 04:11:33,579 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:11:33,800 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/wandb-summary.json
+2024-05-12 04:11:34,800 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/output.log
+2024-05-12 04:11:36,458 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-12 04:11:36,459 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: stop_status
+2024-05-12 04:11:36,460 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-12 04:11:38,678 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:11:38,801 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/output.log
+2024-05-12 04:11:42,678 DEBUG   SenderThread:316323 [sender.py:send():378] send: stats
+2024-05-12 04:11:43,679 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:11:48,679 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:11:50,143 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-12 04:11:50,144 DEBUG   SenderThread:316323 [sender.py:send():378] send: history
+2024-05-12 04:11:50,144 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: summary_record
+2024-05-12 04:11:50,144 INFO    SenderThread:316323 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-05-12 04:11:50,803 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/wandb-summary.json
+2024-05-12 04:11:52,698 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-12 04:11:52,698 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-12 04:11:52,699 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: stop_status
+2024-05-12 04:11:52,803 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/output.log
+2024-05-12 04:11:53,978 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:11:54,804 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/output.log
+2024-05-12 04:11:58,978 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:12:03,979 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:12:06,274 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-12 04:12:06,274 DEBUG   SenderThread:316323 [sender.py:send():378] send: history
+2024-05-12 04:12:06,274 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: summary_record
+2024-05-12 04:12:06,275 INFO    SenderThread:316323 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-05-12 04:12:06,806 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/wandb-summary.json
+2024-05-12 04:12:08,806 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/output.log
+2024-05-12 04:12:08,856 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-12 04:12:08,856 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-12 04:12:08,856 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: stop_status
+2024-05-12 04:12:09,106 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:12:10,807 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/output.log
+2024-05-12 04:12:12,678 DEBUG   SenderThread:316323 [sender.py:send():378] send: stats
+2024-05-12 04:12:14,679 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:12:19,679 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:12:23,856 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-12 04:12:23,856 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-12 04:12:23,856 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: stop_status
+2024-05-12 04:12:24,279 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-12 04:12:24,279 DEBUG   SenderThread:316323 [sender.py:send():378] send: history
+2024-05-12 04:12:24,279 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: summary_record
+2024-05-12 04:12:24,279 INFO    SenderThread:316323 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-05-12 04:12:24,809 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/wandb-summary.json
+2024-05-12 04:12:25,447 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:12:26,810 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/output.log
+2024-05-12 04:12:28,810 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/output.log
+2024-05-12 04:12:30,740 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:12:35,741 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:12:38,856 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-12 04:12:38,856 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: stop_status
+2024-05-12 04:12:38,856 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-12 04:12:40,611 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-12 04:12:40,611 DEBUG   SenderThread:316323 [sender.py:send():378] send: history
+2024-05-12 04:12:40,612 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: summary_record
+2024-05-12 04:12:40,612 INFO    SenderThread:316323 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-05-12 04:12:40,779 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:12:40,812 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/wandb-summary.json
+2024-05-12 04:12:42,679 DEBUG   SenderThread:316323 [sender.py:send():378] send: stats
+2024-05-12 04:12:42,813 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/output.log
+2024-05-12 04:12:44,813 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/output.log
+2024-05-12 04:12:46,134 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:12:51,135 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:12:53,856 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-12 04:12:53,856 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: stop_status
+2024-05-12 04:12:53,856 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-12 04:12:57,066 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-12 04:12:57,066 DEBUG   SenderThread:316323 [sender.py:send():378] send: history
+2024-05-12 04:12:57,066 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: summary_record
+2024-05-12 04:12:57,066 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:12:57,067 INFO    SenderThread:316323 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-05-12 04:12:57,815 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/wandb-summary.json
+2024-05-12 04:12:58,815 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/output.log
+2024-05-12 04:13:00,816 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/output.log
+2024-05-12 04:13:02,623 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:13:07,624 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:13:08,856 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-12 04:13:08,856 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: stop_status
+2024-05-12 04:13:08,857 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-12 04:13:12,679 DEBUG   SenderThread:316323 [sender.py:send():378] send: stats
+2024-05-12 04:13:12,679 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:13:13,520 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-12 04:13:13,521 DEBUG   SenderThread:316323 [sender.py:send():378] send: history
+2024-05-12 04:13:13,521 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: summary_record
+2024-05-12 04:13:13,521 INFO    SenderThread:316323 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-05-12 04:13:13,818 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/wandb-summary.json
+2024-05-12 04:13:14,818 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/output.log
+2024-05-12 04:13:16,819 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/output.log
+2024-05-12 04:13:18,015 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:13:23,016 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:13:23,856 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-12 04:13:23,856 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: stop_status
+2024-05-12 04:13:23,856 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-12 04:13:28,102 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:13:29,459 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-12 04:13:29,460 DEBUG   SenderThread:316323 [sender.py:send():378] send: history
+2024-05-12 04:13:29,460 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: summary_record
+2024-05-12 04:13:29,460 INFO    SenderThread:316323 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-05-12 04:13:29,821 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/wandb-summary.json
+2024-05-12 04:13:30,821 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/output.log
+2024-05-12 04:13:32,822 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/output.log
+2024-05-12 04:13:33,972 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:13:38,856 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-12 04:13:38,856 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-12 04:13:38,856 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: stop_status
+2024-05-12 04:13:39,166 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:13:42,680 DEBUG   SenderThread:316323 [sender.py:send():378] send: stats
+2024-05-12 04:13:44,680 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:13:46,807 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-12 04:13:46,808 DEBUG   SenderThread:316323 [sender.py:send():378] send: history
+2024-05-12 04:13:46,808 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: summary_record
+2024-05-12 04:13:46,808 INFO    SenderThread:316323 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-05-12 04:13:46,825 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/wandb-summary.json
+2024-05-12 04:13:48,825 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/output.log
+2024-05-12 04:13:50,426 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:13:50,826 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/output.log
+2024-05-12 04:13:53,856 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-12 04:13:53,856 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: stop_status
+2024-05-12 04:13:53,856 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-12 04:13:56,170 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:14:01,171 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:14:04,232 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-12 04:14:04,232 DEBUG   SenderThread:316323 [sender.py:send():378] send: history
+2024-05-12 04:14:04,232 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: summary_record
+2024-05-12 04:14:04,233 INFO    SenderThread:316323 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-05-12 04:14:04,828 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/wandb-summary.json
+2024-05-12 04:14:06,412 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:14:06,829 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/output.log
+2024-05-12 04:14:08,829 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/output.log
+2024-05-12 04:14:08,856 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-12 04:14:08,856 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: stop_status
+2024-05-12 04:14:08,856 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-12 04:14:09,830 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/output.log
+2024-05-12 04:14:12,105 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:14:12,680 DEBUG   SenderThread:316323 [sender.py:send():378] send: stats
+2024-05-12 04:14:17,681 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:14:21,558 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-12 04:14:21,558 DEBUG   SenderThread:316323 [sender.py:send():378] send: history
+2024-05-12 04:14:21,558 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: summary_record
+2024-05-12 04:14:21,559 INFO    SenderThread:316323 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-05-12 04:14:21,832 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/wandb-summary.json
+2024-05-12 04:14:22,724 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:14:23,832 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/output.log
+2024-05-12 04:14:24,046 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-12 04:14:24,046 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-12 04:14:24,046 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: stop_status
+2024-05-12 04:14:27,840 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/output.log
+2024-05-12 04:14:28,631 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:14:33,632 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:14:38,632 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:14:39,046 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-12 04:14:39,046 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-12 04:14:39,046 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: stop_status
+2024-05-12 04:14:39,521 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-12 04:14:39,521 DEBUG   SenderThread:316323 [sender.py:send():378] send: history
+2024-05-12 04:14:39,521 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: summary_record
+2024-05-12 04:14:39,522 INFO    SenderThread:316323 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-05-12 04:14:39,842 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/wandb-summary.json
+2024-05-12 04:14:41,843 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/output.log
+2024-05-12 04:14:42,680 DEBUG   SenderThread:316323 [sender.py:send():378] send: stats
+2024-05-12 04:14:43,681 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:14:43,843 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/output.log
+2024-05-12 04:14:48,681 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:14:53,682 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:14:54,046 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-12 04:14:54,046 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: stop_status
+2024-05-12 04:14:54,046 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-12 04:14:57,484 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-12 04:14:57,499 DEBUG   SenderThread:316323 [sender.py:send():378] send: history
+2024-05-12 04:14:57,499 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: summary_record
+2024-05-12 04:14:57,499 INFO    SenderThread:316323 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-05-12 04:14:57,846 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/wandb-summary.json
+2024-05-12 04:14:58,925 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:14:59,846 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/output.log
+2024-05-12 04:15:03,925 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:15:08,926 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:15:09,046 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-12 04:15:09,046 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-12 04:15:09,046 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: stop_status
+2024-05-12 04:15:12,137 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-12 04:15:12,138 DEBUG   SenderThread:316323 [sender.py:send():378] send: history
+2024-05-12 04:15:12,138 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: summary_record
+2024-05-12 04:15:12,139 INFO    SenderThread:316323 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-05-12 04:15:12,681 DEBUG   SenderThread:316323 [sender.py:send():378] send: stats
+2024-05-12 04:15:12,849 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/wandb-summary.json
+2024-05-12 04:15:13,849 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/output.log
+2024-05-12 04:15:14,681 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:15:15,849 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/output.log
+2024-05-12 04:15:19,682 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:15:24,046 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-12 04:15:24,046 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-12 04:15:24,046 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: stop_status
+2024-05-12 04:15:25,307 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:15:27,822 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-12 04:15:27,822 DEBUG   SenderThread:316323 [sender.py:send():378] send: history
+2024-05-12 04:15:27,822 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: summary_record
+2024-05-12 04:15:27,823 INFO    SenderThread:316323 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-05-12 04:15:27,851 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/wandb-summary.json
+2024-05-12 04:15:29,852 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/output.log
+2024-05-12 04:15:31,289 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:15:36,290 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:15:39,046 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-12 04:15:39,046 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-12 04:15:39,046 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: stop_status
+2024-05-12 04:15:41,303 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:15:42,013 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-12 04:15:42,014 DEBUG   SenderThread:316323 [sender.py:send():378] send: history
+2024-05-12 04:15:42,014 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: summary_record
+2024-05-12 04:15:42,014 INFO    SenderThread:316323 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-05-12 04:15:42,681 DEBUG   SenderThread:316323 [sender.py:send():378] send: stats
+2024-05-12 04:15:42,854 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/wandb-summary.json
+2024-05-12 04:15:43,854 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/output.log
+2024-05-12 04:15:45,855 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/output.log
+2024-05-12 04:15:46,682 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:15:51,682 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:15:54,046 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-12 04:15:54,046 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-12 04:15:54,046 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: stop_status
+2024-05-12 04:15:57,360 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:15:59,469 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-12 04:15:59,469 DEBUG   SenderThread:316323 [sender.py:send():378] send: history
+2024-05-12 04:15:59,470 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: summary_record
+2024-05-12 04:15:59,470 INFO    SenderThread:316323 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-05-12 04:15:59,858 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/wandb-summary.json
+2024-05-12 04:16:01,858 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/output.log
+2024-05-12 04:16:02,922 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:16:07,922 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:16:09,046 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-12 04:16:09,046 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-12 04:16:09,046 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: stop_status
+2024-05-12 04:16:12,682 DEBUG   SenderThread:316323 [sender.py:send():378] send: stats
+2024-05-12 04:16:13,682 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:16:16,036 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-12 04:16:16,036 DEBUG   SenderThread:316323 [sender.py:send():378] send: history
+2024-05-12 04:16:16,037 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: summary_record
+2024-05-12 04:16:16,037 INFO    SenderThread:316323 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-05-12 04:16:16,861 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/wandb-summary.json
+2024-05-12 04:16:17,861 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/output.log
+2024-05-12 04:16:19,498 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:16:19,862 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/output.log
+2024-05-12 04:16:24,046 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-12 04:16:24,046 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-12 04:16:24,046 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: stop_status
+2024-05-12 04:16:25,336 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:16:30,336 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:16:33,372 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-12 04:16:33,373 DEBUG   SenderThread:316323 [sender.py:send():378] send: history
+2024-05-12 04:16:33,373 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: summary_record
+2024-05-12 04:16:33,373 INFO    SenderThread:316323 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-05-12 04:16:33,865 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/wandb-summary.json
+2024-05-12 04:16:35,840 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:16:35,865 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/output.log
+2024-05-12 04:16:39,046 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-12 04:16:39,046 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-12 04:16:39,047 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: stop_status
+2024-05-12 04:16:41,333 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:16:42,682 DEBUG   SenderThread:316323 [sender.py:send():378] send: stats
+2024-05-12 04:16:46,683 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:16:48,056 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-12 04:16:48,056 DEBUG   SenderThread:316323 [sender.py:send():378] send: history
+2024-05-12 04:16:48,057 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: summary_record
+2024-05-12 04:16:48,057 INFO    SenderThread:316323 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-05-12 04:16:48,867 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/wandb-summary.json
+2024-05-12 04:16:49,868 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/output.log
+2024-05-12 04:16:51,868 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/output.log
+2024-05-12 04:16:52,525 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:16:54,046 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-12 04:16:54,046 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-12 04:16:54,047 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: stop_status
+2024-05-12 04:16:58,338 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:17:03,339 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:17:03,469 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-12 04:17:03,470 DEBUG   SenderThread:316323 [sender.py:send():378] send: history
+2024-05-12 04:17:03,470 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: summary_record
+2024-05-12 04:17:03,470 INFO    SenderThread:316323 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-05-12 04:17:03,870 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/wandb-summary.json
+2024-05-12 04:17:05,871 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/output.log
+2024-05-12 04:17:09,046 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-12 04:17:09,046 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-12 04:17:09,047 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: stop_status
+2024-05-12 04:17:09,287 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:17:12,683 DEBUG   SenderThread:316323 [sender.py:send():378] send: stats
+2024-05-12 04:17:14,683 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:17:18,630 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-12 04:17:18,631 DEBUG   SenderThread:316323 [sender.py:send():378] send: history
+2024-05-12 04:17:18,631 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: summary_record
+2024-05-12 04:17:18,631 INFO    SenderThread:316323 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-05-12 04:17:18,873 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/wandb-summary.json
+2024-05-12 04:17:20,069 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:17:21,874 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/output.log
+2024-05-12 04:17:24,046 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-12 04:17:24,046 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-12 04:17:24,047 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: stop_status
+2024-05-12 04:17:25,367 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:17:30,368 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:17:32,926 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-12 04:17:32,927 DEBUG   SenderThread:316323 [sender.py:send():378] send: history
+2024-05-12 04:17:32,927 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: summary_record
+2024-05-12 04:17:32,927 INFO    SenderThread:316323 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-05-12 04:17:33,876 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/wandb-summary.json
+2024-05-12 04:17:35,877 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/output.log
+2024-05-12 04:17:36,367 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:17:39,046 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-12 04:17:39,047 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-12 04:17:39,047 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: stop_status
+2024-05-12 04:17:42,336 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:17:42,683 DEBUG   SenderThread:316323 [sender.py:send():378] send: stats
+2024-05-12 04:17:47,684 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:17:49,287 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-12 04:17:49,288 DEBUG   SenderThread:316323 [sender.py:send():378] send: history
+2024-05-12 04:17:49,288 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: summary_record
+2024-05-12 04:17:49,288 INFO    SenderThread:316323 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-05-12 04:17:49,880 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/wandb-summary.json
+2024-05-12 04:17:51,880 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/output.log
+2024-05-12 04:17:52,805 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:17:54,047 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-12 04:17:54,047 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-12 04:17:54,047 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: stop_status
+2024-05-12 04:17:58,246 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:18:03,247 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:18:05,183 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-12 04:18:05,183 DEBUG   SenderThread:316323 [sender.py:send():378] send: history
+2024-05-12 04:18:05,183 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: summary_record
+2024-05-12 04:18:05,184 INFO    SenderThread:316323 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-05-12 04:18:05,882 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/wandb-summary.json
+2024-05-12 04:18:07,883 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/output.log
+2024-05-12 04:18:08,637 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:18:09,047 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-12 04:18:09,047 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-12 04:18:09,047 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: stop_status
+2024-05-12 04:18:12,684 DEBUG   SenderThread:316323 [sender.py:send():378] send: stats
+2024-05-12 04:18:13,684 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:18:18,685 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:18:22,080 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-12 04:18:22,080 DEBUG   SenderThread:316323 [sender.py:send():378] send: history
+2024-05-12 04:18:22,080 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: summary_record
+2024-05-12 04:18:22,080 INFO    SenderThread:316323 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-05-12 04:18:22,886 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/wandb-summary.json
+2024-05-12 04:18:23,886 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/output.log
+2024-05-12 04:18:24,047 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-12 04:18:24,047 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-12 04:18:24,047 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: stop_status
+2024-05-12 04:18:24,294 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:18:29,295 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:18:34,295 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:18:38,872 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-12 04:18:38,873 DEBUG   SenderThread:316323 [sender.py:send():378] send: history
+2024-05-12 04:18:38,873 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: summary_record
+2024-05-12 04:18:38,873 INFO    SenderThread:316323 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-05-12 04:18:38,889 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/wandb-summary.json
+2024-05-12 04:18:39,049 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-12 04:18:39,050 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-12 04:18:39,050 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: stop_status
+2024-05-12 04:18:39,363 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:18:41,890 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/output.log
+2024-05-12 04:18:42,684 DEBUG   SenderThread:316323 [sender.py:send():378] send: stats
+2024-05-12 04:18:44,685 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:18:49,685 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:18:54,050 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-12 04:18:54,050 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-12 04:18:54,050 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: stop_status
+2024-05-12 04:18:55,349 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:18:56,528 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-12 04:18:56,529 DEBUG   SenderThread:316323 [sender.py:send():378] send: history
+2024-05-12 04:18:56,529 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: summary_record
+2024-05-12 04:18:56,529 INFO    SenderThread:316323 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-05-12 04:18:56,893 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/wandb-summary.json
+2024-05-12 04:18:59,894 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/output.log
+2024-05-12 04:19:00,966 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:19:05,966 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:19:09,050 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-12 04:19:09,050 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: stop_status
+2024-05-12 04:19:09,051 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-12 04:19:10,255 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-12 04:19:10,255 DEBUG   SenderThread:316323 [sender.py:send():378] send: history
+2024-05-12 04:19:10,255 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: summary_record
+2024-05-12 04:19:10,256 INFO    SenderThread:316323 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-05-12 04:19:10,896 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/wandb-summary.json
+2024-05-12 04:19:11,713 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:19:11,896 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/output.log
+2024-05-12 04:19:12,685 DEBUG   SenderThread:316323 [sender.py:send():378] send: stats
+2024-05-12 04:19:13,896 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/output.log
+2024-05-12 04:19:17,685 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:19:22,686 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:19:24,050 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-12 04:19:24,050 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-12 04:19:24,050 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: stop_status
+2024-05-12 04:19:24,330 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-12 04:19:24,352 DEBUG   SenderThread:316323 [sender.py:send():378] send: history
+2024-05-12 04:19:24,352 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: summary_record
+2024-05-12 04:19:24,353 INFO    SenderThread:316323 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-05-12 04:19:24,898 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/wandb-summary.json
+2024-05-12 04:19:25,898 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/output.log
+2024-05-12 04:19:27,809 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:19:27,899 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/output.log
+2024-05-12 04:19:32,810 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:19:37,810 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:19:39,050 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-12 04:19:39,050 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-12 04:19:39,050 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: stop_status
+2024-05-12 04:19:39,550 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-12 04:19:39,551 DEBUG   SenderThread:316323 [sender.py:send():378] send: history
+2024-05-12 04:19:39,551 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: summary_record
+2024-05-12 04:19:39,551 INFO    SenderThread:316323 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-05-12 04:19:39,901 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/wandb-summary.json
+2024-05-12 04:19:41,901 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/output.log
+2024-05-12 04:19:42,685 DEBUG   SenderThread:316323 [sender.py:send():378] send: stats
+2024-05-12 04:19:43,686 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:19:48,686 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:19:53,686 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:19:54,050 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-12 04:19:54,050 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-12 04:19:54,050 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: stop_status
+2024-05-12 04:19:54,438 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-12 04:19:54,439 DEBUG   SenderThread:316323 [sender.py:send():378] send: history
+2024-05-12 04:19:54,439 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: summary_record
+2024-05-12 04:19:54,439 INFO    SenderThread:316323 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-05-12 04:19:54,912 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/wandb-summary.json
+2024-05-12 04:19:55,913 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/output.log
+2024-05-12 04:19:57,913 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/output.log
+2024-05-12 04:19:58,870 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:20:03,870 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:20:08,870 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:20:09,050 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-12 04:20:09,050 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: stop_status
+2024-05-12 04:20:09,051 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-12 04:20:12,586 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-12 04:20:12,586 DEBUG   SenderThread:316323 [sender.py:send():378] send: history
+2024-05-12 04:20:12,586 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: summary_record
+2024-05-12 04:20:12,587 INFO    SenderThread:316323 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-05-12 04:20:12,686 DEBUG   SenderThread:316323 [sender.py:send():378] send: stats
+2024-05-12 04:20:12,916 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/wandb-summary.json
+2024-05-12 04:20:14,054 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:20:15,918 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/output.log
+2024-05-12 04:20:19,055 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:20:24,050 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-12 04:20:24,050 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-12 04:20:24,050 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: stop_status
+2024-05-12 04:20:24,358 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:20:29,359 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:20:31,001 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-12 04:20:31,001 DEBUG   SenderThread:316323 [sender.py:send():378] send: history
+2024-05-12 04:20:31,002 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: summary_record
+2024-05-12 04:20:31,002 INFO    SenderThread:316323 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-05-12 04:20:31,921 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/wandb-summary.json
+2024-05-12 04:20:33,921 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/output.log
+2024-05-12 04:20:34,469 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:20:39,050 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-12 04:20:39,050 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-12 04:20:39,050 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: stop_status
+2024-05-12 04:20:40,360 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:20:42,700 DEBUG   SenderThread:316323 [sender.py:send():378] send: stats
+2024-05-12 04:20:45,507 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-12 04:20:45,508 DEBUG   SenderThread:316323 [sender.py:send():378] send: history
+2024-05-12 04:20:45,508 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: summary_record
+2024-05-12 04:20:45,508 INFO    SenderThread:316323 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-05-12 04:20:45,509 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:20:45,924 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/wandb-summary.json
+2024-05-12 04:20:47,924 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/output.log
+2024-05-12 04:20:50,967 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:20:54,050 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-12 04:20:54,050 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: stop_status
+2024-05-12 04:20:54,050 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-12 04:20:56,361 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:21:00,233 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-12 04:21:00,234 DEBUG   SenderThread:316323 [sender.py:send():378] send: history
+2024-05-12 04:21:00,234 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: summary_record
+2024-05-12 04:21:00,234 INFO    SenderThread:316323 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-05-12 04:21:00,926 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/wandb-summary.json
+2024-05-12 04:21:01,672 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:21:01,926 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/output.log
+2024-05-12 04:21:06,673 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:21:09,050 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-12 04:21:09,050 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: stop_status
+2024-05-12 04:21:09,051 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-12 04:21:12,385 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:21:12,687 DEBUG   SenderThread:316323 [sender.py:send():378] send: stats
+2024-05-12 04:21:14,403 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-12 04:21:14,403 DEBUG   SenderThread:316323 [sender.py:send():378] send: history
+2024-05-12 04:21:14,403 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: summary_record
+2024-05-12 04:21:14,404 INFO    SenderThread:316323 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-05-12 04:21:14,929 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/wandb-summary.json
+2024-05-12 04:21:15,929 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/output.log
+2024-05-12 04:21:17,930 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/output.log
+2024-05-12 04:21:18,008 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:21:23,008 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:21:24,050 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-12 04:21:24,050 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: stop_status
+2024-05-12 04:21:24,051 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-12 04:21:28,331 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:21:29,118 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-12 04:21:29,119 DEBUG   SenderThread:316323 [sender.py:send():378] send: history
+2024-05-12 04:21:29,119 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: summary_record
+2024-05-12 04:21:29,119 INFO    SenderThread:316323 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-05-12 04:21:29,932 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/wandb-summary.json
+2024-05-12 04:21:31,932 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/output.log
+2024-05-12 04:21:33,551 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:21:38,552 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:21:39,050 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-12 04:21:39,051 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: stop_status
+2024-05-12 04:21:39,052 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-12 04:21:42,687 DEBUG   SenderThread:316323 [sender.py:send():378] send: stats
+2024-05-12 04:21:43,687 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:21:43,912 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-12 04:21:43,913 DEBUG   SenderThread:316323 [sender.py:send():378] send: history
+2024-05-12 04:21:43,913 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: summary_record
+2024-05-12 04:21:43,913 INFO    SenderThread:316323 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-05-12 04:21:43,935 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/wandb-summary.json
+2024-05-12 04:21:45,936 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/output.log
+2024-05-12 04:21:49,348 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:21:54,050 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-12 04:21:54,051 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: stop_status
+2024-05-12 04:21:54,052 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-12 04:21:54,377 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:21:59,378 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:21:59,510 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-12 04:21:59,510 DEBUG   SenderThread:316323 [sender.py:send():378] send: history
+2024-05-12 04:21:59,510 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: summary_record
+2024-05-12 04:21:59,511 INFO    SenderThread:316323 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-05-12 04:21:59,938 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/wandb-summary.json
+2024-05-12 04:22:01,939 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/output.log
+2024-05-12 04:22:05,010 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:22:09,050 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-12 04:22:09,051 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: stop_status
+2024-05-12 04:22:09,052 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-12 04:22:10,401 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:22:12,687 DEBUG   SenderThread:316323 [sender.py:send():378] send: stats
+2024-05-12 04:22:13,409 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-12 04:22:13,410 DEBUG   SenderThread:316323 [sender.py:send():378] send: history
+2024-05-12 04:22:13,410 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: summary_record
+2024-05-12 04:22:13,410 INFO    SenderThread:316323 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-05-12 04:22:13,941 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/wandb-summary.json
+2024-05-12 04:22:15,842 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:22:15,942 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/output.log
+2024-05-12 04:22:20,843 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:22:24,051 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-12 04:22:24,051 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: stop_status
+2024-05-12 04:22:24,052 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-12 04:22:26,267 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:22:27,887 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-12 04:22:27,887 DEBUG   SenderThread:316323 [sender.py:send():378] send: history
+2024-05-12 04:22:27,887 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: summary_record
+2024-05-12 04:22:27,888 INFO    SenderThread:316323 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-05-12 04:22:27,944 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/wandb-summary.json
+2024-05-12 04:22:29,944 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/output.log
+2024-05-12 04:22:31,321 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:22:36,321 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:22:39,050 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-12 04:22:39,051 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: stop_status
+2024-05-12 04:22:39,052 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-12 04:22:42,071 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-12 04:22:42,072 DEBUG   SenderThread:316323 [sender.py:send():378] send: history
+2024-05-12 04:22:42,072 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: summary_record
+2024-05-12 04:22:42,072 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:22:42,072 INFO    SenderThread:316323 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-05-12 04:22:42,688 DEBUG   SenderThread:316323 [sender.py:send():378] send: stats
+2024-05-12 04:22:42,947 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/wandb-summary.json
+2024-05-12 04:22:43,947 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/output.log
+2024-05-12 04:22:47,689 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:22:52,689 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:22:54,051 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-12 04:22:54,051 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: stop_status
+2024-05-12 04:22:54,052 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-12 04:22:56,716 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-12 04:22:56,717 DEBUG   SenderThread:316323 [sender.py:send():378] send: history
+2024-05-12 04:22:56,717 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: summary_record
+2024-05-12 04:22:56,718 INFO    SenderThread:316323 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-05-12 04:22:56,949 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/wandb-summary.json
+2024-05-12 04:22:58,165 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:22:59,950 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/output.log
+2024-05-12 04:23:03,165 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:23:08,166 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:23:09,051 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-12 04:23:09,051 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: stop_status
+2024-05-12 04:23:09,052 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-12 04:23:11,396 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-12 04:23:11,397 DEBUG   SenderThread:316323 [sender.py:send():378] send: history
+2024-05-12 04:23:11,397 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: summary_record
+2024-05-12 04:23:11,397 INFO    SenderThread:316323 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-05-12 04:23:11,952 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/wandb-summary.json
+2024-05-12 04:23:12,688 DEBUG   SenderThread:316323 [sender.py:send():378] send: stats
+2024-05-12 04:23:13,689 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:23:13,953 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/output.log
+2024-05-12 04:23:18,689 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:23:23,689 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:23:24,051 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-12 04:23:24,051 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: stop_status
+2024-05-12 04:23:24,053 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-12 04:23:26,004 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-12 04:23:26,005 DEBUG   SenderThread:316323 [sender.py:send():378] send: history
+2024-05-12 04:23:26,005 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: summary_record
+2024-05-12 04:23:26,005 INFO    SenderThread:316323 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-05-12 04:23:26,955 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/wandb-summary.json
+2024-05-12 04:23:27,956 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/output.log
+2024-05-12 04:23:29,442 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:23:34,442 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:23:39,051 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-12 04:23:39,051 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: stop_status
+2024-05-12 04:23:39,053 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-12 04:23:40,322 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:23:40,863 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-12 04:23:40,863 DEBUG   SenderThread:316323 [sender.py:send():378] send: history
+2024-05-12 04:23:40,863 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: summary_record
+2024-05-12 04:23:40,864 INFO    SenderThread:316323 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-05-12 04:23:40,958 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/wandb-summary.json
+2024-05-12 04:23:42,689 DEBUG   SenderThread:316323 [sender.py:send():378] send: stats
+2024-05-12 04:23:43,959 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/output.log
+2024-05-12 04:23:45,689 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:23:50,690 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:23:54,051 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-12 04:23:54,051 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: stop_status
+2024-05-12 04:23:54,053 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-12 04:23:55,206 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-12 04:23:55,206 DEBUG   SenderThread:316323 [sender.py:send():378] send: history
+2024-05-12 04:23:55,207 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: summary_record
+2024-05-12 04:23:55,207 INFO    SenderThread:316323 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-05-12 04:23:55,961 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/wandb-summary.json
+2024-05-12 04:23:56,664 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:23:57,962 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/output.log
+2024-05-12 04:24:01,664 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:24:06,665 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:24:09,051 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-12 04:24:09,051 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: stop_status
+2024-05-12 04:24:09,053 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-12 04:24:09,897 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-12 04:24:09,897 DEBUG   SenderThread:316323 [sender.py:send():378] send: history
+2024-05-12 04:24:09,897 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: summary_record
+2024-05-12 04:24:09,897 INFO    SenderThread:316323 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-05-12 04:24:09,964 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/wandb-summary.json
+2024-05-12 04:24:11,965 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/output.log
+2024-05-12 04:24:12,338 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:24:12,689 DEBUG   SenderThread:316323 [sender.py:send():378] send: stats
+2024-05-12 04:24:17,690 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:24:22,690 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:24:24,051 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-12 04:24:24,051 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: stop_status
+2024-05-12 04:24:24,053 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-12 04:24:25,972 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-12 04:24:25,972 DEBUG   SenderThread:316323 [sender.py:send():378] send: history
+2024-05-12 04:24:25,972 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: summary_record
+2024-05-12 04:24:25,972 INFO    SenderThread:316323 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-05-12 04:24:26,968 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/wandb-summary.json
+2024-05-12 04:24:27,969 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/output.log
+2024-05-12 04:24:28,452 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:24:33,453 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:24:38,453 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:24:39,051 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-12 04:24:39,051 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: stop_status
+2024-05-12 04:24:39,053 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-12 04:24:40,480 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-12 04:24:40,480 DEBUG   SenderThread:316323 [sender.py:send():378] send: history
+2024-05-12 04:24:40,480 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: summary_record
+2024-05-12 04:24:40,480 INFO    SenderThread:316323 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-05-12 04:24:40,971 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/wandb-summary.json
+2024-05-12 04:24:41,972 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/output.log
+2024-05-12 04:24:42,690 DEBUG   SenderThread:316323 [sender.py:send():378] send: stats
+2024-05-12 04:24:43,690 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:24:48,691 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:24:53,691 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:24:54,051 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-12 04:24:54,051 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: stop_status
+2024-05-12 04:24:54,053 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-12 04:24:56,623 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-12 04:24:56,624 DEBUG   SenderThread:316323 [sender.py:send():378] send: history
+2024-05-12 04:24:56,624 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: summary_record
+2024-05-12 04:24:56,624 INFO    SenderThread:316323 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-05-12 04:24:56,978 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/wandb-summary.json
+2024-05-12 04:24:57,978 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/output.log
+2024-05-12 04:24:59,212 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:24:59,979 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/output.log
+2024-05-12 04:25:04,212 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:25:09,051 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-12 04:25:09,051 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: stop_status
+2024-05-12 04:25:09,053 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-12 04:25:09,357 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:25:11,153 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-12 04:25:11,153 DEBUG   SenderThread:316323 [sender.py:send():378] send: history
+2024-05-12 04:25:11,153 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: summary_record
+2024-05-12 04:25:11,153 INFO    SenderThread:316323 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-05-12 04:25:11,981 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/wandb-summary.json
+2024-05-12 04:25:12,690 DEBUG   SenderThread:316323 [sender.py:send():378] send: stats
+2024-05-12 04:25:13,981 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/output.log
+2024-05-12 04:25:14,690 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:25:19,691 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:25:24,051 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-12 04:25:24,052 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: stop_status
+2024-05-12 04:25:24,053 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-12 04:25:25,364 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:25:25,743 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-12 04:25:25,744 DEBUG   SenderThread:316323 [sender.py:send():378] send: history
+2024-05-12 04:25:25,744 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: summary_record
+2024-05-12 04:25:25,744 INFO    SenderThread:316323 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-05-12 04:25:25,984 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/wandb-summary.json
+2024-05-12 04:25:27,984 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/output.log
+2024-05-12 04:25:31,179 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:25:36,188 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:25:39,051 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-12 04:25:39,052 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: stop_status
+2024-05-12 04:25:39,053 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-12 04:25:40,489 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-12 04:25:40,489 DEBUG   SenderThread:316323 [sender.py:send():378] send: history
+2024-05-12 04:25:40,489 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: summary_record
+2024-05-12 04:25:40,490 INFO    SenderThread:316323 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-05-12 04:25:40,988 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/wandb-summary.json
+2024-05-12 04:25:41,928 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:25:41,987 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/output.log
+2024-05-12 04:25:42,690 DEBUG   SenderThread:316323 [sender.py:send():378] send: stats
+2024-05-12 04:25:47,691 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:25:52,692 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:25:54,051 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-12 04:25:54,052 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: stop_status
+2024-05-12 04:25:54,053 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-12 04:25:55,635 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-12 04:25:55,635 DEBUG   SenderThread:316323 [sender.py:send():378] send: history
+2024-05-12 04:25:55,635 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: summary_record
+2024-05-12 04:25:55,636 INFO    SenderThread:316323 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-05-12 04:25:55,990 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/wandb-summary.json
+2024-05-12 04:25:57,990 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/output.log
+2024-05-12 04:25:58,074 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:26:03,074 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:26:08,075 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:26:09,051 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-12 04:26:09,052 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: stop_status
+2024-05-12 04:26:09,053 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-12 04:26:09,911 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-12 04:26:09,925 DEBUG   SenderThread:316323 [sender.py:send():378] send: history
+2024-05-12 04:26:09,926 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: summary_record
+2024-05-12 04:26:09,926 INFO    SenderThread:316323 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-05-12 04:26:09,992 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/wandb-summary.json
+2024-05-12 04:26:11,993 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/output.log
+2024-05-12 04:26:12,691 DEBUG   SenderThread:316323 [sender.py:send():378] send: stats
+2024-05-12 04:26:13,691 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:26:18,692 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:26:23,692 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:26:24,052 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-12 04:26:24,052 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: stop_status
+2024-05-12 04:26:24,053 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-12 04:26:24,197 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-12 04:26:24,386 DEBUG   SenderThread:316323 [sender.py:send():378] send: history
+2024-05-12 04:26:24,386 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: summary_record
+2024-05-12 04:26:24,386 INFO    SenderThread:316323 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-05-12 04:26:24,995 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/wandb-summary.json
+2024-05-12 04:26:25,996 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/output.log
+2024-05-12 04:26:29,677 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:26:34,677 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:26:39,052 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-12 04:26:39,052 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: stop_status
+2024-05-12 04:26:39,054 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-12 04:26:40,304 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:26:40,711 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-12 04:26:40,711 DEBUG   SenderThread:316323 [sender.py:send():378] send: history
+2024-05-12 04:26:40,711 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: summary_record
+2024-05-12 04:26:40,712 INFO    SenderThread:316323 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-05-12 04:26:40,998 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/wandb-summary.json
+2024-05-12 04:26:41,999 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/output.log
+2024-05-12 04:26:42,691 DEBUG   SenderThread:316323 [sender.py:send():378] send: stats
+2024-05-12 04:26:43,999 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/output.log
+2024-05-12 04:26:45,692 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:26:50,692 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:26:54,052 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-12 04:26:54,052 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: stop_status
+2024-05-12 04:26:54,054 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-12 04:26:56,377 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:26:57,921 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-12 04:26:57,922 DEBUG   SenderThread:316323 [sender.py:send():378] send: history
+2024-05-12 04:26:57,922 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: summary_record
+2024-05-12 04:26:57,922 INFO    SenderThread:316323 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-05-12 04:26:58,002 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/wandb-summary.json
+2024-05-12 04:27:00,002 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/output.log
+2024-05-12 04:27:01,428 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:27:06,428 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:27:09,052 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-12 04:27:09,052 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: stop_status
+2024-05-12 04:27:09,054 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-12 04:27:12,373 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:27:12,692 DEBUG   SenderThread:316323 [sender.py:send():378] send: stats
+2024-05-12 04:27:13,640 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-12 04:27:13,640 DEBUG   SenderThread:316323 [sender.py:send():378] send: history
+2024-05-12 04:27:13,640 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: summary_record
+2024-05-12 04:27:13,641 INFO    SenderThread:316323 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-05-12 04:27:14,005 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/wandb-summary.json
+2024-05-12 04:27:16,005 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/output.log
+2024-05-12 04:27:18,107 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:27:23,108 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:27:24,052 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-12 04:27:24,052 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: stop_status
+2024-05-12 04:27:24,054 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-12 04:27:28,297 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:27:28,759 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-12 04:27:28,760 DEBUG   SenderThread:316323 [sender.py:send():378] send: history
+2024-05-12 04:27:28,760 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: summary_record
+2024-05-12 04:27:28,760 INFO    SenderThread:316323 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-05-12 04:27:29,008 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/wandb-summary.json
+2024-05-12 04:27:30,008 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/output.log
+2024-05-12 04:27:32,008 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/output.log
+2024-05-12 04:27:34,245 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:27:39,052 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-12 04:27:39,052 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: stop_status
+2024-05-12 04:27:39,056 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-12 04:27:39,349 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:27:42,692 DEBUG   SenderThread:316323 [sender.py:send():378] send: stats
+2024-05-12 04:27:44,693 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:27:44,923 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-12 04:27:44,924 DEBUG   SenderThread:316323 [sender.py:send():378] send: history
+2024-05-12 04:27:44,924 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: summary_record
+2024-05-12 04:27:44,924 INFO    SenderThread:316323 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-05-12 04:27:45,011 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/wandb-summary.json
+2024-05-12 04:27:46,011 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/output.log
+2024-05-12 04:27:48,012 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/output.log
+2024-05-12 04:27:50,394 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:27:54,052 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-12 04:27:54,052 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: stop_status
+2024-05-12 04:27:54,056 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-12 04:27:56,360 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:27:59,769 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-12 04:27:59,770 DEBUG   SenderThread:316323 [sender.py:send():378] send: history
+2024-05-12 04:27:59,770 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: summary_record
+2024-05-12 04:27:59,770 INFO    SenderThread:316323 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-05-12 04:28:00,014 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/wandb-summary.json
+2024-05-12 04:28:02,014 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/output.log
+2024-05-12 04:28:02,233 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:28:07,234 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:28:09,052 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-12 04:28:09,052 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: stop_status
+2024-05-12 04:28:09,056 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-12 04:28:12,372 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:28:12,693 DEBUG   SenderThread:316323 [sender.py:send():378] send: stats
+2024-05-12 04:28:15,082 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-12 04:28:15,082 DEBUG   SenderThread:316323 [sender.py:send():378] send: history
+2024-05-12 04:28:15,082 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: summary_record
+2024-05-12 04:28:15,083 INFO    SenderThread:316323 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-05-12 04:28:16,017 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/wandb-summary.json
+2024-05-12 04:28:17,550 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:28:18,017 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/output.log
+2024-05-12 04:28:22,550 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:28:24,052 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-12 04:28:24,052 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: stop_status
+2024-05-12 04:28:24,056 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-12 04:28:28,267 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:28:29,385 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-12 04:28:29,386 DEBUG   SenderThread:316323 [sender.py:send():378] send: history
+2024-05-12 04:28:29,386 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: summary_record
+2024-05-12 04:28:29,386 INFO    SenderThread:316323 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-05-12 04:28:30,020 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/wandb-summary.json
+2024-05-12 04:28:32,020 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/output.log
+2024-05-12 04:28:33,856 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:28:38,857 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:28:39,052 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-12 04:28:39,052 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: stop_status
+2024-05-12 04:28:39,056 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-12 04:28:42,693 DEBUG   SenderThread:316323 [sender.py:send():378] send: stats
+2024-05-12 04:28:43,833 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-12 04:28:43,833 DEBUG   SenderThread:316323 [sender.py:send():378] send: history
+2024-05-12 04:28:43,833 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: summary_record
+2024-05-12 04:28:43,834 INFO    SenderThread:316323 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-05-12 04:28:44,022 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/wandb-summary.json
+2024-05-12 04:28:44,024 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:28:46,023 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/output.log
+2024-05-12 04:28:49,292 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:28:54,052 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-12 04:28:54,053 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: stop_status
+2024-05-12 04:28:54,057 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-12 04:28:54,359 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:28:58,028 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-12 04:28:58,028 DEBUG   SenderThread:316323 [sender.py:send():378] send: history
+2024-05-12 04:28:58,028 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: summary_record
+2024-05-12 04:28:58,029 INFO    SenderThread:316323 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-05-12 04:28:59,025 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/wandb-summary.json
+2024-05-12 04:28:59,500 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:29:00,025 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/output.log
+2024-05-12 04:29:04,501 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:29:09,052 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-12 04:29:09,053 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: stop_status
+2024-05-12 04:29:09,057 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-12 04:29:10,410 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:29:12,087 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-12 04:29:12,088 DEBUG   SenderThread:316323 [sender.py:send():378] send: history
+2024-05-12 04:29:12,088 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: summary_record
+2024-05-12 04:29:12,088 INFO    SenderThread:316323 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-05-12 04:29:12,693 DEBUG   SenderThread:316323 [sender.py:send():378] send: stats
+2024-05-12 04:29:13,028 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/wandb-summary.json
+2024-05-12 04:29:14,028 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/output.log
+2024-05-12 04:29:15,694 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:29:20,694 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:29:24,052 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-12 04:29:24,053 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: stop_status
+2024-05-12 04:29:24,057 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-12 04:29:26,521 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-12 04:29:26,521 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:29:26,521 DEBUG   SenderThread:316323 [sender.py:send():378] send: history
+2024-05-12 04:29:26,521 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: summary_record
+2024-05-12 04:29:26,522 INFO    SenderThread:316323 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-05-12 04:29:27,041 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/wandb-summary.json
+2024-05-12 04:29:28,041 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/output.log
+2024-05-12 04:29:31,961 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:29:36,962 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:29:39,052 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-12 04:29:39,053 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: stop_status
+2024-05-12 04:29:39,057 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-12 04:29:42,259 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:29:42,694 DEBUG   SenderThread:316323 [sender.py:send():378] send: stats
+2024-05-12 04:29:43,557 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-12 04:29:43,557 DEBUG   SenderThread:316323 [sender.py:send():378] send: history
+2024-05-12 04:29:43,557 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: summary_record
+2024-05-12 04:29:43,558 INFO    SenderThread:316323 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-05-12 04:29:44,044 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/wandb-summary.json
+2024-05-12 04:29:46,044 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/output.log
+2024-05-12 04:29:48,015 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:29:53,016 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:29:54,053 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-12 04:29:54,053 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: stop_status
+2024-05-12 04:29:54,057 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-12 04:29:58,333 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:30:00,086 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-12 04:30:00,087 DEBUG   SenderThread:316323 [sender.py:send():378] send: history
+2024-05-12 04:30:00,087 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: summary_record
+2024-05-12 04:30:00,087 INFO    SenderThread:316323 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-05-12 04:30:01,047 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/wandb-summary.json
+2024-05-12 04:30:02,047 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/output.log
+2024-05-12 04:30:03,568 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:30:08,569 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:30:09,053 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-12 04:30:09,053 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: stop_status
+2024-05-12 04:30:09,057 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-12 04:30:12,694 DEBUG   SenderThread:316323 [sender.py:send():378] send: stats
+2024-05-12 04:30:13,695 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:30:14,535 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-12 04:30:14,535 DEBUG   SenderThread:316323 [sender.py:send():378] send: history
+2024-05-12 04:30:14,535 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: summary_record
+2024-05-12 04:30:14,535 INFO    SenderThread:316323 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-05-12 04:30:15,050 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/wandb-summary.json
+2024-05-12 04:30:16,050 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/output.log
+2024-05-12 04:30:18,993 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:30:23,993 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:30:24,053 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-12 04:30:24,053 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: stop_status
+2024-05-12 04:30:24,057 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-12 04:30:28,850 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-12 04:30:28,851 DEBUG   SenderThread:316323 [sender.py:send():378] send: history
+2024-05-12 04:30:28,851 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: summary_record
+2024-05-12 04:30:28,851 INFO    SenderThread:316323 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-05-12 04:30:29,041 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:30:29,053 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/wandb-summary.json
+2024-05-12 04:30:30,053 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/output.log
+2024-05-12 04:30:34,330 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:30:39,053 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-12 04:30:39,053 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: stop_status
+2024-05-12 04:30:39,057 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-12 04:30:40,307 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:30:42,695 DEBUG   SenderThread:316323 [sender.py:send():378] send: stats
+2024-05-12 04:30:44,236 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-12 04:30:44,236 DEBUG   SenderThread:316323 [sender.py:send():378] send: history
+2024-05-12 04:30:44,236 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: summary_record
+2024-05-12 04:30:44,236 INFO    SenderThread:316323 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-05-12 04:30:45,057 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/wandb-summary.json
+2024-05-12 04:30:45,682 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:30:46,056 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/output.log
+2024-05-12 04:30:50,683 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:30:54,053 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-12 04:30:54,053 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: stop_status
+2024-05-12 04:30:54,057 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-12 04:30:56,361 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:31:01,362 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:31:04,819 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-12 04:31:04,819 DEBUG   SenderThread:316323 [sender.py:send():378] send: history
+2024-05-12 04:31:04,820 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: summary_record
+2024-05-12 04:31:04,820 INFO    SenderThread:316323 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-05-12 04:31:05,059 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/wandb-summary.json
+2024-05-12 04:31:06,060 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/output.log
+2024-05-12 04:31:07,288 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:31:09,053 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-12 04:31:09,053 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: stop_status
+2024-05-12 04:31:09,057 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-12 04:31:12,410 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:31:12,695 DEBUG   SenderThread:316323 [sender.py:send():378] send: stats
+2024-05-12 04:31:17,696 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:31:20,663 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-12 04:31:20,663 DEBUG   SenderThread:316323 [sender.py:send():378] send: history
+2024-05-12 04:31:20,664 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: summary_record
+2024-05-12 04:31:20,664 INFO    SenderThread:316323 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-05-12 04:31:21,062 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/wandb-summary.json
+2024-05-12 04:31:22,063 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/output.log
+2024-05-12 04:31:23,102 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:31:24,053 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-12 04:31:24,053 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: stop_status
+2024-05-12 04:31:24,057 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-12 04:31:28,332 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:31:33,333 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:31:35,663 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-12 04:31:35,663 DEBUG   SenderThread:316323 [sender.py:send():378] send: history
+2024-05-12 04:31:35,663 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: summary_record
+2024-05-12 04:31:35,664 INFO    SenderThread:316323 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-05-12 04:31:36,065 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/wandb-summary.json
+2024-05-12 04:31:38,066 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/output.log
+2024-05-12 04:31:39,053 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:31:39,053 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-12 04:31:39,053 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: stop_status
+2024-05-12 04:31:39,057 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-12 04:31:42,702 DEBUG   SenderThread:316323 [sender.py:send():378] send: stats
+2024-05-12 04:31:44,702 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:31:49,703 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:31:52,492 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-12 04:31:52,493 DEBUG   SenderThread:316323 [sender.py:send():378] send: history
+2024-05-12 04:31:52,493 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: summary_record
+2024-05-12 04:31:52,493 INFO    SenderThread:316323 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-05-12 04:31:53,071 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/wandb-summary.json
+2024-05-12 04:31:54,053 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-12 04:31:54,053 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: stop_status
+2024-05-12 04:31:54,057 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-12 04:31:54,072 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/output.log
+2024-05-12 04:31:55,309 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:32:00,309 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:32:05,310 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:32:08,452 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-12 04:32:08,452 DEBUG   SenderThread:316323 [sender.py:send():378] send: history
+2024-05-12 04:32:08,452 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: summary_record
+2024-05-12 04:32:08,453 INFO    SenderThread:316323 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-05-12 04:32:09,053 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-12 04:32:09,053 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: stop_status
+2024-05-12 04:32:09,057 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-12 04:32:09,075 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/wandb-summary.json
+2024-05-12 04:32:10,075 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/output.log
+2024-05-12 04:32:10,317 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:32:12,696 DEBUG   SenderThread:316323 [sender.py:send():378] send: stats
+2024-05-12 04:32:15,697 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:32:20,697 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:32:24,053 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-12 04:32:24,054 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: stop_status
+2024-05-12 04:32:24,096 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-12 04:32:24,526 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-12 04:32:24,526 DEBUG   SenderThread:316323 [sender.py:send():378] send: history
+2024-05-12 04:32:24,527 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: summary_record
+2024-05-12 04:32:24,528 INFO    SenderThread:316323 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-05-12 04:32:25,078 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/wandb-summary.json
+2024-05-12 04:32:25,966 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:32:26,078 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/output.log
+2024-05-12 04:32:30,967 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:32:35,967 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:32:39,053 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-12 04:32:39,054 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: stop_status
+2024-05-12 04:32:39,058 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-12 04:32:40,315 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-12 04:32:40,315 DEBUG   SenderThread:316323 [sender.py:send():378] send: history
+2024-05-12 04:32:40,315 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: summary_record
+2024-05-12 04:32:40,316 INFO    SenderThread:316323 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-05-12 04:32:41,081 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/wandb-summary.json
+2024-05-12 04:32:41,752 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:32:42,081 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/output.log
+2024-05-12 04:32:42,697 DEBUG   SenderThread:316323 [sender.py:send():378] send: stats
+2024-05-12 04:32:47,697 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:32:52,698 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:32:54,054 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-12 04:32:54,054 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: stop_status
+2024-05-12 04:32:54,058 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-12 04:32:55,986 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-12 04:32:55,986 DEBUG   SenderThread:316323 [sender.py:send():378] send: history
+2024-05-12 04:32:55,986 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: summary_record
+2024-05-12 04:32:55,988 INFO    SenderThread:316323 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-05-12 04:32:56,084 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/wandb-summary.json
+2024-05-12 04:32:58,084 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/output.log
+2024-05-12 04:32:58,470 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:33:03,470 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:33:08,471 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:33:09,054 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-12 04:33:09,054 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: stop_status
+2024-05-12 04:33:09,058 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-12 04:33:12,697 DEBUG   SenderThread:316323 [sender.py:send():378] send: stats
+2024-05-12 04:33:13,697 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:33:18,698 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:33:23,699 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:33:24,054 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-12 04:33:24,054 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: stop_status
+2024-05-12 04:33:24,100 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-12 04:33:26,879 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-12 04:33:26,879 DEBUG   SenderThread:316323 [sender.py:send():378] send: history
+2024-05-12 04:33:26,879 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: summary_record
+2024-05-12 04:33:26,880 INFO    SenderThread:316323 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-05-12 04:33:27,090 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/wandb-summary.json
+2024-05-12 04:33:28,090 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/output.log
+2024-05-12 04:33:29,320 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:33:34,320 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:33:39,054 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-12 04:33:39,054 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: stop_status
+2024-05-12 04:33:39,058 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-12 04:33:40,310 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:33:41,122 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-12 04:33:41,123 DEBUG   SenderThread:316323 [sender.py:send():378] send: history
+2024-05-12 04:33:41,123 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: summary_record
+2024-05-12 04:33:41,123 INFO    SenderThread:316323 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-05-12 04:33:42,093 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/wandb-summary.json
+2024-05-12 04:33:42,093 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/output.log
+2024-05-12 04:33:42,698 DEBUG   SenderThread:316323 [sender.py:send():378] send: stats
+2024-05-12 04:33:44,093 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/output.log
+2024-05-12 04:33:45,698 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:33:50,699 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:33:54,054 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-12 04:33:54,054 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: stop_status
+2024-05-12 04:33:54,058 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-12 04:33:56,187 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-12 04:33:56,188 DEBUG   SenderThread:316323 [sender.py:send():378] send: history
+2024-05-12 04:33:56,188 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: summary_record
+2024-05-12 04:33:56,188 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:33:56,196 INFO    SenderThread:316323 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-05-12 04:33:57,096 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/wandb-summary.json
+2024-05-12 04:33:58,096 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/output.log
+2024-05-12 04:34:01,631 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:34:06,631 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:34:09,054 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-12 04:34:09,054 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: stop_status
+2024-05-12 04:34:09,058 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-12 04:34:10,491 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-12 04:34:10,492 DEBUG   SenderThread:316323 [sender.py:send():378] send: history
+2024-05-12 04:34:10,492 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: summary_record
+2024-05-12 04:34:10,492 INFO    SenderThread:316323 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-05-12 04:34:11,099 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/wandb-summary.json
+2024-05-12 04:34:11,959 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:34:12,099 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/output.log
+2024-05-12 04:34:12,698 DEBUG   SenderThread:316323 [sender.py:send():378] send: stats
+2024-05-12 04:34:17,704 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:34:22,704 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:34:24,054 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-12 04:34:24,054 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: stop_status
+2024-05-12 04:34:24,058 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-12 04:34:24,946 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-12 04:34:24,947 DEBUG   SenderThread:316323 [sender.py:send():378] send: history
+2024-05-12 04:34:24,947 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: summary_record
+2024-05-12 04:34:24,947 INFO    SenderThread:316323 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-05-12 04:34:25,101 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/wandb-summary.json
+2024-05-12 04:34:26,101 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/output.log
+2024-05-12 04:34:28,429 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:34:33,429 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:34:38,430 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: status_report
+2024-05-12 04:34:39,054 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-12 04:34:39,054 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: stop_status
+2024-05-12 04:34:39,058 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-12 04:34:39,635 DEBUG   HandlerThread:316323 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-12 04:34:39,636 DEBUG   SenderThread:316323 [sender.py:send():378] send: history
+2024-05-12 04:34:39,636 DEBUG   SenderThread:316323 [sender.py:send_request():405] send_request: summary_record
+2024-05-12 04:34:39,637 INFO    SenderThread:316323 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-05-12 04:34:40,104 INFO    Thread-12 :316323 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho/files/wandb-summary.json

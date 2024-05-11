@@ -30,9 +30,12 @@ class segmentation_models_loader:
         elif self.model_name == 'manet':
             model = manet.manet()
             print("Model: MAnet loaded successfully!! | pretrained : imagenet")
+        elif self.model_name == 'swinunet':
+            model = swinunet.swinunet()
+            print("Model: swinunet loaded successfully!! | pretrained : None")
         elif self.model_name == 'monai_swinunet':
             model = swinunet.monai_swinunet()
-            print("Model: SwinUNET loaded successfully!! | pretrained : None")
+            print("Model: MONAI-SwinUNET loaded successfully!! | pretrained : brain MRI")
         else:
             raise ValueError('Model name is not valid')
         return model
