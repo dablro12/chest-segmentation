@@ -498,3 +498,15 @@ Visualize save : 165/1000
  16%|█▋        | 165/1000 [42:27<3:28:56, 15.01s/it]
 Visualize save : 166/1000
 
+ 17%|█▋        | 166/1000 [42:42<3:29:54, 15.10s/it]
+Visualize save : 167/1000
+
+ 17%|█▋        | 167/1000 [42:56<3:27:13, 14.93s/it]
+Visualize save : 168/1000
+Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_168.pt
+Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_168.pt
+[41m Early stopping at epoch 168
+[41m Best valid loss: 1.5214460771530867
+[41m ACC : 0.7220497189029571
+
+ 17%|█▋        | 167/1000 [43:17<3:35:54, 15.55s/it]

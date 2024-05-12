@@ -1,0 +1,111 @@
+2024-05-12 14:11:49.972416: I tensorflow/core/util/port.cc:110] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2024-05-12 14:11:49.973638: I tensorflow/tsl/cuda/cudart_stub.cc:28] Could not find cuda drivers on your machine, GPU will not be used.
+2024-05-12 14:11:49.998197: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-05-12 14:11:50.413919: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+wandb: Currently logged in as: dablro1232. Use `wandb login --relogin` to force relogin
+wandb: wandb version 0.17.0 is available!  To upgrade, please run:
+wandb:  $ pip install wandb --upgrade
+wandb: Tracking run with wandb version 0.16.4
+wandb: Run data is saved locally in /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_141151-0d833abp
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run wild-jazz-15
+wandb: ⭐️ View project at https://wandb.ai/dablro1232/Chest-segmentation
+wandb: 🚀 View run at https://wandb.ai/dablro1232/Chest-segmentation/runs/0d833abp
+CUDA Status : cuda
+Model: swinunet loaded successfully!! | pretrained : None
+  0%|          | 0/1000 [00:00<?, ?it/s]  0%|          | 1/1000 [00:17<4:47:05, 17.24s/it]  0%|          | 2/1000 [00:34<4:45:07, 17.14s/it]  0%|          | 3/1000 [00:51<4:42:10, 16.98s/it]  0%|          | 4/1000 [01:07<4:40:25, 16.89s/it]  0%|          | 5/1000 [01:25<4:46:56, 17.30s/it]  1%|          | 6/1000 [01:43<4:48:58, 17.44s/it]  1%|          | 7/1000 [02:00<4:46:21, 17.30s/it]  1%|          | 8/1000 [02:17<4:45:06, 17.24s/it]  1%|          | 9/1000 [02:35<4:46:52, 17.37s/it]  1%|          | 10/1000 [02:52<4:46:56, 17.39s/it]  1%|          | 11/1000 [03:09<4:44:16, 17.25s/it]  1%|          | 12/1000 [03:26<4:43:14, 17.20s/it]  1%|▏         | 13/1000 [03:44<4:43:03, 17.21s/it]  1%|▏         | 14/1000 [04:02<4:50:21, 17.67s/it]  2%|▏         | 15/1000 [04:19<4:45:33, 17.39s/it]  2%|▏         | 16/1000 [04:37<4:46:44, 17.48s/it]  2%|▏         | 17/1000 [04:55<4:48:19, 17.60s/it]  2%|▏         | 18/1000 [05:13<4:49:37, 17.70s/it]  2%|▏         | 19/1000 [05:30<4:46:22, 17.52s/it]  2%|▏         | 20/1000 [05:47<4:45:25, 17.47s/it]  2%|▏         | 21/1000 [06:04<4:44:45, 17.45s/it]  2%|▏         | 22/1000 [06:22<4:43:39, 17.40s/it]  2%|▏         | 23/1000 [06:40<4:49:22, 17.77s/it]  2%|▏         | 24/1000 [06:57<4:45:56, 17.58s/it]  2%|▎         | 25/1000 [07:16<4:49:09, 17.79s/it]  3%|▎         | 26/1000 [07:33<4:44:48, 17.54s/it]  3%|▎         | 27/1000 [07:50<4:42:27, 17.42s/it]  3%|▎         | 28/1000 [08:07<4:41:24, 17.37s/it]  3%|▎         | 29/1000 [08:24<4:39:54, 17.30s/it]  3%|▎         | 30/1000 [08:41<4:38:50, 17.25s/it]  3%|▎         | 31/1000 [08:59<4:38:14, 17.23s/it]  3%|▎         | 32/1000 [09:16<4:37:40, 17.21s/it]  3%|▎         | 33/1000 [09:33<4:38:24, 17.27s/it]  3%|▎         | 34/1000 [09:51<4:40:57, 17.45s/it]  4%|▎         | 35/1000 [10:08<4:39:16, 17.36s/it]  4%|▎         | 36/1000 [10:26<4:41:18, 17.51s/it]  4%|▎         | 37/1000 [10:45<4:47:17, 17.90s/it]  4%|▍         | 38/1000 [11:03<4:48:23, 17.99s/it]  4%|▍         | 39/1000 [11:24<5:01:50, 18.85s/it]  4%|▍         | 40/1000 [11:42<4:55:59, 18.50s/it]  4%|▍         | 41/1000 [11:58<4:46:37, 17.93s/it]  4%|▍         | 42/1000 [12:16<4:45:01, 17.85s/it]  4%|▍         | 43/1000 [12:33<4:43:42, 17.79s/it]  4%|▍         | 44/1000 [12:51<4:42:45, 17.75s/it]  4%|▍         | 45/1000 [13:10<4:47:50, 18.08s/it]  5%|▍         | 46/1000 [13:27<4:44:33, 17.90s/it]  5%|▍         | 47/1000 [13:45<4:40:28, 17.66s/it]  5%|▍         | 48/1000 [14:02<4:37:25, 17.48s/it]  5%|▍         | 49/1000 [14:19<4:37:48, 17.53s/it]  5%|▌         | 50/1000 [14:37<4:39:40, 17.66s/it]  5%|▌         | 51/1000 [14:55<4:40:42, 17.75s/it]  5%|▌         | 52/1000 [15:13<4:40:18, 17.74s/it]  5%|▌         | 53/1000 [15:30<4:35:49, 17.48s/it]  5%|▌         | 54/1000 [15:47<4:32:34, 17.29s/it]  6%|▌         | 55/1000 [16:04<4:32:06, 17.28s/it]  6%|▌         | 56/1000 [16:21<4:32:57, 17.35s/it]  6%|▌         | 57/1000 [16:39<4:33:00, 17.37s/it]  6%|▌         | 58/1000 [16:57<4:35:31, 17.55s/it]  6%|▌         | 59/1000 [17:14<4:33:50, 17.46s/it]  6%|▌         | 60/1000 [17:31<4:31:45, 17.35s/it]  6%|▌         | 61/1000 [17:48<4:29:57, 17.25s/it]  6%|▌         | 62/1000 [18:05<4:29:03, 17.21s/it]  6%|▋         | 63/1000 [18:22<4:27:58, 17.16s/it]  6%|▋         | 63/1000 [18:40<4:37:49, 17.79s/it]
+wandb: - 0.003 MB of 0.003 MB uploadedwandb: \ 0.003 MB of 0.003 MB uploadedwandb: | 0.003 MB of 0.003 MB uploadedwandb: / 0.003 MB of 0.003 MB uploadedwandb: - 0.003 MB of 0.003 MB uploadedwandb: \ 0.012 MB of 0.030 MB uploaded (0.003 MB deduped)wandb: | 0.012 MB of 0.030 MB uploaded (0.003 MB deduped)wandb: / 0.030 MB of 0.030 MB uploaded (0.003 MB deduped)wandb:                                                                                
+wandb: W&B sync reduced upload amount by 9.7%             
+wandb: 
+wandb: Run history:
+wandb:  train_acc ▁▁▁▁▁▂▂▂▃▃▄▄▄▅▅▅▅▆▆▆▆▆▆▆▇▇▇▇▇▇▇▇▇▇██████
+wandb: train_ious ▁▇██████████████████████████████████████
+wandb: train_loss █▃▂▂▂▂▂▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:  valid_acc ▂▁▂▃▄▅▅▆▄▅▇▅▅▄▅▆▇▅▆▆▆▆▇▆▇▆▇▇▇▇█▇▇█▇▆▇▇█▇
+wandb: valid_ious ▁██████▇██▇█████████████████████████████
+wandb: valid_loss █▃▂▂▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▂▁▁▂▁▂▁▂
+wandb: 
+wandb: Run summary:
+wandb:  train_acc 0.61221
+wandb: train_ious 0.99166
+wandb: train_loss 0.02087
+wandb:  valid_acc 0.23637
+wandb: valid_ious 0.97805
+wandb: valid_loss 0.09228
+wandb: 
+wandb: 🚀 View run wild-jazz-15 at: https://wandb.ai/dablro1232/Chest-segmentation/runs/0d833abp
+wandb: ️⚡ View job at https://wandb.ai/dablro1232/Chest-segmentation/jobs/QXJ0aWZhY3RDb2xsZWN0aW9uOjE3MzMwNzAxNQ==/version_details/v4
+wandb: Synced 6 W&B file(s), 0 media file(s), 2 artifact file(s) and 0 other file(s)
+wandb: Find logs at: ./wandb/run-20240512_141151-0d833abp/logs
+Visualize save : 1/1000
+Visualize save : 2/1000
+Visualize save : 3/1000
+Visualize save : 4/1000
+Visualize save : 5/1000
+Visualize save : 6/1000
+Visualize save : 7/1000
+Visualize save : 8/1000
+Visualize save : 9/1000
+Visualize save : 10/1000
+Visualize save : 11/1000
+Visualize save : 12/1000
+Visualize save : 13/1000
+Visualize save : 14/1000
+Visualize save : 15/1000
+Visualize save : 16/1000
+Visualize save : 17/1000
+Visualize save : 18/1000
+Visualize save : 19/1000
+Visualize save : 20/1000
+Visualize save : 21/1000
+Visualize save : 22/1000
+Visualize save : 23/1000
+Visualize save : 24/1000
+Visualize save : 25/1000
+Visualize save : 26/1000
+Visualize save : 27/1000
+Visualize save : 28/1000
+Visualize save : 29/1000
+Visualize save : 30/1000
+Visualize save : 31/1000
+Visualize save : 32/1000
+Visualize save : 33/1000
+Visualize save : 34/1000
+Visualize save : 35/1000
+Visualize save : 36/1000
+Visualize save : 37/1000
+Visualize save : 38/1000
+Visualize save : 39/1000
+Visualize save : 40/1000
+Visualize save : 41/1000
+Visualize save : 42/1000
+Visualize save : 43/1000
+Visualize save : 44/1000
+Visualize save : 45/1000
+Visualize save : 46/1000
+Visualize save : 47/1000
+Visualize save : 48/1000
+Visualize save : 49/1000
+Visualize save : 50/1000
+Saved model at /mnt/HDD/chest-seg_models/swinunet_v1_240512/model_50.pt
+Visualize save : 51/1000
+Visualize save : 52/1000
+Visualize save : 53/1000
+Visualize save : 54/1000
+Visualize save : 55/1000
+Visualize save : 56/1000
+Visualize save : 57/1000
+Visualize save : 58/1000
+Visualize save : 59/1000
+Visualize save : 60/1000
+Visualize save : 61/1000
+Visualize save : 62/1000
+Visualize save : 63/1000
+Visualize save : 64/1000
+Saved model at /mnt/HDD/chest-seg_models/swinunet_v1_240512/model_64.pt
+[41m Early stopping at epoch 64[0m
+[41m Best valid loss: 8.966670840978622[0m
+[41m ACC : 0.23637482944515445[0m
+[41m mIoU: 0.9780513884559754[0m
+Training Complete.

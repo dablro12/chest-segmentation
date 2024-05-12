@@ -39,6 +39,7 @@ os.environ['KMP_DUPLICATE_LIB_OK']='True'
 import sys 
 sys.path.append('../')
 from model import load_model
+from torch.optim.lr_scheduler import ReduceLROnPlateau
 
 class Train(nn.Module):
     def __init__(self, args):
@@ -115,6 +116,11 @@ class Train(nn.Module):
             checkpoint_paths = {key: f"/mnt/HDD/chest-seg_models/pretrained_models/{args.pretrained_model}/{key}0000000.pt" for key in ['G', 'D', 'O']}
             self.load_checkpoints(checkpoint_paths)
             print('\033[41m',"#"*30, ' | ', 'Pretrained Setting Complete !!', '\033[0m')
+        self.setup_scheduler(args)  # 스케줄러 설정 호출
+    
+    def setup_scheduler(self, args):
+        # ReduceLROnPlateau 스케줄러 설정
+        self.scheduler = ReduceLROnPlateau(self.optimizer, mode='min', factor=0.1, patience=10, verbose=True)
 
     def load_checkpoints(self, paths):
         self.model_weights = torch.load(paths['G'], map_location=self.device)
@@ -161,7 +167,8 @@ class Train(nn.Module):
                     valid_losses += loss.cpu().detach().item()
                     valid_accs += acc
                     valid_ious += iou
-    
+                    
+            self.scheduler.step(valid_losses)  # 스케줄러 업데이트 호출
             self.log_metrics(epoch, train_losses, train_accs, train_ious, valid_losses, valid_accs, valid_ious)
             self.visualize(epoch = epoch, image = images[0,0], mask = masks[0,0], output_image = (outputs[0,0] > 0.5).int())
             

@@ -1,15 +1,15 @@
-python ./run.py --model "unet" \
+python ./run.py --model "monai_swinunet" \
                 --version "v1" \
                 --save_path "/mnt/HDD/chest-seg_models" \
                 --cuda "0"\
-                --ts_batch_size 64\
-                --vs_batch_size 8\
+                --ts_batch_size 12\
+                --vs_batch_size 4\
                 --epochs 1000\
                 --loss "BCE"\
                 --optimizer "AdamW"\
                 --learning_rate 0.0001\
                 --scheduler "lambda"\
                 --pretrain "no" --pretrained_model "premodel" --error_signal no\
-                --wandb "yes"\ > unet.log 2>&1 &
+                --wandb "yes"\ > monai_swinunet.log 2>&1 &
 
 

@@ -1,0 +1,143 @@
+2024-05-12 13:33:42.562234: I tensorflow/core/util/port.cc:110] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2024-05-12 13:33:42.563449: I tensorflow/tsl/cuda/cudart_stub.cc:28] Could not find cuda drivers on your machine, GPU will not be used.
+2024-05-12 13:33:42.587461: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-05-12 13:33:42.990783: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+wandb: Currently logged in as: dablro1232. Use `wandb login --relogin` to force relogin
+wandb: wandb version 0.17.0 is available!  To upgrade, please run:
+wandb:  $ pip install wandb --upgrade
+wandb: Tracking run with wandb version 0.16.4
+wandb: Run data is saved locally in /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_133344-smdfbikw
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run woven-capybara-13
+wandb: ⭐️ View project at https://wandb.ai/dablro1232/Chest-segmentation
+wandb: 🚀 View run at https://wandb.ai/dablro1232/Chest-segmentation/runs/smdfbikw
+CUDA Status : cuda
+Model: AttU_Net loaded successfully!! | pretrained : False
+  0%|          | 0/1000 [00:00<?, ?it/s]  0%|          | 1/1000 [00:17<4:48:13, 17.31s/it]  0%|          | 2/1000 [00:34<4:45:17, 17.15s/it]  0%|          | 3/1000 [00:51<4:47:28, 17.30s/it]  0%|          | 4/1000 [01:14<5:23:58, 19.52s/it]  0%|          | 5/1000 [01:37<5:42:47, 20.67s/it]  1%|          | 6/1000 [02:00<5:54:51, 21.42s/it]  1%|          | 7/1000 [02:23<6:01:34, 21.85s/it]  1%|          | 8/1000 [02:45<6:05:18, 22.10s/it]  1%|          | 9/1000 [03:08<6:07:46, 22.27s/it]  1%|          | 10/1000 [03:32<6:18:13, 22.92s/it]  1%|          | 11/1000 [03:55<6:17:19, 22.89s/it]  1%|          | 12/1000 [04:18<6:17:45, 22.94s/it]  1%|▏         | 13/1000 [04:41<6:17:30, 22.95s/it]  1%|▏         | 14/1000 [05:04<6:16:43, 22.92s/it]  2%|▏         | 15/1000 [05:27<6:16:01, 22.90s/it]  2%|▏         | 16/1000 [05:50<6:16:48, 22.98s/it]  2%|▏         | 17/1000 [06:13<6:16:11, 22.96s/it]  2%|▏         | 18/1000 [06:36<6:16:26, 23.00s/it]  2%|▏         | 19/1000 [06:59<6:16:23, 23.02s/it]  2%|▏         | 20/1000 [07:22<6:14:26, 22.93s/it]  2%|▏         | 21/1000 [07:44<6:12:26, 22.83s/it]  2%|▏         | 22/1000 [08:07<6:12:48, 22.87s/it]  2%|▏         | 23/1000 [08:30<6:12:29, 22.88s/it]  2%|▏         | 24/1000 [08:54<6:14:17, 23.01s/it]  2%|▎         | 25/1000 [09:16<6:13:49, 23.00s/it]  3%|▎         | 26/1000 [09:39<6:12:43, 22.96s/it]  3%|▎         | 27/1000 [10:02<6:11:23, 22.90s/it]  3%|▎         | 28/1000 [10:25<6:12:45, 23.01s/it]  3%|▎         | 29/1000 [10:48<6:11:51, 22.98s/it]  3%|▎         | 30/1000 [11:11<6:10:45, 22.93s/it]  3%|▎         | 31/1000 [11:34<6:12:14, 23.05s/it]  3%|▎         | 32/1000 [11:57<6:10:16, 22.95s/it]  3%|▎         | 33/1000 [12:20<6:09:05, 22.90s/it]  3%|▎         | 34/1000 [12:43<6:11:40, 23.09s/it]  4%|▎         | 35/1000 [13:06<6:10:35, 23.04s/it]  4%|▎         | 36/1000 [13:29<6:08:36, 22.94s/it]  4%|▎         | 37/1000 [13:52<6:10:17, 23.07s/it]  4%|▍         | 38/1000 [14:16<6:09:53, 23.07s/it]  4%|▍         | 39/1000 [14:38<6:07:42, 22.96s/it]  4%|▍         | 40/1000 [15:02<6:09:37, 23.10s/it]  4%|▍         | 41/1000 [15:25<6:08:16, 23.04s/it]  4%|▍         | 42/1000 [15:47<6:06:19, 22.94s/it]  4%|▍         | 43/1000 [16:11<6:07:20, 23.03s/it]  4%|▍         | 44/1000 [16:34<6:07:28, 23.06s/it]  4%|▍         | 45/1000 [16:56<6:04:18, 22.89s/it]  5%|▍         | 46/1000 [17:20<6:07:15, 23.10s/it]  5%|▍         | 47/1000 [17:43<6:06:52, 23.10s/it]  5%|▍         | 48/1000 [18:06<6:06:32, 23.10s/it]  5%|▍         | 49/1000 [18:29<6:06:42, 23.14s/it]  5%|▌         | 50/1000 [18:53<6:07:33, 23.21s/it]  5%|▌         | 51/1000 [19:16<6:06:15, 23.16s/it]  5%|▌         | 52/1000 [19:39<6:06:39, 23.21s/it]  5%|▌         | 53/1000 [20:02<6:07:07, 23.26s/it]  5%|▌         | 54/1000 [20:25<6:02:57, 23.02s/it]  6%|▌         | 55/1000 [20:50<6:13:26, 23.71s/it]  6%|▌         | 56/1000 [21:14<6:14:39, 23.81s/it]  6%|▌         | 57/1000 [21:38<6:13:46, 23.78s/it]  6%|▌         | 58/1000 [22:02<6:16:42, 23.99s/it]  6%|▌         | 59/1000 [22:26<6:16:30, 24.01s/it]  6%|▌         | 60/1000 [22:50<6:14:41, 23.92s/it]  6%|▌         | 61/1000 [23:13<6:11:26, 23.73s/it]  6%|▌         | 62/1000 [23:36<6:07:30, 23.51s/it]  6%|▋         | 63/1000 [24:00<6:07:32, 23.54s/it]  6%|▋         | 64/1000 [24:23<6:04:44, 23.38s/it]  6%|▋         | 65/1000 [24:47<6:06:39, 23.53s/it]  7%|▋         | 66/1000 [25:10<6:04:23, 23.41s/it]  7%|▋         | 67/1000 [25:33<6:01:42, 23.26s/it]  7%|▋         | 68/1000 [25:56<6:01:39, 23.28s/it]  7%|▋         | 69/1000 [26:19<6:00:30, 23.23s/it]  7%|▋         | 70/1000 [26:42<5:56:53, 23.03s/it]  7%|▋         | 71/1000 [27:05<5:57:09, 23.07s/it]  7%|▋         | 72/1000 [27:28<5:55:44, 23.00s/it]  7%|▋         | 73/1000 [27:51<5:54:55, 22.97s/it]  7%|▋         | 74/1000 [28:14<5:55:55, 23.06s/it]  8%|▊         | 75/1000 [28:37<5:55:20, 23.05s/it]  8%|▊         | 76/1000 [29:00<5:53:16, 22.94s/it]  8%|▊         | 77/1000 [29:23<5:55:16, 23.09s/it]  8%|▊         | 78/1000 [29:46<5:53:53, 23.03s/it]  8%|▊         | 79/1000 [30:09<5:53:21, 23.02s/it]  8%|▊         | 80/1000 [30:32<5:53:31, 23.06s/it]  8%|▊         | 81/1000 [30:55<5:53:31, 23.08s/it]  8%|▊         | 82/1000 [31:18<5:51:02, 22.94s/it]  8%|▊         | 83/1000 [31:41<5:52:45, 23.08s/it]  8%|▊         | 84/1000 [32:05<5:52:38, 23.10s/it]  8%|▊         | 85/1000 [32:27<5:51:23, 23.04s/it]  9%|▊         | 86/1000 [32:51<5:52:30, 23.14s/it]  9%|▊         | 87/1000 [33:14<5:51:41, 23.11s/it]  9%|▉         | 88/1000 [33:37<5:50:04, 23.03s/it]  9%|▉         | 89/1000 [34:00<5:51:12, 23.13s/it]  9%|▉         | 90/1000 [34:23<5:48:43, 22.99s/it]  9%|▉         | 91/1000 [34:45<5:46:35, 22.88s/it]  9%|▉         | 92/1000 [35:09<5:48:46, 23.05s/it]  9%|▉         | 93/1000 [35:32<5:48:59, 23.09s/it]  9%|▉         | 94/1000 [35:55<5:46:56, 22.98s/it] 10%|▉         | 95/1000 [36:18<5:49:27, 23.17s/it] 10%|▉         | 96/1000 [36:35<5:21:53, 21.36s/it] 10%|▉         | 96/1000 [36:53<5:47:23, 23.06s/it]
+wandb: - 0.003 MB of 0.003 MB uploadedwandb: \ 0.003 MB of 0.003 MB uploadedwandb: | 0.003 MB of 0.023 MB uploadedwandb: / 0.023 MB of 0.023 MB uploadedwandb: - 0.023 MB of 0.023 MB uploadedwandb: \ 0.023 MB of 0.023 MB uploadedwandb:                                                                                
+wandb: 
+wandb: Run history:
+wandb:  train_acc ▁▂▃▅▅▆▆▆▆▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇██████████████
+wandb: train_ious ▁▆▆▇▇▇▇▇████████████████████████████████
+wandb: train_loss █▆▅▄▄▃▃▂▂▂▂▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:  valid_acc ▁▄▄▅▇▇▇▇█▇██████████████████████████████
+wandb: valid_ious ▃▄▁▁▆▇▇▇█▇██████████████████████████████
+wandb: valid_loss █▇▆▅▄▃▃▂▂▂▂▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb: 
+wandb: Run summary:
+wandb:  train_acc 0.91197
+wandb: train_ious 0.99952
+wandb: train_loss 0.00134
+wandb:  valid_acc 0.7695
+wandb: valid_ious 0.99371
+wandb: valid_loss 0.03671
+wandb: 
+wandb: 🚀 View run woven-capybara-13 at: https://wandb.ai/dablro1232/Chest-segmentation/runs/smdfbikw
+wandb: ️⚡ View job at https://wandb.ai/dablro1232/Chest-segmentation/jobs/QXJ0aWZhY3RDb2xsZWN0aW9uOjE3MzMwNzAxNQ==/version_details/v3
+wandb: Synced 6 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: Find logs at: ./wandb/run-20240512_133344-smdfbikw/logs
+Visualize save : 1/1000
+Visualize save : 2/1000
+Visualize save : 3/1000
+Visualize save : 4/1000
+Visualize save : 5/1000
+Visualize save : 6/1000
+Visualize save : 7/1000
+Visualize save : 8/1000
+Visualize save : 9/1000
+Visualize save : 10/1000
+Visualize save : 11/1000
+Visualize save : 12/1000
+Visualize save : 13/1000
+Visualize save : 14/1000
+Visualize save : 15/1000
+Visualize save : 16/1000
+Visualize save : 17/1000
+Visualize save : 18/1000
+Visualize save : 19/1000
+Visualize save : 20/1000
+Visualize save : 21/1000
+Visualize save : 22/1000
+Visualize save : 23/1000
+Visualize save : 24/1000
+Visualize save : 25/1000
+Visualize save : 26/1000
+Visualize save : 27/1000
+Visualize save : 28/1000
+Visualize save : 29/1000
+Visualize save : 30/1000
+Visualize save : 31/1000
+Visualize save : 32/1000
+Visualize save : 33/1000
+Visualize save : 34/1000
+Visualize save : 35/1000
+Visualize save : 36/1000
+Visualize save : 37/1000
+Visualize save : 38/1000
+Visualize save : 39/1000
+Visualize save : 40/1000
+Visualize save : 41/1000
+Visualize save : 42/1000
+Visualize save : 43/1000
+Visualize save : 44/1000
+Visualize save : 45/1000
+Visualize save : 46/1000
+Visualize save : 47/1000
+Visualize save : 48/1000
+Visualize save : 49/1000
+Visualize save : 50/1000
+Saved model at /mnt/HDD/chest-seg_models/attunet_v1_240512/model_50.pt
+Visualize save : 51/1000
+Visualize save : 52/1000
+Visualize save : 53/1000
+Visualize save : 54/1000
+Visualize save : 55/1000
+Visualize save : 56/1000
+Visualize save : 57/1000
+Visualize save : 58/1000
+Visualize save : 59/1000
+Visualize save : 60/1000
+Visualize save : 61/1000
+Visualize save : 62/1000
+Visualize save : 63/1000
+Visualize save : 64/1000
+Visualize save : 65/1000
+Visualize save : 66/1000
+Visualize save : 67/1000
+Visualize save : 68/1000
+Visualize save : 69/1000
+Visualize save : 70/1000
+Visualize save : 71/1000
+Visualize save : 72/1000
+Visualize save : 73/1000
+Visualize save : 74/1000
+Visualize save : 75/1000
+Visualize save : 76/1000
+Visualize save : 77/1000
+Visualize save : 78/1000
+Visualize save : 79/1000
+Visualize save : 80/1000
+Visualize save : 81/1000
+Visualize save : 82/1000
+Visualize save : 83/1000
+Visualize save : 84/1000
+Visualize save : 85/1000
+Visualize save : 86/1000
+Visualize save : 87/1000
+Visualize save : 88/1000
+Visualize save : 89/1000
+Visualize save : 90/1000
+Visualize save : 91/1000
+Visualize save : 92/1000
+Visualize save : 93/1000
+Visualize save : 94/1000
+Visualize save : 95/1000
+Visualize save : 96/1000
+Visualize save : 97/1000
+Saved model at /mnt/HDD/chest-seg_models/attunet_v1_240512/model_97.pt
+[41m Early stopping at epoch 97[0m
+[41m Best valid loss: 2.452117062639445[0m
+[41m ACC : 0.7695024672054476[0m
+[41m mIoU: 0.9937088556828038[0m
+Training Complete.

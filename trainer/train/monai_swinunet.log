@@ -1,0 +1,138 @@
+2024-05-12 14:11:51.278965: I tensorflow/core/util/port.cc:110] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2024-05-12 14:11:51.280142: I tensorflow/tsl/cuda/cudart_stub.cc:28] Could not find cuda drivers on your machine, GPU will not be used.
+2024-05-12 14:11:51.304356: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-05-12 14:11:51.708898: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+wandb: Currently logged in as: dablro1232. Use `wandb login --relogin` to force relogin
+wandb: wandb version 0.17.0 is available!  To upgrade, please run:
+wandb:  $ pip install wandb --upgrade
+wandb: Tracking run with wandb version 0.16.4
+wandb: Run data is saved locally in /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_141153-oy59lwvj
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run genial-rain-16
+wandb: ⭐️ View project at https://wandb.ai/dablro1232/Chest-segmentation
+wandb: 🚀 View run at https://wandb.ai/dablro1232/Chest-segmentation/runs/oy59lwvj
+CUDA Status : cuda
+Model: MONAI-SwinUNET loaded successfully!! | pretrained : brain MRI
+  0%|          | 0/1000 [00:00<?, ?it/s]  0%|          | 1/1000 [00:18<5:14:06, 18.87s/it]  0%|          | 2/1000 [00:37<5:09:58, 18.64s/it]  0%|          | 3/1000 [00:55<5:04:01, 18.30s/it]  0%|          | 4/1000 [01:14<5:07:56, 18.55s/it]  0%|          | 5/1000 [01:33<5:13:55, 18.93s/it]  1%|          | 6/1000 [01:52<5:11:59, 18.83s/it]  1%|          | 7/1000 [02:10<5:08:01, 18.61s/it]  1%|          | 8/1000 [02:28<5:05:29, 18.48s/it]  1%|          | 9/1000 [02:47<5:08:36, 18.69s/it]  1%|          | 10/1000 [03:06<5:06:38, 18.58s/it]  1%|          | 11/1000 [03:24<5:06:08, 18.57s/it]  1%|          | 12/1000 [03:43<5:06:17, 18.60s/it]  1%|▏         | 13/1000 [04:04<5:16:46, 19.26s/it]  1%|▏         | 14/1000 [04:22<5:11:33, 18.96s/it]  2%|▏         | 15/1000 [04:42<5:16:28, 19.28s/it]  2%|▏         | 16/1000 [05:01<5:13:37, 19.12s/it]  2%|▏         | 17/1000 [05:20<5:12:12, 19.06s/it]  2%|▏         | 18/1000 [05:38<5:08:07, 18.83s/it]  2%|▏         | 19/1000 [05:58<5:11:22, 19.04s/it]  2%|▏         | 20/1000 [06:16<5:08:35, 18.89s/it]  2%|▏         | 21/1000 [06:36<5:13:10, 19.19s/it]  2%|▏         | 22/1000 [06:55<5:12:14, 19.16s/it]  2%|▏         | 23/1000 [07:15<5:13:30, 19.25s/it]  2%|▏         | 24/1000 [07:33<5:10:47, 19.11s/it]  2%|▎         | 25/1000 [07:52<5:08:20, 18.98s/it]  3%|▎         | 26/1000 [08:11<5:07:48, 18.96s/it]  3%|▎         | 27/1000 [08:29<5:05:18, 18.83s/it]  3%|▎         | 28/1000 [08:48<5:04:22, 18.79s/it]  3%|▎         | 29/1000 [09:07<5:03:16, 18.74s/it]  3%|▎         | 30/1000 [09:25<5:02:57, 18.74s/it]  3%|▎         | 31/1000 [09:44<5:03:11, 18.77s/it]  3%|▎         | 32/1000 [10:03<5:02:35, 18.76s/it]  3%|▎         | 33/1000 [10:22<5:03:45, 18.85s/it]  3%|▎         | 34/1000 [10:41<5:05:36, 18.98s/it]  4%|▎         | 35/1000 [11:01<5:07:40, 19.13s/it]  4%|▎         | 36/1000 [11:23<5:21:55, 20.04s/it]  4%|▎         | 37/1000 [11:42<5:18:03, 19.82s/it]  4%|▍         | 38/1000 [12:01<5:11:23, 19.42s/it]  4%|▍         | 39/1000 [12:20<5:09:39, 19.33s/it]  4%|▍         | 40/1000 [12:39<5:07:31, 19.22s/it]  4%|▍         | 41/1000 [12:58<5:08:54, 19.33s/it]  4%|▍         | 42/1000 [13:17<5:06:11, 19.18s/it]  4%|▍         | 43/1000 [13:36<5:02:39, 18.98s/it]  4%|▍         | 44/1000 [13:55<5:02:43, 19.00s/it]  4%|▍         | 45/1000 [14:14<5:02:23, 19.00s/it]  5%|▍         | 46/1000 [14:34<5:06:30, 19.28s/it]  5%|▍         | 47/1000 [14:53<5:06:45, 19.31s/it]  5%|▍         | 48/1000 [15:12<5:05:02, 19.22s/it]  5%|▍         | 49/1000 [15:30<5:00:10, 18.94s/it]  5%|▌         | 50/1000 [15:49<4:58:44, 18.87s/it]  5%|▌         | 51/1000 [16:08<4:58:48, 18.89s/it]  5%|▌         | 52/1000 [16:27<4:58:00, 18.86s/it]  5%|▌         | 53/1000 [16:46<4:57:38, 18.86s/it]  5%|▌         | 54/1000 [17:04<4:56:43, 18.82s/it]  6%|▌         | 55/1000 [17:23<4:56:15, 18.81s/it]  6%|▌         | 56/1000 [17:42<4:56:24, 18.84s/it]  6%|▌         | 57/1000 [18:01<4:54:21, 18.73s/it]  6%|▌         | 58/1000 [18:19<4:54:24, 18.75s/it]  6%|▌         | 59/1000 [18:38<4:55:15, 18.83s/it]  6%|▌         | 60/1000 [18:53<4:34:07, 17.50s/it]  6%|▌         | 61/1000 [19:07<4:18:26, 16.51s/it]  6%|▌         | 62/1000 [19:21<4:07:19, 15.82s/it]  6%|▋         | 63/1000 [19:35<3:59:04, 15.31s/it]  6%|▋         | 64/1000 [19:50<3:53:19, 14.96s/it]  6%|▋         | 65/1000 [20:04<3:49:31, 14.73s/it]  7%|▋         | 66/1000 [20:18<3:46:59, 14.58s/it]  7%|▋         | 67/1000 [20:32<3:45:34, 14.51s/it]  7%|▋         | 68/1000 [20:46<3:43:34, 14.39s/it]  7%|▋         | 69/1000 [21:01<3:42:06, 14.31s/it]  7%|▋         | 70/1000 [21:15<3:42:29, 14.35s/it]  7%|▋         | 71/1000 [21:29<3:41:18, 14.29s/it]  7%|▋         | 72/1000 [21:43<3:40:47, 14.28s/it]  7%|▋         | 73/1000 [21:58<3:39:56, 14.24s/it]  7%|▋         | 74/1000 [22:12<3:39:43, 14.24s/it]  8%|▊         | 75/1000 [22:26<3:38:39, 14.18s/it]  8%|▊         | 76/1000 [22:40<3:38:19, 14.18s/it]  8%|▊         | 77/1000 [22:54<3:37:56, 14.17s/it]  8%|▊         | 78/1000 [23:08<3:37:38, 14.16s/it]  8%|▊         | 79/1000 [23:23<3:37:56, 14.20s/it]  8%|▊         | 80/1000 [23:37<3:37:26, 14.18s/it]  8%|▊         | 81/1000 [23:51<3:37:52, 14.22s/it]  8%|▊         | 82/1000 [24:05<3:37:10, 14.19s/it]  8%|▊         | 83/1000 [24:19<3:37:12, 14.21s/it]  8%|▊         | 84/1000 [24:34<3:36:58, 14.21s/it]  8%|▊         | 85/1000 [24:48<3:36:45, 14.21s/it]  9%|▊         | 86/1000 [25:02<3:36:28, 14.21s/it]  9%|▊         | 87/1000 [25:16<3:35:36, 14.17s/it]  9%|▉         | 88/1000 [25:30<3:34:44, 14.13s/it]  9%|▉         | 89/1000 [25:44<3:34:41, 14.14s/it]  9%|▉         | 90/1000 [25:59<3:35:20, 14.20s/it]  9%|▉         | 91/1000 [26:13<3:35:39, 14.23s/it]  9%|▉         | 91/1000 [26:27<4:24:22, 17.45s/it]
+wandb: - 0.003 MB of 0.003 MB uploadedwandb: \ 0.003 MB of 0.003 MB uploadedwandb: | 0.003 MB of 0.023 MB uploadedwandb: / 0.003 MB of 0.023 MB uploadedwandb: - 0.023 MB of 0.023 MB uploadedwandb:                                                                                
+wandb: 
+wandb: Run history:
+wandb:  train_acc ▁▂▄▅▆▆▆▇▇▇▇▇▇▇▇▇▇▇▇█████████████████████
+wandb: train_ious ▁▅▅▆▆▇▇▇▇▇▇▇▇▇██████████████████████████
+wandb: train_loss █▅▄▄▃▃▂▂▂▂▂▂▂▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:  valid_acc ▁▄▆▆▇▇▇▇████████████████████████████████
+wandb: valid_ious ▁▃▃▃▃▅▆▆▇▇▇██▇▇▇▇▇███▇██████████████████
+wandb: valid_loss █▆▅▄▃▃▂▂▂▂▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▂▂▂▂
+wandb: 
+wandb: Run summary:
+wandb:  train_acc 0.85086
+wandb: train_ious 0.99806
+wandb: train_loss 0.00507
+wandb:  valid_acc 0.49127
+wandb: valid_ious 0.98479
+wandb: valid_loss 0.07876
+wandb: 
+wandb: 🚀 View run genial-rain-16 at: https://wandb.ai/dablro1232/Chest-segmentation/runs/oy59lwvj
+wandb: ️⚡ View job at https://wandb.ai/dablro1232/Chest-segmentation/jobs/QXJ0aWZhY3RDb2xsZWN0aW9uOjE3MzMwNzAxNQ==/version_details/v4
+wandb: Synced 6 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: Find logs at: ./wandb/run-20240512_141153-oy59lwvj/logs
+Visualize save : 1/1000
+Visualize save : 2/1000
+Visualize save : 3/1000
+Visualize save : 4/1000
+Visualize save : 5/1000
+Visualize save : 6/1000
+Visualize save : 7/1000
+Visualize save : 8/1000
+Visualize save : 9/1000
+Visualize save : 10/1000
+Visualize save : 11/1000
+Visualize save : 12/1000
+Visualize save : 13/1000
+Visualize save : 14/1000
+Visualize save : 15/1000
+Visualize save : 16/1000
+Visualize save : 17/1000
+Visualize save : 18/1000
+Visualize save : 19/1000
+Visualize save : 20/1000
+Visualize save : 21/1000
+Visualize save : 22/1000
+Visualize save : 23/1000
+Visualize save : 24/1000
+Visualize save : 25/1000
+Visualize save : 26/1000
+Visualize save : 27/1000
+Visualize save : 28/1000
+Visualize save : 29/1000
+Visualize save : 30/1000
+Visualize save : 31/1000
+Visualize save : 32/1000
+Visualize save : 33/1000
+Visualize save : 34/1000
+Visualize save : 35/1000
+Visualize save : 36/1000
+Visualize save : 37/1000
+Visualize save : 38/1000
+Visualize save : 39/1000
+Visualize save : 40/1000
+Visualize save : 41/1000
+Visualize save : 42/1000
+Visualize save : 43/1000
+Visualize save : 44/1000
+Visualize save : 45/1000
+Visualize save : 46/1000
+Visualize save : 47/1000
+Visualize save : 48/1000
+Visualize save : 49/1000
+Visualize save : 50/1000
+Saved model at /mnt/HDD/chest-seg_models/monai_swinunet_v1_240512/model_50.pt
+Visualize save : 51/1000
+Visualize save : 52/1000
+Visualize save : 53/1000
+Visualize save : 54/1000
+Visualize save : 55/1000
+Visualize save : 56/1000
+Visualize save : 57/1000
+Visualize save : 58/1000
+Visualize save : 59/1000
+Visualize save : 60/1000
+Visualize save : 61/1000
+Visualize save : 62/1000
+Visualize save : 63/1000
+Visualize save : 64/1000
+Visualize save : 65/1000
+Visualize save : 66/1000
+Visualize save : 67/1000
+Visualize save : 68/1000
+Visualize save : 69/1000
+Visualize save : 70/1000
+Visualize save : 71/1000
+Visualize save : 72/1000
+Visualize save : 73/1000
+Visualize save : 74/1000
+Visualize save : 75/1000
+Visualize save : 76/1000
+Visualize save : 77/1000
+Visualize save : 78/1000
+Visualize save : 79/1000
+Visualize save : 80/1000
+Visualize save : 81/1000
+Visualize save : 82/1000
+Visualize save : 83/1000
+Visualize save : 84/1000
+Visualize save : 85/1000
+Visualize save : 86/1000
+Visualize save : 87/1000
+Visualize save : 88/1000
+Visualize save : 89/1000
+Visualize save : 90/1000
+Visualize save : 91/1000
+Visualize save : 92/1000
+Saved model at /mnt/HDD/chest-seg_models/monai_swinunet_v1_240512/model_92.pt
+[41m Early stopping at epoch 92[0m
+[41m Best valid loss: 7.214709598571062[0m
+[41m ACC : 0.49126651138067245[0m
+[41m mIoU: 0.9847917354875996[0m
+Training Complete.

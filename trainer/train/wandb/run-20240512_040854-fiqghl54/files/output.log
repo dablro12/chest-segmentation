@@ -453,3 +453,36 @@ Visualize save : 150/1000
 
  15%|█▌        | 151/1000 [42:27<3:49:47, 16.24s/it]
 Visualize save : 151/1000
+
+ 15%|█▌        | 152/1000 [42:43<3:46:56, 16.06s/it]
+Visualize save : 152/1000
+
+ 15%|█▌        | 153/1000 [42:58<3:45:01, 15.94s/it]
+Visualize save : 153/1000
+
+ 15%|█▌        | 154/1000 [43:12<3:33:55, 15.17s/it]
+Visualize save : 154/1000
+
+ 16%|█▌        | 155/1000 [43:25<3:25:59, 14.63s/it]
+Visualize save : 155/1000
+
+ 16%|█▌        | 156/1000 [43:38<3:19:45, 14.20s/it]
+Visualize save : 156/1000
+
+ 16%|█▌        | 157/1000 [43:51<3:15:14, 13.90s/it]
+Visualize save : 157/1000
+
+ 16%|█▌        | 158/1000 [44:05<3:12:27, 13.71s/it]
+Visualize save : 158/1000
+
+ 16%|█▌        | 159/1000 [44:19<3:15:01, 13.91s/it]
+Visualize save : 159/1000
+Saved model at /mnt/HDD/chest-seg_models/unet_plus_plus_v1_240512/model_159.pt
+Visualize save : 160/1000
+
+ 16%|█▌        | 159/1000 [44:36<3:55:58, 16.84s/it]
+Saved model at /mnt/HDD/chest-seg_models/unet_plus_plus_v1_240512/model_160.pt
+[41m Early stopping at epoch 160
+[41m Best valid loss: 1.6394953336566687
+[41m ACC : 0.7219351328188374
+[41m mIoU: 0.9922317179941362

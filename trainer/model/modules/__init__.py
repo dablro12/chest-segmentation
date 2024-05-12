@@ -1,7 +1,6 @@
 import torch
 import torch.nn as nn
 
-
 class Recurrent_block(nn.Module):
     def __init__(self,ch_out,t=2):
         super(Recurrent_block,self).__init__()
