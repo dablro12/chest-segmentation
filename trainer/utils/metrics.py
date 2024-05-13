@@ -1,6 +1,31 @@
 from scipy.spatial.distance import directed_hausdorff
 from monai.metrics import DiceMetric
 
+
+def train_metrics(preds, targets, threshold=0.5):
+    """
+    mIoU 및 Accuracy 계산 함수.
+    
+    Args:
+        preds (torch.Tensor): 모델의 예측값.
+        targets (torch.Tensor): 실제 레이블.
+        threshold (float): 이진화 임계값.
+        
+    Returns:
+        (tuple): mIoU와 Accuracy, Dice Score, Hausdorff Distance Metric의 튜플.
+    """
+    preds_binary = (preds > threshold).int()
+    targets_binary = targets.clone().int()
+    intersection = (preds_binary & targets_binary).sum((1, 2, 3))
+    union = (preds_binary | targets_binary).sum((1, 2, 3))
+
+    # Calculate metrics
+    iou = (intersection / (union + 1e-6)).mean().item()
+    accuracy = (preds_binary == targets_binary).float().mean().item()
+
+    return iou, accuracy
+
+
 def calculate_metrics(preds, targets, threshold=0.5):
     """
     mIoU 및 Accuracy 계산 함수.

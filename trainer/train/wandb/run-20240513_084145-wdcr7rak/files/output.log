@@ -1,0 +1,38 @@
+/home/eiden/anaconda3/envs/eiden/lib/python3.8/site-packages/torch/optim/lr_scheduler.py:28: UserWarning: The verbose parameter is deprecated. Please use get_last_lr() to access the learning rate.
+  warnings.warn("The verbose parameter is deprecated. Please use get_last_lr() "
+  0%|          | 0/1000 [00:00<?, ?it/s]
+  0%|          | 0/1000 [00:01<?, ?it/s]
+Traceback (most recent call last):
+  File "./run.py", line 12, in <module>
+    main()
+  File "./run.py", line 9, in main
+    trainer.fit()
+  File "/home/eiden/eiden/chest-segmentation/src/trainer/train/train.py", line 147, in fit
+    outputs = self.model(images)
+  File "/home/eiden/anaconda3/envs/eiden/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/eiden/anaconda3/envs/eiden/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/eiden/eiden/chest-segmentation/src/trainer/train/../model/models.py", line 139, in forward
+    x1 = self.Att2(g=d2,x=x1)
+  File "/home/eiden/anaconda3/envs/eiden/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/eiden/anaconda3/envs/eiden/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/eiden/eiden/chest-segmentation/src/trainer/train/../model/modules/__init__.py", line 62, in forward
+    x1 = self.W_x(x)
+  File "/home/eiden/anaconda3/envs/eiden/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/eiden/anaconda3/envs/eiden/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/eiden/anaconda3/envs/eiden/lib/python3.8/site-packages/torch/nn/modules/container.py", line 217, in forward
+    input = module(input)
+  File "/home/eiden/anaconda3/envs/eiden/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/eiden/anaconda3/envs/eiden/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/eiden/anaconda3/envs/eiden/lib/python3.8/site-packages/torch/nn/modules/batchnorm.py", line 175, in forward
+    return F.batch_norm(
+  File "/home/eiden/anaconda3/envs/eiden/lib/python3.8/site-packages/torch/nn/functional.py", line 2482, in batch_norm
+    return torch.batch_norm(
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 392.00 MiB. GPU 0 has a total capacity of 23.60 GiB of which 256.31 MiB is free. Process 911540 has 2.03 GiB memory in use. Including non-PyTorch memory, this process has 21.09 GiB memory in use. Of the allocated memory 19.76 GiB is allocated by PyTorch, and 907.00 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)

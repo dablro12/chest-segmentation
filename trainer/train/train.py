@@ -11,7 +11,7 @@ from torchvision import transforms
 from torch.utils.data import DataLoader
 from tqdm import tqdm
 from utils.dataset import Segmentation_CustomDataset as CustomDataset
-from utils.metrics import calculate_metrics
+from utils.metrics import train_metrics
 from utils.__init__ import *
 from utils.arg import save_args
 from utils import * 
@@ -24,20 +24,16 @@ os.environ['KMP_DUPLICATE_LIB_OK'] = 'True'
 torch.backends.cuda.matmul.allow_tf32 = False
 torch.backends.cudnn.allow_tf32 = False
 torch.autograd.set_detect_anomaly(False) 
-
 #################
 import torch 
 from torchvision import transforms
 from torch.utils.data import DataLoader
 import torch.nn as nn
 from utils.dataset import Segmentation_CustomDataset as CustomDataset
-import os
 import torch.optim as optim
 from utils.__init__ import *
 from utils import * 
 os.environ['KMP_DUPLICATE_LIB_OK']='True'
-import sys 
-sys.path.append('../')
 from model import load_model
 from torch.optim.lr_scheduler import ReduceLROnPlateau
 
@@ -63,19 +59,16 @@ class Train(nn.Module):
     def setup_datasets(self, args):
         transform = {
             'train': transforms.Compose([
+                transforms.RandomPerspective(distortion_scale=0.5, p=0.5),
                 transforms.RandomRotation(25),
                 transforms.RandomHorizontalFlip(p=0.5),
                 transforms.RandomVerticalFlip(p=0.5),
-                transforms.RandomResizedCrop(224, scale=(0.75, 1.0), ratio=(0.75, 1.33)),
-                # transforms.RandomCrop(size = (224,224), pad_if_needed=True, padding_mode='reflect'),
-                transforms.ColorJitter(brightness=0.2, contrast=0.2),  # 밝기와 대비 조정
+                transforms.Resize((224, 224)),
                 transforms.ToTensor(),
-                transforms.Normalize(mean=[0.5], std=[0.5]),# [0, 1] -> [-1, 1] : 이게 실험적으로 더 좋은 신경망 학습
             ]),
             'valid': transforms.Compose([
                 transforms.Resize((224, 224)),
                 transforms.ToTensor(),
-                transforms.Normalize(mean=[0.5], std=[0.5]),
             ])
         }
         img_dirs = {'train': '/mnt/HDD/chest-seg/dataset/train_img', 'valid': '/mnt/HDD/chest-seg/dataset/train_img' }
@@ -87,7 +80,7 @@ class Train(nn.Module):
         )
         self.valid_loader = DataLoader(
             CustomDataset(image_dir = img_dirs['valid'], mask_dir = mask_dir['valid'], transform=transform['valid'], testing=True, seed = 627), 
-            batch_size=args.vs_batch_size, shuffle=False
+            batch_size=args.vs_batch_size, shuffle=True
         )
 
     def setup_wandb(self, args):
@@ -148,7 +141,7 @@ class Train(nn.Module):
                 loss.backward()
                 self.optimizer.step()
 
-                acc, iou = calculate_metrics(outputs, masks, threshold=0.5)
+                acc, iou = train_metrics(outputs, masks, threshold=0.5)
 
                 train_losses += loss.cpu().detach().item()
                 train_accs += acc
@@ -162,7 +155,7 @@ class Train(nn.Module):
                     # BCE Logistic Loss
                     loss = self.loss_fn(outputs, masks)
 
-                    acc, iou = calculate_metrics(outputs, masks, threshold=0.5)
+                    acc, iou = train_metrics(outputs, masks, threshold=0.5)
 
                     valid_losses += loss.cpu().detach().item()
                     valid_accs += acc
@@ -178,9 +171,6 @@ class Train(nn.Module):
                 self.epochs_no_improve = 0
             else:
                 self.epochs_no_improve += 1
-            
-            if epoch % 50 == 0:
-                self.save_model(epoch, valid_losses/len(self.valid_loader))
 
             if self.epochs_no_improve >= self.n_epochs_stop:
                 self.save_model(epoch, valid_losses/len(self.valid_loader))  # Save the best model
@@ -189,6 +179,9 @@ class Train(nn.Module):
                 print(f"\033[41m ACC : {valid_accs / len(self.valid_loader)}\033[0m")
                 print(f"\033[41m mIoU: {valid_ious / len(self.valid_loader)}\033[0m")
                 break
+            
+            if epoch % 50 == 0:
+                self.save_model(epoch, valid_losses/len(self.valid_loader))
 
         if self.w == "yes":
             wandb.finish()
@@ -203,6 +196,7 @@ class Train(nn.Module):
                 "valid_loss": valid_losses / len(self.valid_loader),
                 "valid_acc": valid_accs / len(self.valid_loader),
                 "valid_ious": valid_ious / len(self.valid_loader),
+                'learning_rate': self.optimizer.param_groups[0]['lr']
             }, step = epoch)
 
     def save_model(self, epoch, valid_loss):

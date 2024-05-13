@@ -1,0 +1,22 @@
+
+Model: MAnet loaded successfully!! | pretrained : imagenet
+/home/eiden/anaconda3/envs/eiden/lib/python3.8/site-packages/torch/optim/lr_scheduler.py:28: UserWarning: The verbose parameter is deprecated. Please use get_last_lr() to access the learning rate.
+  warnings.warn("The verbose parameter is deprecated. Please use get_last_lr() "
+  0%|          | 0/1000 [00:00<?, ?it/s]
+
+  0%|          | 1/1000 [00:18<5:13:03, 18.80s/it]
+
+  0%|          | 2/1000 [00:36<5:05:29, 18.37s/it]
+
+  0%|          | 3/1000 [00:55<5:03:55, 18.29s/it]
+
+  0%|          | 4/1000 [01:12<4:59:08, 18.02s/it]
+
+  0%|          | 5/1000 [01:30<4:57:07, 17.92s/it]
+
+  1%|          | 6/1000 [01:48<4:57:19, 17.95s/it]
+
+  1%|          | 7/1000 [02:06<4:58:17, 18.02s/it]
+
+  1%|          | 8/1000 [02:24<4:57:06, 17.97s/it]
+

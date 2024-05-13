@@ -1,381 +1,0 @@
-2024-05-12 04:08:39.393235: I tensorflow/core/util/port.cc:110] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-2024-05-12 04:08:39.394453: I tensorflow/tsl/cuda/cudart_stub.cc:28] Could not find cuda drivers on your machine, GPU will not be used.
-2024-05-12 04:08:39.418830: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
-To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
-2024-05-12 04:08:39.820611: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
-wandb: Currently logged in as: dablro1232. Use `wandb login --relogin` to force relogin
-wandb: wandb version 0.17.0 is available!  To upgrade, please run:
-wandb:  $ pip install wandb --upgrade
-wandb: Tracking run with wandb version 0.16.4
-wandb: Run data is saved locally in /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240512_040841-do41msho
-wandb: Run `wandb offline` to turn off syncing.
-wandb: Syncing run worthy-armadillo-7
-wandb: ⭐️ View project at https://wandb.ai/dablro1232/Chest-segmentation
-wandb: 🚀 View run at https://wandb.ai/dablro1232/Chest-segmentation/runs/do41msho
-CUDA Status : cuda
-Model: MAnet loaded successfully!! | pretrained : imagenet
-  0%|          | 0/1000 [00:00<?, ?it/s]  0%|          | 1/1000 [00:15<4:12:36, 15.17s/it]  0%|          | 2/1000 [00:34<4:48:39, 17.35s/it]  0%|          | 3/1000 [00:52<4:53:34, 17.67s/it]  0%|          | 4/1000 [01:13<5:15:51, 19.03s/it]  0%|          | 5/1000 [01:35<5:35:11, 20.21s/it]  1%|          | 6/1000 [01:56<5:41:03, 20.59s/it]  1%|          | 7/1000 [02:15<5:31:58, 20.06s/it]  1%|          | 8/1000 [02:32<5:15:18, 19.07s/it]  1%|          | 9/1000 [02:50<5:06:12, 18.54s/it]  1%|          | 10/1000 [03:06<4:54:10, 17.83s/it]  1%|          | 11/1000 [03:22<4:45:27, 17.32s/it]  1%|          | 12/1000 [03:40<4:47:59, 17.49s/it]  1%|▏         | 13/1000 [03:56<4:42:14, 17.16s/it]  1%|▏         | 14/1000 [04:13<4:38:38, 16.96s/it]  2%|▏         | 15/1000 [04:29<4:35:34, 16.79s/it]  2%|▏         | 16/1000 [04:45<4:31:11, 16.54s/it]  2%|▏         | 17/1000 [05:03<4:35:26, 16.81s/it]  2%|▏         | 18/1000 [05:20<4:38:15, 17.00s/it]  2%|▏         | 19/1000 [05:37<4:38:50, 17.05s/it]  2%|▏         | 20/1000 [05:55<4:43:12, 17.34s/it]  2%|▏         | 21/1000 [06:11<4:35:45, 16.90s/it]  2%|▏         | 22/1000 [06:26<4:24:28, 16.23s/it]  2%|▏         | 23/1000 [06:41<4:21:41, 16.07s/it]  2%|▏         | 24/1000 [06:56<4:12:20, 15.51s/it]  2%|▎         | 25/1000 [07:13<4:21:23, 16.09s/it]  3%|▎         | 26/1000 [07:30<4:23:31, 16.23s/it]  3%|▎         | 27/1000 [07:47<4:28:38, 16.57s/it]  3%|▎         | 28/1000 [08:02<4:19:13, 16.00s/it]  3%|▎         | 29/1000 [08:17<4:16:40, 15.86s/it]  3%|▎         | 30/1000 [08:32<4:12:17, 15.61s/it]  3%|▎         | 31/1000 [08:47<4:05:41, 15.21s/it]  3%|▎         | 32/1000 [09:03<4:11:22, 15.58s/it]  3%|▎         | 33/1000 [09:19<4:12:19, 15.66s/it]  3%|▎         | 34/1000 [09:36<4:18:11, 16.04s/it]  4%|▎         | 35/1000 [09:53<4:21:36, 16.27s/it]  4%|▎         | 36/1000 [10:10<4:27:46, 16.67s/it]  4%|▎         | 37/1000 [10:24<4:13:26, 15.79s/it]  4%|▍         | 38/1000 [10:38<4:05:01, 15.28s/it]  4%|▍         | 39/1000 [10:53<4:04:23, 15.26s/it]  4%|▍         | 40/1000 [11:08<4:02:12, 15.14s/it]  4%|▍         | 41/1000 [11:26<4:16:34, 16.05s/it]  4%|▍         | 42/1000 [11:45<4:27:37, 16.76s/it]  4%|▍         | 43/1000 [11:59<4:16:30, 16.08s/it]  4%|▍         | 44/1000 [12:14<4:09:39, 15.67s/it]  4%|▍         | 45/1000 [12:28<4:03:01, 15.27s/it]  5%|▍         | 46/1000 [12:43<3:59:19, 15.05s/it]  5%|▍         | 47/1000 [12:58<3:57:51, 14.98s/it]  5%|▍         | 48/1000 [13:13<4:00:52, 15.18s/it]  5%|▍         | 49/1000 [13:27<3:54:12, 14.78s/it]  5%|▌         | 50/1000 [13:41<3:52:32, 14.69s/it]  5%|▌         | 51/1000 [13:56<3:49:55, 14.54s/it]  5%|▌         | 52/1000 [14:10<3:50:15, 14.57s/it]  5%|▌         | 53/1000 [14:25<3:50:26, 14.60s/it]  5%|▌         | 54/1000 [14:40<3:50:15, 14.60s/it]  6%|▌         | 55/1000 [14:54<3:51:15, 14.68s/it]  6%|▌         | 56/1000 [15:09<3:49:27, 14.58s/it]  6%|▌         | 57/1000 [15:24<3:49:38, 14.61s/it]  6%|▌         | 58/1000 [15:40<3:56:28, 15.06s/it]  6%|▌         | 59/1000 [15:54<3:53:26, 14.89s/it]  6%|▌         | 60/1000 [16:10<3:59:47, 15.31s/it]  6%|▌         | 61/1000 [16:25<3:55:26, 15.04s/it]  6%|▌         | 62/1000 [16:39<3:52:47, 14.89s/it]  6%|▋         | 63/1000 [16:54<3:51:52, 14.85s/it]  6%|▋         | 64/1000 [17:09<3:53:01, 14.94s/it]  6%|▋         | 65/1000 [17:24<3:49:40, 14.74s/it]  7%|▋         | 66/1000 [17:38<3:47:19, 14.60s/it]  7%|▋         | 67/1000 [17:54<3:55:58, 15.17s/it]  7%|▋         | 68/1000 [18:12<4:05:32, 15.81s/it]  7%|▋         | 69/1000 [18:27<4:04:41, 15.77s/it]  7%|▋         | 70/1000 [18:42<4:01:29, 15.58s/it]  7%|▋         | 71/1000 [18:59<4:03:52, 15.75s/it]  7%|▋         | 72/1000 [19:13<3:59:22, 15.48s/it]  7%|▋         | 73/1000 [19:29<3:58:22, 15.43s/it]  7%|▋         | 74/1000 [19:43<3:52:55, 15.09s/it]  8%|▊         | 75/1000 [19:57<3:49:38, 14.90s/it]  8%|▊         | 76/1000 [20:12<3:46:12, 14.69s/it]  8%|▊         | 77/1000 [20:26<3:43:33, 14.53s/it]  8%|▊         | 78/1000 [20:40<3:42:12, 14.46s/it]  8%|▊         | 79/1000 [20:57<3:53:54, 15.24s/it]  8%|▊         | 80/1000 [21:14<3:59:41, 15.63s/it]  8%|▊         | 81/1000 [21:28<3:53:53, 15.27s/it]  8%|▊         | 82/1000 [21:43<3:49:21, 14.99s/it]  8%|▊         | 83/1000 [21:58<3:50:45, 15.10s/it]  8%|▊         | 84/1000 [22:18<4:15:44, 16.75s/it]  8%|▊         | 85/1000 [22:34<4:11:10, 16.47s/it]  9%|▊         | 86/1000 [22:49<4:04:24, 16.04s/it]  9%|▊         | 87/1000 [23:06<4:07:33, 16.27s/it]Visualize save : 1/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_1.pt
-Visualize save : 2/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_2.pt
-Visualize save : 3/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_3.pt
-Visualize save : 4/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_4.pt
-Visualize save : 5/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_5.pt
-Visualize save : 6/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_6.pt
-Visualize save : 7/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_7.pt
-Visualize save : 8/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_8.pt
-Visualize save : 9/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_9.pt
-Visualize save : 10/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_10.pt
-Visualize save : 11/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_11.pt
-Visualize save : 12/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_12.pt
-Visualize save : 13/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_13.pt
-Visualize save : 14/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_14.pt
-Visualize save : 15/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_15.pt
-Visualize save : 16/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_16.pt
-Visualize save : 17/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_17.pt
-Visualize save : 18/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_18.pt
-Visualize save : 19/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_19.pt
-Visualize save : 20/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_20.pt
-Visualize save : 21/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_21.pt
-Visualize save : 22/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_22.pt
-Visualize save : 23/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_23.pt
-Visualize save : 24/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_24.pt
-Visualize save : 25/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_25.pt
-Visualize save : 26/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_26.pt
-Visualize save : 27/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_27.pt
-Visualize save : 28/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_28.pt
-Visualize save : 29/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_29.pt
-Visualize save : 30/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_30.pt
-Visualize save : 31/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_31.pt
-Visualize save : 32/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_32.pt
-Visualize save : 33/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_33.pt
-Visualize save : 34/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_34.pt
-Visualize save : 35/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_35.pt
-Visualize save : 36/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_36.pt
-Visualize save : 37/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_37.pt
-Visualize save : 38/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_38.pt
-Visualize save : 39/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_39.pt
-Visualize save : 40/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_40.pt
-Visualize save : 41/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_41.pt
-Visualize save : 42/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_42.pt
-Visualize save : 43/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_43.pt
-Visualize save : 44/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_44.pt
-Visualize save : 45/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_45.pt
-Visualize save : 46/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_46.pt
-Visualize save : 47/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_47.pt
-Visualize save : 48/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_48.pt
-Visualize save : 49/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_49.pt
-Visualize save : 50/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_50.pt
-Visualize save : 51/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_51.pt
-Visualize save : 52/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_52.pt
-Visualize save : 53/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_53.pt
-Visualize save : 54/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_54.pt
-Visualize save : 55/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_55.pt
-Visualize save : 56/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_56.pt
-Visualize save : 57/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_57.pt
-Visualize save : 58/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_58.pt
-Visualize save : 59/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_59.pt
-Visualize save : 60/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_60.pt
-Visualize save : 61/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_61.pt
-Visualize save : 62/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_62.pt
-Visualize save : 63/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_63.pt
-Visualize save : 64/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_64.pt
-Visualize save : 65/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_65.pt
-Visualize save : 66/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_66.pt
-Visualize save : 67/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_67.pt
-Visualize save : 68/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_68.pt
-Visualize save : 69/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_69.pt
-Visualize save : 70/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_70.pt
-Visualize save : 71/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_71.pt
-Visualize save : 72/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_72.pt
-Visualize save : 73/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_73.pt
-Visualize save : 74/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_74.pt
-Visualize save : 75/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_75.pt
-Visualize save : 76/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_76.pt
-Visualize save : 77/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_77.pt
-Visualize save : 78/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_78.pt
-Visualize save : 79/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_79.pt
-Visualize save : 80/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_80.pt
-Visualize save : 81/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_81.pt
-Visualize save : 82/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_82.pt
-Visualize save : 83/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_83.pt
-Visualize save : 84/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_84.pt
-Visualize save : 85/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_85.pt
-Visualize save : 86/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_86.pt
-Visualize save : 87/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_87.pt
-Visualize save : 88/1000
-  9%|▉         | 88/1000 [23:22<4:06:04, 16.19s/it]  9%|▉         | 89/1000 [23:38<4:05:01, 16.14s/it]  9%|▉         | 90/1000 [23:54<4:03:09, 16.03s/it]  9%|▉         | 91/1000 [24:10<4:01:27, 15.94s/it]  9%|▉         | 92/1000 [24:40<5:08:53, 20.41s/it]  9%|▉         | 93/1000 [24:55<4:41:13, 18.60s/it]  9%|▉         | 94/1000 [25:10<4:24:15, 17.50s/it] 10%|▉         | 95/1000 [25:24<4:09:36, 16.55s/it] 10%|▉         | 96/1000 [25:39<3:59:56, 15.92s/it] 10%|▉         | 97/1000 [25:53<3:53:57, 15.54s/it] 10%|▉         | 98/1000 [26:08<3:48:29, 15.20s/it] 10%|▉         | 99/1000 [26:22<3:44:22, 14.94s/it] 10%|█         | 100/1000 [26:36<3:40:56, 14.73s/it] 10%|█         | 101/1000 [26:50<3:38:05, 14.56s/it] 10%|█         | 102/1000 [27:05<3:36:59, 14.50s/it] 10%|█         | 103/1000 [27:20<3:40:26, 14.75s/it] 10%|█         | 104/1000 [27:34<3:38:19, 14.62s/it] 10%|█         | 105/1000 [27:49<3:39:42, 14.73s/it] 11%|█         | 106/1000 [28:06<3:46:36, 15.21s/it] 11%|█         | 107/1000 [28:22<3:52:21, 15.61s/it] 11%|█         | 108/1000 [28:37<3:48:40, 15.38s/it] 11%|█         | 109/1000 [28:52<3:45:08, 15.16s/it] 11%|█         | 110/1000 [29:07<3:43:14, 15.05s/it] 11%|█         | 111/1000 [29:21<3:40:37, 14.89s/it] 11%|█         | 112/1000 [29:35<3:38:10, 14.74s/it] 11%|█▏        | 113/1000 [29:50<3:36:10, 14.62s/it] 11%|█▏        | 114/1000 [30:04<3:35:36, 14.60s/it] 12%|█▏        | 115/1000 [30:19<3:33:29, 14.47s/it] 12%|█▏        | 116/1000 [30:33<3:31:57, 14.39s/it] 12%|█▏        | 117/1000 [30:47<3:32:07, 14.41s/it] 12%|█▏        | 118/1000 [31:01<3:30:42, 14.33s/it] 12%|█▏        | 119/1000 [31:16<3:29:52, 14.29s/it] 12%|█▏        | 120/1000 [31:30<3:29:35, 14.29s/it] 12%|█▏        | 121/1000 [31:44<3:29:04, 14.27s/it] 12%|█▏        | 122/1000 [31:58<3:29:36, 14.32s/it] 12%|█▏        | 123/1000 [32:13<3:30:29, 14.40s/it] 12%|█▏        | 124/1000 [32:28<3:30:52, 14.44s/it] 12%|█▎        | 125/1000 [32:42<3:32:02, 14.54s/it] 13%|█▎        | 126/1000 [32:57<3:32:14, 14.57s/it] 13%|█▎        | 127/1000 [33:11<3:31:09, 14.51s/it] 13%|█▎        | 128/1000 [33:26<3:30:27, 14.48s/it] 13%|█▎        | 129/1000 [33:40<3:29:45, 14.45s/it] 13%|█▎        | 130/1000 [33:54<3:28:55, 14.41s/it] 13%|█▎        | 131/1000 [34:09<3:27:55, 14.36s/it] 13%|█▎        | 132/1000 [34:23<3:27:48, 14.37s/it] 13%|█▎        | 133/1000 [34:38<3:27:54, 14.39s/it] 13%|█▎        | 134/1000 [34:52<3:28:06, 14.42s/it] 14%|█▎        | 135/1000 [35:06<3:27:52, 14.42s/it] 14%|█▎        | 136/1000 [35:21<3:27:27, 14.41s/it] 14%|█▎        | 137/1000 [35:35<3:27:07, 14.40s/it] 14%|█▍        | 138/1000 [35:50<3:27:08, 14.42s/it] 14%|█▍        | 139/1000 [36:04<3:27:44, 14.48s/it] 14%|█▍        | 140/1000 [36:19<3:26:27, 14.40s/it] 14%|█▍        | 141/1000 [36:33<3:26:29, 14.42s/it] 14%|█▍        | 142/1000 [36:47<3:26:20, 14.43s/it] 14%|█▍        | 143/1000 [37:02<3:25:49, 14.41s/it] 14%|█▍        | 144/1000 [37:16<3:25:35, 14.41s/it] 14%|█▍        | 145/1000 [37:31<3:26:27, 14.49s/it] 15%|█▍        | 146/1000 [37:45<3:25:48, 14.46s/it] 15%|█▍        | 147/1000 [38:00<3:24:33, 14.39s/it] 15%|█▍        | 148/1000 [38:14<3:24:26, 14.40s/it] 15%|█▍        | 149/1000 [38:28<3:24:23, 14.41s/it] 15%|█▌        | 150/1000 [38:43<3:23:44, 14.38s/it] 15%|█▌        | 151/1000 [38:57<3:22:45, 14.33s/it] 15%|█▌        | 152/1000 [39:11<3:22:24, 14.32s/it] 15%|█▌        | 153/1000 [39:26<3:23:01, 14.38s/it] 15%|█▌        | 154/1000 [39:41<3:25:47, 14.60s/it] 16%|█▌        | 155/1000 [39:56<3:26:11, 14.64s/it] 16%|█▌        | 156/1000 [40:11<3:28:28, 14.82s/it] 16%|█▌        | 157/1000 [40:28<3:37:30, 15.48s/it] 16%|█▌        | 158/1000 [40:42<3:32:26, 15.14s/it] 16%|█▌        | 159/1000 [40:56<3:28:20, 14.86s/it] 16%|█▌        | 160/1000 [41:11<3:25:29, 14.68s/it] 16%|█▌        | 161/1000 [41:25<3:23:25, 14.55s/it] 16%|█▌        | 162/1000 [41:41<3:29:36, 15.01s/it] 16%|█▋        | 163/1000 [41:57<3:35:44, 15.47s/it] 16%|█▋        | 164/1000 [42:12<3:31:40, 15.19s/it] 16%|█▋        | 165/1000 [42:27<3:28:56, 15.01s/it] 17%|█▋        | 166/1000 [42:42<3:29:54, 15.10s/it] 17%|█▋        | 167/1000 [42:56<3:27:13, 14.93s/it] 17%|█▋        | 167/1000 [43:17<3:35:54, 15.55s/it]
-wandb: - 0.003 MB of 0.003 MB uploadedwandb: \ 0.003 MB of 0.003 MB uploadedwandb: | 0.003 MB of 0.003 MB uploadedwandb: / 0.003 MB of 0.003 MB uploadedwandb: - 0.012 MB of 0.041 MB uploadedwandb: \ 0.012 MB of 0.041 MB uploadedwandb: | 0.012 MB of 0.041 MB uploadedwandb: / 0.041 MB of 0.041 MB uploadedwandb:                                                                                
-wandb: 
-wandb: Run history:
-wandb:  train_acc ▁▁▂▄▅▅▆▆▇▇▇▇▇▇▇▇▇▇▇▇▇▇██████████████████
-wandb: train_ious ▁▇██████████████████████████████████████
-wandb: train_loss █▆▅▄▄▄▃▃▂▂▂▂▂▂▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
-wandb:  valid_acc ▁▂▂▅▅▆▆▇▇▇▇▇▇▇██████████████████████████
-wandb: valid_ious ▁▇██████████████████████████████████████
-wandb: valid_loss █▆▄▄▄▃▃▃▂▂▂▂▂▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
-wandb: 
-wandb: Run summary:
-wandb:  train_acc 0.86184
-wandb: train_ious 0.9984
-wandb: train_loss 0.00424
-wandb:  valid_acc 0.72205
-wandb: valid_ious 0.99219
-wandb: valid_loss 0.02812
-wandb: 
-wandb: 🚀 View run worthy-armadillo-7 at: https://wandb.ai/dablro1232/Chest-segmentation/runs/do41msho
-wandb: ️⚡ View job at https://wandb.ai/dablro1232/Chest-segmentation/jobs/QXJ0aWZhY3RDb2xsZWN0aW9uOjE3MzMwNzAxNQ==/version_details/v1
-wandb: Synced 6 W&B file(s), 0 media file(s), 2 artifact file(s) and 0 other file(s)
-wandb: Find logs at: ./wandb/run-20240512_040841-do41msho/logs
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_88.pt
-Visualize save : 89/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_89.pt
-Visualize save : 90/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_90.pt
-Visualize save : 91/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_91.pt
-Visualize save : 92/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_92.pt
-Visualize save : 93/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_93.pt
-Visualize save : 94/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_94.pt
-Visualize save : 95/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_95.pt
-Visualize save : 96/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_96.pt
-Visualize save : 97/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_97.pt
-Visualize save : 98/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_98.pt
-Visualize save : 99/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_99.pt
-Visualize save : 100/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_100.pt
-Visualize save : 101/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_101.pt
-Visualize save : 102/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_102.pt
-Visualize save : 103/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_103.pt
-Visualize save : 104/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_104.pt
-Visualize save : 105/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_105.pt
-Visualize save : 106/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_106.pt
-Visualize save : 107/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_107.pt
-Visualize save : 108/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_108.pt
-Visualize save : 109/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_109.pt
-Visualize save : 110/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_110.pt
-Visualize save : 111/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_111.pt
-Visualize save : 112/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_112.pt
-Visualize save : 113/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_113.pt
-Visualize save : 114/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_114.pt
-Visualize save : 115/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_115.pt
-Visualize save : 116/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_116.pt
-Visualize save : 117/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_117.pt
-Visualize save : 118/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_118.pt
-Visualize save : 119/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_119.pt
-Visualize save : 120/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_120.pt
-Visualize save : 121/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_121.pt
-Visualize save : 122/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_122.pt
-Visualize save : 123/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_123.pt
-Visualize save : 124/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_124.pt
-Visualize save : 125/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_125.pt
-Visualize save : 126/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_126.pt
-Visualize save : 127/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_127.pt
-Visualize save : 128/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_128.pt
-Visualize save : 129/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_129.pt
-Visualize save : 130/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_130.pt
-Visualize save : 131/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_131.pt
-Visualize save : 132/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_132.pt
-Visualize save : 133/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_133.pt
-Visualize save : 134/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_134.pt
-Visualize save : 135/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_135.pt
-Visualize save : 136/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_136.pt
-Visualize save : 137/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_137.pt
-Visualize save : 138/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_138.pt
-Visualize save : 139/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_139.pt
-Visualize save : 140/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_140.pt
-Visualize save : 141/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_141.pt
-Visualize save : 142/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_142.pt
-Visualize save : 143/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_143.pt
-Visualize save : 144/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_144.pt
-Visualize save : 145/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_145.pt
-Visualize save : 146/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_146.pt
-Visualize save : 147/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_147.pt
-Visualize save : 148/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_148.pt
-Visualize save : 149/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_149.pt
-Visualize save : 150/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_150.pt
-Visualize save : 151/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_151.pt
-Visualize save : 152/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_152.pt
-Visualize save : 153/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_153.pt
-Visualize save : 154/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_154.pt
-Visualize save : 155/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_155.pt
-Visualize save : 156/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_156.pt
-Visualize save : 157/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_157.pt
-Visualize save : 158/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_158.pt
-Visualize save : 159/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_159.pt
-Visualize save : 160/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_160.pt
-Visualize save : 161/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_161.pt
-Visualize save : 162/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_162.pt
-Visualize save : 163/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_163.pt
-Visualize save : 164/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_164.pt
-Visualize save : 165/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_165.pt
-Visualize save : 166/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_166.pt
-Visualize save : 167/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_167.pt
-Visualize save : 168/1000
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_168.pt
-Saved model at /mnt/HDD/chest-seg_models/manet_v1_240512/model_168.pt
-[41m Early stopping at epoch 168[0m
-[41m Best valid loss: 1.5214460771530867[0m
-[41m ACC : 0.7220497189029571[0m
-[41m mIoU: 0.992185389803302[0m
-Training Complete.
