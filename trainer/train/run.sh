@@ -10,6 +10,6 @@ python ./run.py --model "manet" \
                 --learning_rate 0.0001\
                 --scheduler "lambda"\
                 --pretrain "no" --pretrained_model "premodel" --error_signal no\
-                --wandb "no"\ > manet.log 2>&1 &
+                --wandb "yes"\ > manet.log 2>&1 &
 
 

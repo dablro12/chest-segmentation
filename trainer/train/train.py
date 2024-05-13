@@ -2,21 +2,29 @@
 import sys 
 sys.path.append('../')
 import os
-import numpy as np
-import matplotlib.pyplot as plt 
+
 import torch
 import torch.nn as nn
 import torch.optim as optim
+from torch.optim.lr_scheduler import ReduceLROnPlateau
 from torchvision import transforms 
 from torch.utils.data import DataLoader
+
+import numpy as np
+
+import matplotlib.pyplot as plt 
+
 from tqdm import tqdm
+
+import wandb
+
 from utils.dataset import Segmentation_CustomDataset as CustomDataset
 from utils.metrics import train_metrics
 from utils.__init__ import *
 from utils.arg import save_args
 from utils import * 
-
-import wandb
+#################
+from model import load_model
 # Set environment variable for compatibility issues
 os.environ['KMP_DUPLICATE_LIB_OK'] = 'True'
 
@@ -24,18 +32,7 @@ os.environ['KMP_DUPLICATE_LIB_OK'] = 'True'
 torch.backends.cuda.matmul.allow_tf32 = False
 torch.backends.cudnn.allow_tf32 = False
 torch.autograd.set_detect_anomaly(False) 
-#################
-import torch 
-from torchvision import transforms
-from torch.utils.data import DataLoader
-import torch.nn as nn
-from utils.dataset import Segmentation_CustomDataset as CustomDataset
-import torch.optim as optim
-from utils.__init__ import *
-from utils import * 
-os.environ['KMP_DUPLICATE_LIB_OK']='True'
-from model import load_model
-from torch.optim.lr_scheduler import ReduceLROnPlateau
+
 
 class Train(nn.Module):
     def __init__(self, args):
