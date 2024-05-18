@@ -1,19 +1,15 @@
-2024-05-13 11:28:42.078016: I tensorflow/core/util/port.cc:110] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-2024-05-13 11:28:42.079214: I tensorflow/tsl/cuda/cudart_stub.cc:28] Could not find cuda drivers on your machine, GPU will not be used.
-2024-05-13 11:28:42.103896: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+2024-05-19 04:29:27.354015: I tensorflow/core/util/port.cc:110] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2024-05-19 04:29:27.381094: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
 To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
-2024-05-13 11:28:42.516831: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
 wandb: Currently logged in as: dablro1232. Use `wandb login --relogin` to force relogin
 wandb: wandb version 0.17.0 is available!  To upgrade, please run:
 wandb:  $ pip install wandb --upgrade
 wandb: Tracking run with wandb version 0.16.4
-wandb: Run data is saved locally in /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240513_112844-45urnus1
+wandb: Run data is saved locally in /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240519_042929-bvdo5rx0
 wandb: Run `wandb offline` to turn off syncing.
-wandb: Syncing run autumn-plant-34
+wandb: Syncing run distinctive-violet-40
 wandb: ⭐️ View project at https://wandb.ai/dablro1232/Chest-segmentation
-wandb: 🚀 View run at https://wandb.ai/dablro1232/Chest-segmentation/runs/45urnus1
-/home/eiden/anaconda3/envs/eiden/lib/python3.8/site-packages/torch/optim/lr_scheduler.py:28: UserWarning: The verbose parameter is deprecated. Please use get_last_lr() to access the learning rate.
-  warnings.warn("The verbose parameter is deprecated. Please use get_last_lr() "
+wandb: 🚀 View run at https://wandb.ai/dablro1232/Chest-segmentation/runs/bvdo5rx0
 CUDA Status : cuda
 Model: MAnet loaded successfully!! | pretrained : imagenet
-  0%|          | 0/1000 [00:00<?, ?it/s]  0%|          | 1/1000 [00:17<4:51:25, 17.50s/it]  0%|          | 2/1000 [00:34<4:48:19, 17.33s/it]  0%|          | 3/1000 [00:51<4:47:03, 17.28s/it]  0%|          | 4/1000 [01:09<4:46:39, 17.27s/it]  0%|          | 5/1000 [01:26<4:44:33, 17.16s/it]  1%|          | 6/1000 [01:43<4:47:25, 17.35s/it]  1%|          | 7/1000 [02:01<4:47:06, 17.35s/it]  1%|          | 8/1000 [02:18<4:46:57, 17.36s/it]  1%|          | 9/1000 [02:36<4:47:35, 17.41s/it]  1%|          | 10/1000 [02:53<4:48:26, 17.48s/it]  1%|          | 11/1000 [03:11<4:47:02, 17.41s/it]  1%|          | 12/1000 [03:28<4:48:13, 17.50s/it]  1%|▏         | 13/1000 [03:46<4:51:12, 17.70s/it]  1%|▏         | 14/1000 [04:04<4:50:04, 17.65s/it]  2%|▏         | 15/1000 [04:21<4:47:03, 17.49s/it]  2%|▏         | 16/1000 [04:38<4:46:36, 17.48s/it]  2%|▏         | 17/1000 [04:54<4:35:53, 16.84s/it]  2%|▏         | 18/1000 [05:09<4:25:28, 16.22s/it]  2%|▏         | 19/1000 [05:23<4:17:32, 15.75s/it]  2%|▏         | 20/1000 [05:38<4:12:14, 15.44s/it]  2%|▏         | 21/1000 [05:53<4:08:26, 15.23s/it]  2%|▏         | 22/1000 [06:07<4:05:30, 15.06s/it]  2%|▏         | 23/1000 [06:22<4:03:01, 14.92s/it]
+  0%|          | 0/1000 [00:00<?, ?it/s]  0%|          | 1/1000 [00:26<7:15:25, 26.15s/it]  0%|          | 2/1000 [00:47<6:30:30, 23.48s/it]  0%|          | 3/1000 [01:29<8:50:05, 31.90s/it]  0%|          | 4/1000 [02:35<12:34:52, 45.47s/it]  0%|          | 5/1000 [03:31<13:33:41, 49.07s/it]  1%|          | 6/1000 [04:25<14:03:30, 50.92s/it]  1%|          | 7/1000 [05:19<14:15:27, 51.69s/it]  1%|          | 8/1000 [06:12<14:22:09, 52.15s/it]  1%|          | 9/1000 [07:05<14:25:23, 52.39s/it]

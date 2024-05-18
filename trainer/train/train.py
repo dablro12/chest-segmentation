@@ -19,12 +19,13 @@ from tqdm import tqdm
 import wandb
 
 from utils.dataset import Segmentation_CustomDataset as CustomDataset
-from utils.metrics import train_metrics
+from utils.metrics import calculate_metrics
 from utils.__init__ import *
 from utils.arg import save_args
 from utils import * 
-#################
+
 from model import load_model
+####################################################################
 # Set environment variable for compatibility issues
 os.environ['KMP_DUPLICATE_LIB_OK'] = 'True'
 
@@ -32,6 +33,7 @@ os.environ['KMP_DUPLICATE_LIB_OK'] = 'True'
 torch.backends.cuda.matmul.allow_tf32 = False
 torch.backends.cudnn.allow_tf32 = False
 torch.autograd.set_detect_anomaly(False) 
+####################################################################
 
 
 class Train(nn.Module):
@@ -44,7 +46,6 @@ class Train(nn.Module):
         self.setup_train(args)
         self.setup_paths(args)
         
-
         self.best_valid_loss = np.inf
         self.epochs_no_improve = 0
         self.n_epochs_stop = 50  # Number of epochs to wait before stopping
@@ -62,12 +63,15 @@ class Train(nn.Module):
                 transforms.RandomVerticalFlip(p=0.5),
                 transforms.Resize((224, 224)),
                 transforms.ToTensor(),
+                transforms.Normalize(mean=[0.5], std=[0.5])
             ]),
             'valid': transforms.Compose([
                 transforms.Resize((224, 224)),
                 transforms.ToTensor(),
+                transforms.Normalize(mean=[0.5], std=[0.5])
             ])
         }
+
         img_dirs = {'train': '/mnt/HDD/chest-seg/dataset/train_img', 'valid': '/mnt/HDD/chest-seg/dataset/train_img' }
         mask_dir = {'train': '/mnt/HDD/chest-seg/dataset/train_mask', 'valid': '/mnt/HDD/chest-seg/dataset/train_mask'} 
 
@@ -76,7 +80,7 @@ class Train(nn.Module):
             batch_size=args.ts_batch_size, shuffle=True
         )
         self.valid_loader = DataLoader(
-            CustomDataset(image_dir = img_dirs['valid'], mask_dir = mask_dir['valid'], transform=transform['valid'], testing=True, seed = 627), 
+            CustomDataset(image_dir = img_dirs['valid'], mask_dir = mask_dir['valid'], transform=transform['valid'], testing=True), 
             batch_size=args.vs_batch_size, shuffle=True
         )
 
@@ -97,7 +101,7 @@ class Train(nn.Module):
     
     def setup_train(self, args):
         self.epochs = args.epochs
-        self.loss_fn = nn.BCELoss().to(self.device)
+        self.loss_fn = nn.BCEWithLogitsLoss().to(self.device)
         
     def setup_optimizers(self, args):
         self.optimizer = optim.AdamW(self.model.parameters(), lr=args.learning_rate, betas=(0, 0.9))
@@ -125,24 +129,31 @@ class Train(nn.Module):
 
     def fit(self):
         for epoch in tqdm(range(1, self.epochs+1)):
-            train_losses, train_accs, train_ious, valid_losses, valid_accs, valid_ious = 0, 0, 0, 0, 0, 0
+            train_losses, train_accs, train_ious, train_dices, train_hds = 0, 0, 0, 0, 0
+            valid_losses, valid_accs, valid_ious, valid_dices, valid_hds = 0, 0, 0, 0, 0
             # Training phase
             self.model.train()
             for images, masks in self.train_loader:
-                self.optimizer.zero_grad()
                 images, masks = images.to(self.device), masks.to(self.device)
                 outputs = self.model(images)
 
                 # BCE Logistic Loss
                 loss = self.loss_fn(outputs, masks)
+
+                self.optimizer.zero_grad()
                 loss.backward()
                 self.optimizer.step()
-
-                acc, iou = train_metrics(outputs, masks, threshold=0.5)
+                
+                preds = torch.sigmoid(outputs)
+                acc, iou, dice, hd = calculate_metrics(preds, masks, threshold=0.5)
 
                 train_losses += loss.cpu().detach().item()
                 train_accs += acc
                 train_ious += iou
+                train_dices += dice
+                train_hds += hd
+                
+                
             # Validation phase
             with torch.no_grad():
                 self.model.eval()
@@ -152,15 +163,17 @@ class Train(nn.Module):
                     # BCE Logistic Loss
                     loss = self.loss_fn(outputs, masks)
 
-                    acc, iou = train_metrics(outputs, masks, threshold=0.5)
-
+                    preds = torch.sigmoid(outputs)
+                    acc, iou, dice, hd = calculate_metrics(preds, masks, threshold=0.5)
                     valid_losses += loss.cpu().detach().item()
                     valid_accs += acc
                     valid_ious += iou
+                    valid_dices += dice
+                    valid_hds += hd
                     
             self.scheduler.step(valid_losses)  # 스케줄러 업데이트 호출
-            self.log_metrics(epoch, train_losses, train_accs, train_ious, valid_losses, valid_accs, valid_ious)
-            self.visualize(epoch = epoch, image = images[0,0], mask = masks[0,0], output_image = (outputs[0,0] > 0.5).int())
+            self.log_metrics(epoch, train_losses, train_accs, train_ious, train_dices, train_hds, valid_losses, valid_accs, valid_ious, valid_dices, valid_hds)
+            self.visualize(epoch = epoch, image = images[0,0], mask = masks[0,0], output_image = (preds[0,0] > 0.5).int())
             
             # Early Stopping Check
             if valid_losses < self.best_valid_loss:
@@ -177,22 +190,26 @@ class Train(nn.Module):
                 print(f"\033[41m mIoU: {valid_ious / len(self.valid_loader)}\033[0m")
                 break
             
-            if epoch % 50 == 0:
+            if epoch % 25 == 0:
                 self.save_model(epoch, valid_losses/len(self.valid_loader))
 
         if self.w == "yes":
             wandb.finish()
         print("Training Complete.")
 
-    def log_metrics(self, epoch, train_losses, train_accs, train_ious, valid_losses, valid_accs, valid_ious):
+    def log_metrics(self, epoch, train_losses, train_accs, train_ious, train_dices, train_hds, valid_losses, valid_accs, valid_ious, valid_dices, valid_hds):
         if self.w == 'yes':
             wandb.log({
                 "train_loss": train_losses / len(self.train_loader),
                 "train_acc": train_accs / len(self.train_loader),
                 "train_ious": train_ious / len(self.train_loader),
+                "train_dice": train_dices / len(self.train_loader),
+                "train_hausdorff_distance": train_hds / len(self.train_loader),
                 "valid_loss": valid_losses / len(self.valid_loader),
                 "valid_acc": valid_accs / len(self.valid_loader),
                 "valid_ious": valid_ious / len(self.valid_loader),
+                "valid_dice": valid_dices / len(self.valid_loader),
+                "valid_hausdorff_distance": valid_hds / len(self.valid_loader),
                 'learning_rate': self.optimizer.param_groups[0]['lr']
             }, step = epoch)
 
