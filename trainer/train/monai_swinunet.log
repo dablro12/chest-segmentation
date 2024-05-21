@@ -1,0 +1,18 @@
+2024-05-21 11:26:29.934039: I tensorflow/core/util/port.cc:110] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2024-05-21 11:26:29.960347: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+wandb: Currently logged in as: dablro1232. Use `wandb login --relogin` to force relogin
+wandb: wandb version 0.17.0 is available!  To upgrade, please run:
+wandb:  $ pip install wandb --upgrade
+wandb: Tracking run with wandb version 0.16.4
+wandb: Run data is saved locally in /home/eiden/eiden/chest-segmentation/src/trainer/train/wandb/run-20240521_112632-nrzb6mwc
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run rose-eon-69
+wandb: ⭐️ View project at https://wandb.ai/dablro1232/Chest-segmentation
+wandb: 🚀 View run at https://wandb.ai/dablro1232/Chest-segmentation/runs/nrzb6mwc
+CUDA Status : cuda
+DataLoader Setting Complete.
+Train Data : 9
+Valid Data : 4
+Model: MONAI-SwinUNET loaded successfully!! | pretrained : brain MRI
+  0%|          | 0/1000 [00:00<?, ?it/s]  0%|          | 1/1000 [00:15<4:20:57, 15.67s/it]

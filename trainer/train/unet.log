@@ -1,4 +1,16 @@
-2024-05-19 04:36:57.199609: I tensorflow/core/util/port.cc:110] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-2024-05-19 04:36:57.237534: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+2024-05-21 10:58:52.152149: I tensorflow/core/util/port.cc:110] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2024-05-21 10:58:52.180299: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
 To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
-wandb: Currently logged in as: dablro1232. Use `wandb login --relogin` to force relogin
+CUDA Status : cuda
+Traceback (most recent call last):
+  File "./run.py", line 12, in <module>
+    main() 
+  File "./run.py", line 8, in main
+    trainer =  Train(args = args)
+  File "/home/eiden/eiden/chest-segmentation/src/trainer/train/train.py", line 43, in __init__
+    self.setup_datasets(args)
+  File "/home/eiden/eiden/chest-segmentation/src/trainer/train/train.py", line 80, in setup_datasets
+    CustomDataset(image_dir = img_dirs['train'], mask_dir = mask_dir['train'], transform=transform['train'], testing=False,),
+  File "/home/eiden/eiden/chest-segmentation/src/trainer/train/../utils/dataset.py", line 20, in __init__
+    self.images = [os.path.join(image_dir, x) for x in os.listdir(image_dir) if x.endswith('.png')]
+FileNotFoundError: [Errno 2] No such file or directory: '/mnt/HDD/chest-seg/dataset1000/train_img'

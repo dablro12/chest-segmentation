@@ -57,11 +57,11 @@ class Train(nn.Module):
     def setup_datasets(self, args):
         transform = {
             'train': transforms.Compose([
+                transforms.Resize((224, 224)),
                 transforms.RandomPerspective(distortion_scale=0.5, p=0.5),
                 transforms.RandomRotation(25),
                 transforms.RandomHorizontalFlip(p=0.5),
                 transforms.RandomVerticalFlip(p=0.5),
-                transforms.Resize((224, 224)),
                 transforms.ToTensor(),
                 transforms.Normalize(mean=[0.5], std=[0.5])
             ]),
@@ -72,8 +72,8 @@ class Train(nn.Module):
             ])
         }
 
-        img_dirs = {'train': '/mnt/HDD/chest-seg/dataset/train_img', 'valid': '/mnt/HDD/chest-seg/dataset/train_img' }
-        mask_dir = {'train': '/mnt/HDD/chest-seg/dataset/train_mask', 'valid': '/mnt/HDD/chest-seg/dataset/train_mask'} 
+        img_dirs = {'train': '/mnt/HDD/chest-seg/dataset1000/train/img', 'valid': '/mnt/HDD/chest-seg/dataset1000/valid/img' }
+        mask_dir = {'train': '/mnt/HDD/chest-seg/dataset1000/train/mask', 'valid': '/mnt/HDD/chest-seg/dataset1000/valid/mask'} 
 
         self.train_loader = DataLoader(
             CustomDataset(image_dir = img_dirs['train'], mask_dir = mask_dir['train'], transform=transform['train'], testing=False,),
@@ -83,6 +83,10 @@ class Train(nn.Module):
             CustomDataset(image_dir = img_dirs['valid'], mask_dir = mask_dir['valid'], transform=transform['valid'], testing=True), 
             batch_size=args.vs_batch_size, shuffle=True
         )
+        print("DataLoader Setting Complete.")
+        print(f"Train Data : {len(self.train_loader)}")
+        print(f"Valid Data : {len(self.valid_loader)}")
+
 
     def setup_wandb(self, args):
         self.w = args.wandb.strip().lower()
@@ -101,21 +105,27 @@ class Train(nn.Module):
     
     def setup_train(self, args):
         self.epochs = args.epochs
-        self.loss_fn = nn.BCEWithLogitsLoss().to(self.device)
+        # self.loss_fn = nn.BCEWithLogitsLoss().to(self.device) # ~v7 BCEWithLogitsLoss
+        from monai.losses import DiceCELoss
+        self.loss_fn = DiceCELoss(to_onehot_y = False, sigmoid=True).to(self.device) # v8~ DiceCELoss
         
     def setup_optimizers(self, args):
         self.optimizer = optim.AdamW(self.model.parameters(), lr=args.learning_rate, betas=(0, 0.9))
 
         if args.pretrain == 'yes':
-            checkpoint_paths = {key: f"/mnt/HDD/chest-seg_models/pretrained_models/{args.pretrained_model}/{key}0000000.pt" for key in ['G', 'D', 'O']}
+            checkpoint_paths = {key: f"/mnt/HDD/chest-seg_models/pretrained_models/{args.pretrained_model}/{key}0000000.pt" for key in ['G', 'O']}
             self.load_checkpoints(checkpoint_paths)
             print('\033[41m',"#"*30, ' | ', 'Pretrained Setting Complete !!', '\033[0m')
         self.setup_scheduler(args)  # 스케줄러 설정 호출
     
     def setup_scheduler(self, args):
         # ReduceLROnPlateau 스케줄러 설정
-        self.scheduler = ReduceLROnPlateau(self.optimizer, mode='min', factor=0.1, patience=10, verbose=True)
-
+        if args.scheduler == 'ReduceLROnPlateau':
+            self.scheduler = ReduceLROnPlateau(self.optimizer, mode='min', factor=0.1, patience=10, verbose=True)
+        elif args.scheduler == 'LambdaLR':
+            self.scheduler = optim.lr_scheduler.LambdaLR(self.optimizer, lr_lambda=lambda epoch: 0.95 ** epoch)
+        else:
+            self.scheduler = None
     def load_checkpoints(self, paths):
         self.model_weights = torch.load(paths['G'], map_location=self.device)
         self.model.load_state_dict(self.model_weights)
@@ -138,6 +148,7 @@ class Train(nn.Module):
                 outputs = self.model(images)
 
                 # BCE Logistic Loss
+                
                 loss = self.loss_fn(outputs, masks)
 
                 self.optimizer.zero_grad()
@@ -171,7 +182,9 @@ class Train(nn.Module):
                     valid_dices += dice
                     valid_hds += hd
                     
-            self.scheduler.step(valid_losses)  # 스케줄러 업데이트 호출
+            if self.scheduler:
+                self.scheduler.step(valid_losses)
+                
             self.log_metrics(epoch, train_losses, train_accs, train_ious, train_dices, train_hds, valid_losses, valid_accs, valid_ious, valid_dices, valid_hds)
             self.visualize(epoch = epoch, image = images[0,0], mask = masks[0,0], output_image = (preds[0,0] > 0.5).int())
             
@@ -188,15 +201,18 @@ class Train(nn.Module):
                 print(f"\033[41m Best valid loss: {self.best_valid_loss}\033[0m")
                 print(f"\033[41m ACC : {valid_accs / len(self.valid_loader)}\033[0m")
                 print(f"\033[41m mIoU: {valid_ious / len(self.valid_loader)}\033[0m")
-                break
+                print(f"\033[41m mDice: {valid_dices / len(self.valid_loader)}\033[0m")
+                print(f"\033[41m mHD: {valid_hds / len(self.valid_loader)}\033[0m")
+                # break
             
-            if epoch % 25 == 0:
+            if epoch % 50 == 0:
                 self.save_model(epoch, valid_losses/len(self.valid_loader))
 
         if self.w == "yes":
             wandb.finish()
         print("Training Complete.")
 
+        
     def log_metrics(self, epoch, train_losses, train_accs, train_ious, train_dices, train_hds, valid_losses, valid_accs, valid_ious, valid_dices, valid_hds):
         if self.w == 'yes':
             wandb.log({
