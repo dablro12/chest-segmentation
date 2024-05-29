@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 2024-05-23 15:16:13.149655: I tensorflow/core/util/port.cc:110] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
 2024-05-23 15:16:13.251543: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
 To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
@@ -1050,3 +1051,23 @@ Visualize save : 1999/2000
 Visualize save : 2000/2000
 Saved model at /mnt/HDD/chest-seg_models/monai_swinunet_v7_240519/model_2000.pt
 Training Complete.
+=======
+2024-05-29 22:26:02.805209: I tensorflow/core/util/port.cc:110] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2024-05-29 22:26:02.831833: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+wandb: Currently logged in as: dablro1232. Use `wandb login --relogin` to force relogin
+wandb: wandb version 0.17.0 is available!  To upgrade, please run:
+wandb:  $ pip install wandb --upgrade
+wandb: Tracking run with wandb version 0.16.4
+wandb: Run data is saved locally in /home/eiden/eiden/octc-segmentation/src/trainer/train/wandb/run-20240529_222605-7nkuhttl
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run vivid-oath-6
+wandb: ⭐️ View project at https://wandb.ai/dablro1232/oci-inpainting-segmentation
+wandb: 🚀 View run at https://wandb.ai/dablro1232/oci-inpainting-segmentation/runs/7nkuhttl
+CUDA Status : cuda
+DataLoader Setting Complete.
+Train Data : 409 개
+Valid Data : 46 개
+Model: MONAI-SwinUNET loaded successfully!! | pretrained : brain MRI
+  0%|          | 0/400 [00:00<?, ?it/s]  0%|          | 1/400 [00:29<3:16:06, 29.49s/it]  0%|          | 2/400 [00:55<3:01:13, 27.32s/it]  1%|          | 3/400 [01:20<2:54:44, 26.41s/it]  1%|          | 4/400 [01:45<2:51:34, 26.00s/it]  1%|▏         | 5/400 [02:11<2:49:44, 25.78s/it]  2%|▏         | 6/400 [02:37<2:49:04, 25.75s/it]  2%|▏         | 7/400 [03:02<2:48:41, 25.75s/it]  2%|▏         | 8/400 [03:28<2:48:56, 25.86s/it]  2%|▏         | 9/400 [03:54<2:48:26, 25.85s/it]  2%|▎         | 10/400 [04:20<2:48:11, 25.88s/it]  3%|▎         | 11/400 [04:46<2:48:23, 25.97s/it]  3%|▎         | 12/400 [05:12<2:47:29, 25.90s/it]  3%|▎         | 13/400 [05:38<2:47:50, 26.02s/it]  4%|▎         | 14/400 [06:04<2:47:18, 26.01s/it]  4%|▍         | 15/400 [06:30<2:47:03, 26.04s/it]  4%|▍         | 16/400 [06:57<2:47:31, 26.18s/it]  4%|▍         | 17/400 [07:23<2:46:46, 26.13s/it]  4%|▍         | 18/400 [07:49<2:46:06, 26.09s/it]  5%|▍         | 19/400 [08:16<2:46:45, 26.26s/it]  5%|▌         | 20/400 [08:42<2:45:35, 26.15s/it]  5%|▌         | 21/400 [09:07<2:44:47, 26.09s/it]  6%|▌         | 22/400 [09:33<2:44:04, 26.04s/it]  6%|▌         | 23/400 [09:59<2:43:17, 25.99s/it]  6%|▌         | 24/400 [10:25<2:42:45, 25.97s/it]  6%|▋         | 25/400 [10:51<2:42:22, 25.98s/it]  6%|▋         | 26/400 [11:17<2:41:43, 25.95s/it]  7%|▋         | 27/400 [11:43<2:41:12, 25.93s/it]  7%|▋         | 28/400 [12:09<2:40:56, 25.96s/it]  7%|▋         | 29/400 [12:35<2:40:44, 26.00s/it]  8%|▊         | 30/400 [13:01<2:40:16, 25.99s/it]  8%|▊         | 31/400 [13:27<2:40:10, 26.05s/it]  8%|▊         | 32/400 [13:53<2:39:32, 26.01s/it]  8%|▊         | 33/400 [14:19<2:39:13, 26.03s/it]  8%|▊         | 34/400 [14:45<2:38:59, 26.06s/it]  9%|▉         | 35/400 [15:12<2:38:51, 26.11s/it]  9%|▉         | 36/400 [15:38<2:38:43, 26.16s/it]  9%|▉         | 37/400 [16:04<2:38:05, 26.13s/it] 10%|▉         | 38/400 [16:30<2:37:34, 26.12s/it] 10%|▉         | 39/400 [16:56<2:37:06, 26.11s/it] 10%|█         | 40/400 [17:22<2:36:57, 26.16s/it] 10%|█         | 41/400 [17:49<2:36:36, 26.17s/it] 10%|█         | 42/400 [18:15<2:36:27, 26.22s/it] 11%|█         | 43/400 [18:41<2:36:09, 26.25s/it] 11%|█         | 44/400 [19:08<2:35:43, 26.24s/it] 11%|█▏        | 45/400 [19:34<2:35:32, 26.29s/it] 12%|█▏        | 46/400 [20:00<2:35:32, 26.36s/it] 12%|█▏        | 47/400 [20:27<2:35:22, 26.41s/it] 12%|█▏        | 48/400 [20:54<2:35:39, 26.53s/it] 12%|█▏        | 49/400 [21:20<2:35:17, 26.55s/it] 12%|█▎        | 50/400 [21:47<2:34:30, 26.49s/it] 13%|█▎        | 51/400 [22:13<2:33:25, 26.38s/it] 13%|█▎        | 52/400 [22:39<2:32:58, 26.37s/it] 13%|█▎        | 53/400 [23:05<2:32:23, 26.35s/it] 14%|█▎        | 54/400 [23:32<2:31:58, 26.35s/it] 14%|█▍        | 55/400 [23:58<2:31:23, 26.33s/it] 14%|█▍        | 56/400 [24:24<2:30:56, 26.33s/it] 14%|█▍        | 57/400 [24:51<2:30:31, 26.33s/it] 14%|█▍        | 58/400 [25:17<2:30:02, 26.32s/it] 15%|█▍        | 59/400 [25:43<2:29:38, 26.33s/it] 15%|█▌        | 60/400 [26:10<2:29:14, 26.34s/it] 15%|█▌        | 61/400 [26:36<2:29:02, 26.38s/it] 16%|█▌        | 62/400 [27:02<2:28:20, 26.33s/it] 16%|█▌        | 63/400 [27:29<2:27:52, 26.33s/it] 16%|█▌        | 64/400 [27:55<2:27:37, 26.36s/it]
+>>>>>>> 4f34f26cde23ccf0785f5fc8b7ae5da11ebe5111

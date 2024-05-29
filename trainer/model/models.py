@@ -4,7 +4,7 @@ from model.modules import *
 from model.modules.conv import *
 
 class R2U_Net(nn.Module):
-    def __init__(self,img_ch=1,output_ch=1,t=2):
+    def __init__(self,width =224, height =224, img_ch=1,output_ch=1,t=2):
         super(R2U_Net,self).__init__()
         
         self.Maxpool = nn.MaxPool2d(kernel_size=2,stride=2)
@@ -73,7 +73,7 @@ class R2U_Net(nn.Module):
         return d1
 
 class AttU_Net(nn.Module):
-    def __init__(self,img_ch=1,output_ch=1):
+    def __init__(self, width = 224, height = 224, img_ch=1,output_ch=1):
         super(AttU_Net,self).__init__()
         
         self.Maxpool = nn.MaxPool2d(kernel_size=2,stride=2)
@@ -144,7 +144,7 @@ class AttU_Net(nn.Module):
         return d1
 
 class R2AttU_Net(nn.Module):
-    def __init__(self,img_ch=1,output_ch=1,t=2):
+    def __init__(self,width = 224, height = 224, img_ch=1,output_ch=1,t=2):
         super(R2AttU_Net,self).__init__()
         
         self.Maxpool = nn.MaxPool2d(kernel_size=2,stride=2)

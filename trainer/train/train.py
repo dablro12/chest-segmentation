@@ -58,22 +58,31 @@ class Train(nn.Module):
         transform = {
             'train': transforms.Compose([
                 transforms.RandomPerspective(distortion_scale=0.5, p=0.5),
-                transforms.RandomRotation(25),
+                # transforms.RandomRotation(25),
                 transforms.RandomHorizontalFlip(p=0.5),
                 transforms.RandomVerticalFlip(p=0.5),
+<<<<<<< HEAD
                 transforms.Resize((224, 224)),
+=======
+                transforms.Resize((512, 512)),
+>>>>>>> 4f34f26cde23ccf0785f5fc8b7ae5da11ebe5111
                 transforms.ToTensor(),
                 transforms.Normalize(mean=[0.5], std=[0.5])
             ]),
             'valid': transforms.Compose([
-                transforms.Resize((224, 224)),
+                transforms.Resize((512, 512)),
                 transforms.ToTensor(),
                 transforms.Normalize(mean=[0.5], std=[0.5])
             ])
         }
 
+<<<<<<< HEAD
         img_dirs = {'train': '/mnt/HDD/chest-seg/dataset1000/train/img', 'valid': '/mnt/HDD/chest-seg/dataset1000/valid/img' }
         mask_dir = {'train': '/mnt/HDD/chest-seg/dataset1000/train/mask', 'valid': '/mnt/HDD/chest-seg/dataset1000/valid/mask'} 
+=======
+        img_dirs = {'train': '/mnt/HDD/octc/seg_data/train_img', 'valid': '/mnt/HDD/octc/seg_data/valid_img' }
+        mask_dir = {'train': '/mnt/HDD/octc/seg_data/train_mask', 'valid': '/mnt/HDD/octc/seg_data/valid_mask'} 
+>>>>>>> 4f34f26cde23ccf0785f5fc8b7ae5da11ebe5111
         
         tr_dataset = CustomDataset(image_dir = img_dirs['train'], mask_dir = mask_dir['train'], transform=transform['train'], testing=False)
         val_dataset = CustomDataset(image_dir = img_dirs['valid'], mask_dir = mask_dir['valid'], transform=transform['valid'], testing=True)
@@ -93,14 +102,14 @@ class Train(nn.Module):
     def setup_wandb(self, args):
         self.w = args.wandb.strip().lower()
         if args.wandb.strip().lower() == "yes":
-            wandb.init(project='Chest-segmentation', entity='dablro1232', notes='baseline', config=args.__dict__)
+            wandb.init(project='oci-inpainting-segmentation', entity='dablro1232', notes='baseline', config=args.__dict__)
             wandb.run.name = args.model + f'_{args.version}_{args.training_date}'
             self.run_name = args.model + f'_{args.version}_{args.training_date}'
         else:
             self.run_name = args.model + '_debug'
 
     def initialize_models(self, args):
-        model_loader = load_model.segmentation_models_loader(model_name = args.model)
+        model_loader = load_model.segmentation_models_loader(model_name = args.model, width = 512, height = 512)
         self.model = model_loader().to(self.device)
                 
         self.setup_optimizers(args)
@@ -108,8 +117,13 @@ class Train(nn.Module):
     def setup_train(self, args):
         # self.loss_fn = nn.BCEWithLogitsLoss().to(self.device) # ~v7 BCEWithLogitsLoss
         from monai.losses import DiceCELoss
-        self.loss_fn = DiceCELoss(to_onehot_y = False, sigmoid=True).to(self.device) # v8~ DiceCELoss
+        self.bce_fn = nn.BCEWithLogitsLoss().to(self.device)
+        self.dice_fn = DiceCELoss(to_onehot_y = False, sigmoid=True).to(self.device)
         
+    def loss_fn(self, outputs, masks):
+        bce_loss = self.bce_fn(outputs, masks)
+        dice_loss = self.dice_fn(outputs, masks)
+        return 0.5 * bce_loss + 0.5 * dice_loss
     def setup_optimizers(self, args):
         self.epochs = args.epochs
         self.optimizer = optim.AdamW(self.model.parameters(), lr=args.learning_rate, betas=(0, 0.9))
