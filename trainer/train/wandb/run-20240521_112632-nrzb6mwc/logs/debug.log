@@ -25,3 +25,10 @@ config: {'save_path': '/mnt/HDD/chest-seg_models', 'version': 'v12', 'cuda': '0'
 2024-05-21 11:26:38,615 INFO    MainThread:147897 [wandb_run.py:_redirect():2161] Wrapping output streams.
 2024-05-21 11:26:38,615 INFO    MainThread:147897 [wandb_run.py:_redirect():2186] Redirects installed.
 2024-05-21 11:26:38,616 INFO    MainThread:147897 [wandb_init.py:init():847] run started, returning control to user process
+2024-05-21 15:39:52,186 INFO    MainThread:147897 [wandb_run.py:_finish():1970] finishing run dablro1232/Chest-segmentation/nrzb6mwc
+2024-05-21 15:39:52,186 INFO    MainThread:147897 [wandb_run.py:_atexit_cleanup():2210] got exitcode: 0
+2024-05-21 15:39:52,186 INFO    MainThread:147897 [wandb_run.py:_restore():2193] restore
+2024-05-21 15:39:52,187 INFO    MainThread:147897 [wandb_run.py:_restore():2199] restore done
+2024-05-21 15:40:00,713 INFO    MainThread:147897 [wandb_run.py:_footer_history_summary_info():3851] rendering history
+2024-05-21 15:40:00,715 INFO    MainThread:147897 [wandb_run.py:_footer_history_summary_info():3883] rendering summary
+2024-05-21 15:40:00,719 INFO    MainThread:147897 [wandb_run.py:_footer_sync_info():3810] logging synced files

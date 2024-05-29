@@ -4,7 +4,7 @@ def unet_plus_plus():
         encoder_name= "resnet34",
         encoder_weights= "imagenet",
         in_channels = 1,
-        activation= 'sigmoid',
+        activation= None,
         classes = 1
         )
     return model 

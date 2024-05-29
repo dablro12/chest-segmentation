@@ -4,7 +4,7 @@ def U_Net():
         encoder_name= "resnet34",
         encoder_weights= "imagenet",
         in_channels = 1,
-        activation= 'sigmoid',
+        activation= None,
         classes = 1
         )
     return model

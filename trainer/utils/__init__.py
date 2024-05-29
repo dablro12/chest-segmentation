@@ -1,8 +1,8 @@
 import matplotlib.pyplot as plt 
-import matplotlib
 import torch 
 import os 
 import numpy as np 
+import cv2
 
 # matplotlib의 Backend를 TkAgg로 설정
 def train_plotting(images, masks):
@@ -70,10 +70,17 @@ def save_comparision(input_images, masks, output_images, filenames, save_dir, th
         plt.close()
     
 
-def save_prediction(outputs, threshold, filenames, save_dir):
+def save_prediction(preds, threshold, paths, save_dir):
     """ Save the output images(png). & setting Hyperparameters Threshold """
-    for i in range(len(outputs)):
-        plt.imsave(os.path.join(save_dir, filenames[i]), (outputs[i].cpu().detach() > threshold).int().squeeze(), cmap='gray')
+    
+    filenames = [os.path.basename(path) for path in paths]  # paths에서 파일명 추출
+    
+    # 마스크 사이즈를 원본 사이즈에 맞게 저장 
+    for i in range(len(preds)):
+        # 원본 이미지 상지ㅡ로 resize
+        original_size = cv2.imread(paths[i], cv2.IMREAD_GRAYSCALE).shape
+        resized_mask = cv2.resize((preds[i].cpu().detach() > threshold).int().squeeze().numpy(), (original_size[1], original_size[0]), interpolation=cv2.INTER_NEAREST)
+        plt.imsave(os.path.join(save_dir, filenames[i]), resized_mask, cmap='gray')
     
 
 def save_model(model, optimizer, epoch, save_dir):
@@ -81,11 +88,12 @@ def save_model(model, optimizer, epoch, save_dir):
         'model': model.state_dict(),
         'optimizer': optimizer.state_dict(),
     }, os.path.join(save_dir, f'epoch_{epoch}.pt'))
-def save_metrics(metrics, save_dir):
+    
+def save_metrics(metrics, save_path):
     import pandas as pd 
     """ dictonary 형태 metrics을 dataframe으로 저장 """
     df = pd.DataFrame(metrics)
-    df.to_csv(os.path.join(save_dir, 'metrics.csv'), index=False)
+    df.to_csv(save_path, index=False)
     
 def save_loss(metrics, save_dir):
     # loss plot

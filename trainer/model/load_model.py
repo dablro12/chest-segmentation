@@ -14,7 +14,7 @@ class segmentation_models_loader:
     def load_model(self):
         if self.model_name == 'unet':
             model = unet.U_Net()
-            print("Model: U-Net loaded successfully!! | pretrained : brain MRI dataset")
+            print("Model: U-Net loaded successfully!! | pretrained : imagenet")
         elif self.model_name == 'r2unet':
             model = models.R2U_Net()
             print("Model: R2U_Net loaded successfully!! | pretrained : False")

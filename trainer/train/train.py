@@ -57,11 +57,11 @@ class Train(nn.Module):
     def setup_datasets(self, args):
         transform = {
             'train': transforms.Compose([
-                transforms.Resize((224, 224)),
                 transforms.RandomPerspective(distortion_scale=0.5, p=0.5),
                 transforms.RandomRotation(25),
                 transforms.RandomHorizontalFlip(p=0.5),
                 transforms.RandomVerticalFlip(p=0.5),
+                transforms.Resize((224, 224)),
                 transforms.ToTensor(),
                 transforms.Normalize(mean=[0.5], std=[0.5])
             ]),
@@ -74,18 +74,20 @@ class Train(nn.Module):
 
         img_dirs = {'train': '/mnt/HDD/chest-seg/dataset1000/train/img', 'valid': '/mnt/HDD/chest-seg/dataset1000/valid/img' }
         mask_dir = {'train': '/mnt/HDD/chest-seg/dataset1000/train/mask', 'valid': '/mnt/HDD/chest-seg/dataset1000/valid/mask'} 
-
+        
+        tr_dataset = CustomDataset(image_dir = img_dirs['train'], mask_dir = mask_dir['train'], transform=transform['train'], testing=False)
+        val_dataset = CustomDataset(image_dir = img_dirs['valid'], mask_dir = mask_dir['valid'], transform=transform['valid'], testing=True)
         self.train_loader = DataLoader(
-            CustomDataset(image_dir = img_dirs['train'], mask_dir = mask_dir['train'], transform=transform['train'], testing=False,),
+            tr_dataset,
             batch_size=args.ts_batch_size, shuffle=True
         )
         self.valid_loader = DataLoader(
-            CustomDataset(image_dir = img_dirs['valid'], mask_dir = mask_dir['valid'], transform=transform['valid'], testing=True), 
+            val_dataset, 
             batch_size=args.vs_batch_size, shuffle=True
         )
         print("DataLoader Setting Complete.")
-        print(f"Train Data : {len(self.train_loader)}")
-        print(f"Valid Data : {len(self.valid_loader)}")
+        print(f"Train Data : {len(tr_dataset)} 개")
+        print(f"Valid Data : {len(val_dataset)} 개")
 
 
     def setup_wandb(self, args):
@@ -104,18 +106,23 @@ class Train(nn.Module):
         self.setup_optimizers(args)
     
     def setup_train(self, args):
-        self.epochs = args.epochs
         # self.loss_fn = nn.BCEWithLogitsLoss().to(self.device) # ~v7 BCEWithLogitsLoss
         from monai.losses import DiceCELoss
         self.loss_fn = DiceCELoss(to_onehot_y = False, sigmoid=True).to(self.device) # v8~ DiceCELoss
         
     def setup_optimizers(self, args):
+        self.epochs = args.epochs
         self.optimizer = optim.AdamW(self.model.parameters(), lr=args.learning_rate, betas=(0, 0.9))
-
         if args.pretrain == 'yes':
-            checkpoint_paths = {key: f"/mnt/HDD/chest-seg_models/pretrained_models/{args.pretrained_model}/{key}0000000.pt" for key in ['G', 'O']}
-            self.load_checkpoints(checkpoint_paths)
+            checkpoint = torch.load(args.pretrained_model, map_location=self.device)
+            self.best_valid_loss = checkpoint['valid_loss']
+            self.load_checkpoints(checkpoint)
+            self.epoch = checkpoint['epoch']
+            
             print('\033[41m',"#"*30, ' | ', 'Pretrained Setting Complete !!', '\033[0m')
+        else:
+            self.epoch = 1
+            
         self.setup_scheduler(args)  # 스케줄러 설정 호출
     
     def setup_scheduler(self, args):
@@ -126,19 +133,26 @@ class Train(nn.Module):
             self.scheduler = optim.lr_scheduler.LambdaLR(self.optimizer, lr_lambda=lambda epoch: 0.95 ** epoch)
         else:
             self.scheduler = None
-    def load_checkpoints(self, paths):
-        self.model_weights = torch.load(paths['G'], map_location=self.device)
+    def load_checkpoints(self, checkpoint):
+        self.model_weights = checkpoint['model_state_dict']
         self.model.load_state_dict(self.model_weights)
-        self.optim_weights = torch.load(paths['O'], map_location=self.device)
+        self.optim_weights = checkpoint['optimzier_state_dict']
         self.optimizer.load_state_dict(self.optim_weights) #Only use pretrained G optimizer checkpoint 
 
     def setup_paths(self, args):
         self.save_path = os.path.join(args.save_path, f"{self.run_name}")
         os.makedirs(self.save_path, exist_ok=True)
         save_args(f"{self.save_path}/{self.run_name}.json")
+        
+        if args.pretrain == "yes":
+            print(f"Pretrained model loaded : {args.pretrained_model}")
+            self.save_path = args.pretrained_model.split('/')[:-1]
+            self.save_path = '/'.join(self.save_path)
+            print(self.save_path)
+            save_args(f"{self.save_path}/{self.run_name}.json")
 
     def fit(self):
-        for epoch in tqdm(range(1, self.epochs+1)):
+        for epoch in tqdm(range(self.epoch, self.epochs+1)):
             train_losses, train_accs, train_ious, train_dices, train_hds = 0, 0, 0, 0, 0
             valid_losses, valid_accs, valid_ious, valid_dices, valid_hds = 0, 0, 0, 0, 0
             # Training phase
@@ -156,14 +170,13 @@ class Train(nn.Module):
                 self.optimizer.step()
                 
                 preds = torch.sigmoid(outputs)
-                acc, iou, dice, hd = calculate_metrics(preds, masks, threshold=0.5)
+                iou, acc, dice, hd = calculate_metrics(preds, masks, threshold=0.5)
 
                 train_losses += loss.cpu().detach().item()
-                train_accs += acc
                 train_ious += iou
+                train_accs += acc
                 train_dices += dice
                 train_hds += hd
-                
                 
             # Validation phase
             with torch.no_grad():
@@ -172,13 +185,13 @@ class Train(nn.Module):
                     images, masks = images.to(self.device), masks.to(self.device)
                     outputs = self.model(images)
                     # BCE Logistic Loss
-                    loss = self.loss_fn(outputs, masks)
+                    loss = self.loss_fn(outputs, masks).cpu().detach().item()
 
                     preds = torch.sigmoid(outputs)
-                    acc, iou, dice, hd = calculate_metrics(preds, masks, threshold=0.5)
-                    valid_losses += loss.cpu().detach().item()
-                    valid_accs += acc
+                    iou, acc, dice, hd = calculate_metrics(preds, masks, threshold=0.5)
+                    valid_losses += loss
                     valid_ious += iou
+                    valid_accs += acc
                     valid_dices += dice
                     valid_hds += hd
                     
@@ -186,7 +199,7 @@ class Train(nn.Module):
                 self.scheduler.step(valid_losses)
                 
             self.log_metrics(epoch, train_losses, train_accs, train_ious, train_dices, train_hds, valid_losses, valid_accs, valid_ious, valid_dices, valid_hds)
-            self.visualize(epoch = epoch, image = images[0,0], mask = masks[0,0], output_image = (preds[0,0] > 0.5).int())
+            self.visualize(epoch = epoch, image = images[0,0], mask = masks[0,0], output_image = (preds[0,0] > 0.5).float())
             
             # Early Stopping Check
             if valid_losses < self.best_valid_loss:
@@ -196,6 +209,7 @@ class Train(nn.Module):
                 self.epochs_no_improve += 1
 
             if self.epochs_no_improve >= self.n_epochs_stop:
+                self.epochs_no_improve = 0
                 self.save_model(epoch, valid_losses/len(self.valid_loader))  # Save the best model
                 print(f"\033[41m Early stopping at epoch {epoch}\033[0m")
                 print(f"\033[41m Best valid loss: {self.best_valid_loss}\033[0m")

@@ -9,9 +9,8 @@ def monai_swinunet():
         in_channels = 1,
         out_channels = 1,
         spatial_dims = 2,
-        use_checkpoint = False,
+        use_checkpoint = True,
     )
-    model = nn.Sequential(model, nn.Sigmoid())
     return model
 
 
@@ -184,7 +183,7 @@ class PatchEmbedding(nn.Module):
     def __init__(self, in_ch, num_feat, patch_size):
         super().__init__()
         self.conv = nn.Conv2d(in_ch,num_feat, kernel_size=patch_size,
-                                  stride=patch_size)
+                                stride=patch_size)
 
     def forward(self, X):
         # Output shape: (batch size, no. of patches, no. of channels)
@@ -339,7 +338,7 @@ class SwinUNet(nn.Module):
 
         x = self.head(x.permute(0,3,1,2))
         
-        return torch.sigmoid(x)
+        return x
     
 def swinunet():
     model = SwinUNet(224,224,1,32,1,3,4)

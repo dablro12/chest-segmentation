@@ -70,7 +70,7 @@ class R2U_Net(nn.Module):
         d2 = self.Up_RRCNN2(d2)
 
         d1 = self.Conv_1x1(d2)
-        return torch.sigmoid(d1)
+        return d1
 
 class AttU_Net(nn.Module):
     def __init__(self,img_ch=1,output_ch=1):
@@ -141,7 +141,7 @@ class AttU_Net(nn.Module):
         d2 = self.Up_conv2(d2)
 
         d1 = self.Conv_1x1(d2)
-        return torch.sigmoid(d1)
+        return d1
 
 class R2AttU_Net(nn.Module):
     def __init__(self,img_ch=1,output_ch=1,t=2):
@@ -218,4 +218,4 @@ class R2AttU_Net(nn.Module):
         d2 = self.Up_RRCNN2(d2)
 
         d1 = self.Conv_1x1(d2)
-        return torch.sigmoid(d1)
+        return d1
