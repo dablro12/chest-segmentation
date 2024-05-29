@@ -26,42 +26,28 @@ class Segmentation_CustomDataset(Dataset):
         image_path = self.images[idx]
         mask_path = self.masks[idx]
 
-        # 이미지와 마스크를 PIL Image로 로드
-        image = Image.open(image_path).convert('L')  # L모드는 그레이스케일
-        mask = Image.open(mask_path).convert('L')  # L모드는 그레이스케일
+        image = Image.open(image_path).convert('L')
+        mask = Image.open(mask_path).convert('L')
 
-        if self.testing:
-            # 추론 시 일관된 결과를 위해 고정된 시드 사용
-            seed = self.seed  # 임의의 고정된 시드 값
+        if self.transform:
+            seed = random.randint(0, 10000)
             random.seed(seed)
             torch.manual_seed(seed)
             image = self.transform(image)
+
             random.seed(seed)
             torch.manual_seed(seed)
             mask = self.transform(mask)
 
-        else:
-            if self.transform:
-                # 동일한 변환을 이미지와 마스크에 적용하기 위해 랜덤 시드를 동기화
-                seed = random.randint(0, 10000)
-                random.seed(seed)
-                torch.manual_seed(seed)
-                image = self.transform(image)
-
-                random.seed(seed)
-                torch.manual_seed(seed)
-                mask = self.transform(mask)
-
-        # binary mask로 변환
         mask = (mask > 0.5).float()
 
         if self.testing:
             return image, mask, image_path
         else:
             return image, mask
-
+        
 class Test_Segmentation_CustomDataset(Dataset):
-    def __init__(self, image_dir,transform=None, testing = False, seed = 627):
+    def __init__(self, image_dir,transform=None, seed = 627):
         """
         Args:
             image_dir (string): 경로 내 이미지 디렉토리
@@ -70,38 +56,24 @@ class Test_Segmentation_CustomDataset(Dataset):
         """
         self.image_dir = image_dir
         self.transform = transform
-        self.testing = testing
         self.seed = seed
         self.images = [os.path.join(image_dir, x) for x in os.listdir(image_dir) if x.endswith('.png')]
+        
     def __len__(self):
         return len(self.images)
 
     def __getitem__(self, idx):
         image_path = self.images[idx]
+        image = Image.open(image_path).convert('L')
 
-        # 이미지와 마스크를 PIL Image로 로드
-        image = Image.open(image_path).convert('L')  # L모드는 그레이스케일
-
-        if self.testing:
-            # 추론 시 일관된 결과를 위해 고정된 시드 사용
-            seed = self.seed  # 임의의 고정된 시드 값
+        if self.transform:
+            seed = random.randint(0, 10000)
             random.seed(seed)
             torch.manual_seed(seed)
             image = self.transform(image)
 
-        else:
-            if self.transform:
-                # 동일한 변환을 이미지와 마스크에 적용하기 위해 랜덤 시드를 동기화
-                seed = random.randint(0, 10000)
-                random.seed(seed)
-                torch.manual_seed(seed)
-                image = self.transform(image)
+        return image, image_path
 
-
-        if self.testing:
-            return image, image_path
-        else:
-            return image
 class Inpaint_CustomDataset(Dataset):
     """CustomDataset with support of transforms for Inpainting GAN.
     Args:
@@ -181,8 +153,6 @@ class Test_Inpaint_CustomDataset(Dataset):
         for filename in os.listdir(self.mask_dir):
             mask_path = os.path.join(self.mask_dir, filename)
             self.mask_paths.append(mask_path)
-
-
 
     def __len__(self):
         return len(self.image_paths) 

@@ -3,15 +3,14 @@ import torch.nn as nn
 import torch
 import math
 
-def monai_swinunet():
+def monai_swinunet(width = 224, height =224):
     model = swin_unetr.SwinUNETR(
-        img_size = (256,256),
+        img_size = (width, height),
         in_channels = 1,
         out_channels = 1,
         spatial_dims = 2,
-        use_checkpoint = False,
+        use_checkpoint = True,
     )
-    model = nn.Sequential(model, nn.Sigmoid())
     return model
 
 
@@ -92,7 +91,7 @@ class WindowAttention(nn.Module):
     
 class SwinTransformerBlock(nn.Module):
     def __init__(
-            self,  dim, input_resolution, window_size = 7, shift_size = 0):
+            self,  dim, input_resolution, window_size = 8, shift_size = 0):
 
         super().__init__()
         self.input_resolution = input_resolution
@@ -184,7 +183,7 @@ class PatchEmbedding(nn.Module):
     def __init__(self, in_ch, num_feat, patch_size):
         super().__init__()
         self.conv = nn.Conv2d(in_ch,num_feat, kernel_size=patch_size,
-                                  stride=patch_size)
+                                stride=patch_size)
 
     def forward(self, X):
         # Output shape: (batch size, no. of patches, no. of channels)
@@ -339,10 +338,18 @@ class SwinUNet(nn.Module):
 
         x = self.head(x.permute(0,3,1,2))
         
-        return torch.sigmoid(x)
+        return x
     
-def swinunet():
-    model = SwinUNet(224,224,1,32,1,3,4)
+def swinunet(width = 224, height = 224, C= 32, num_blocks = 3, path_size = 4):
+    model = SwinUNet(
+        height,
+        width,
+        ch = 1,
+        C = 16, #32
+        num_class = 1,
+        num_blocks = 3,
+        patch_size = 4
+    )
 
     for p in model.parameters():
         if p.dim() > 1:
