@@ -1114,3 +1114,32 @@
 2024-05-29 22:53:28,908 DEBUG   HandlerThread:763633 [handler.py:handle_request():146] handle_request: status_report
 2024-05-29 22:53:33,908 DEBUG   HandlerThread:763633 [handler.py:handle_request():146] handle_request: status_report
 2024-05-29 22:53:36,807 DEBUG   SenderThread:763633 [sender.py:send():378] send: stats
+2024-05-29 22:53:39,807 DEBUG   HandlerThread:763633 [handler.py:handle_request():146] handle_request: status_report
+2024-05-29 22:53:40,341 DEBUG   HandlerThread:763633 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-29 22:53:40,341 DEBUG   SenderThread:763633 [sender.py:send():378] send: history
+2024-05-29 22:53:40,342 DEBUG   SenderThread:763633 [sender.py:send_request():405] send_request: summary_record
+2024-05-29 22:53:40,342 INFO    SenderThread:763633 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-05-29 22:53:40,640 DEBUG   HandlerThread:763633 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-29 22:53:40,641 DEBUG   HandlerThread:763633 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-29 22:53:40,641 DEBUG   SenderThread:763633 [sender.py:send_request():405] send_request: stop_status
+2024-05-29 22:53:41,218 INFO    Thread-12 :763633 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/octc-segmentation/src/trainer/train/wandb/run-20240529_222605-7nkuhttl/files/wandb-summary.json
+2024-05-29 22:53:43,218 INFO    Thread-12 :763633 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/octc-segmentation/src/trainer/train/wandb/run-20240529_222605-7nkuhttl/files/output.log
+2024-05-29 22:53:44,939 DEBUG   HandlerThread:763633 [handler.py:handle_request():146] handle_request: status_report
+2024-05-29 22:53:49,940 DEBUG   HandlerThread:763633 [handler.py:handle_request():146] handle_request: status_report
+2024-05-29 22:53:54,940 DEBUG   HandlerThread:763633 [handler.py:handle_request():146] handle_request: status_report
+2024-05-29 22:53:55,640 DEBUG   HandlerThread:763633 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-29 22:53:55,640 DEBUG   HandlerThread:763633 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-29 22:53:55,641 DEBUG   SenderThread:763633 [sender.py:send_request():405] send_request: stop_status
+2024-05-29 22:53:59,983 DEBUG   HandlerThread:763633 [handler.py:handle_request():146] handle_request: status_report
+2024-05-29 22:54:04,983 DEBUG   HandlerThread:763633 [handler.py:handle_request():146] handle_request: status_report
+2024-05-29 22:54:06,783 DEBUG   HandlerThread:763633 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-29 22:54:06,783 DEBUG   SenderThread:763633 [sender.py:send():378] send: history
+2024-05-29 22:54:06,783 DEBUG   SenderThread:763633 [sender.py:send_request():405] send_request: summary_record
+2024-05-29 22:54:06,784 INFO    SenderThread:763633 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-05-29 22:54:06,807 DEBUG   SenderThread:763633 [sender.py:send():378] send: stats
+2024-05-29 22:54:07,223 INFO    Thread-12 :763633 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/octc-segmentation/src/trainer/train/wandb/run-20240529_222605-7nkuhttl/files/wandb-summary.json
+2024-05-29 22:54:09,223 INFO    Thread-12 :763633 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/eiden/eiden/octc-segmentation/src/trainer/train/wandb/run-20240529_222605-7nkuhttl/files/output.log
+2024-05-29 22:54:10,640 DEBUG   HandlerThread:763633 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-29 22:54:10,640 DEBUG   HandlerThread:763633 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-29 22:54:10,641 DEBUG   HandlerThread:763633 [handler.py:handle_request():146] handle_request: status_report
+2024-05-29 22:54:10,641 DEBUG   SenderThread:763633 [sender.py:send_request():405] send_request: stop_status
